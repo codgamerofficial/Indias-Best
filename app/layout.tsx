@@ -6,8 +6,7 @@ export const metadata = {
   description: 'Find the perfect college or course in India. Your future starts here.',
   keywords: 'colleges, education, scholarships, India, university, courses, admission',
   authors: [{ name: "India's Best Team" }],
-  viewport: 'width=device-width, initial-scale=1',
-  themeColor: '#FDE047',
+
   manifest: '/manifest.json',
   robots: 'index, follow',
   openGraph: {
