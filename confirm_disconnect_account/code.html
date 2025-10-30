@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Disconnect Account Confirmation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+      .perspective-container {
+        perspective: 1000px;
+      }
+      .modal-3d {
+        transform: rotateY(-5deg) rotateX(2deg) translateZ(0);
+        transform-style: preserve-3d;
+        transition: transform 0.3s ease-out;
+      }
+      .modal-3d:hover {
+        transform: rotateY(0deg) rotateX(0deg) translateZ(20px);
+      }
+      .btn-3d {
+        transform: translateZ(20px);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .btn-3d:hover {
+        transform: translateZ(30px) translateY(-2px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+       .btn-3d:active {
+        transform: translateZ(15px) translateY(1px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#f9d006",
+              "background-light": "#f8f8f5",
+              "background-dark": "#231f0f",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-display">
+<div class="relative flex min-h-screen w-full flex-col items-center justify-center bg-background-light dark:bg-background-dark p-4 overflow-hidden">
+<!-- Background elements for context -->
+<div class="absolute inset-0 bg-cover bg-center opacity-30" data-alt="Abstract blurry background gradient" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBzk2C2Ro2UCQtd_961OVfuhsaYXBE5poS58RMi935jIp4VYdm0dq2i0nhJDCi-Ic0CKoy1KsxBZwkhlRvGD0a7Nv5SlpEIBMnCt1gnn_iNg6dfO_QJCbcfUdOEIr9TLkNADKMmpdXHuBTHhjD3z31MHuQAlQfCC5fhqVD_oWbQmOxiWoOzWfyYOjcOS-Db_woGkcQowWpF9Lli2LidafJFfRjU3hwqGaGIJBszRFdOZZinEqfF8raSar3Lby9N88KTp9djb9ms4AUg')"></div>
+<div class="absolute inset-0 bg-black/50"></div>
+<!-- Modal Overlay -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-[#1A1A1A]/80 backdrop-blur-sm p-4 perspective-container">
+<!-- Modal Container with 3D effect -->
+<div class="modal-3d relative w-full max-w-md rounded-xl border border-[#FF3B30]/30 bg-[#1e1e1e]/80 shadow-2xl shadow-[#FF3B30]/10 backdrop-blur-lg">
+<button aria-label="Close" class="absolute top-4 right-4 text-[#E5E5E7]/50 hover:text-white transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+<div class="flex flex-col items-center justify-center p-8 text-center">
+<!-- Warning Icon -->
+<div class="mb-4 flex h-16 w-16 items-center justify-center rounded-full border-2 border-[#FF3B30]/50 bg-[#FF3B30]/20 text-[#FF3B30] shadow-lg shadow-[#FF3B30]/20">
+<span class="material-symbols-outlined text-4xl" style="transform: translateZ(20px);">link_off</span>
+</div>
+<!-- HeadlineText -->
+<h1 class="text-[#E5E5E7] tracking-tight text-3xl font-bold leading-tight pb-2">Disconnect Account?</h1>
+<!-- BodyText -->
+<p class="text-[#E5E5E7]/70 text-base font-normal leading-relaxed pb-8">
+                        Disconnecting your account will remove your ability to log in using this method. You will need to set a password to access your <span class="font-semibold text-primary/80">'India's Best'</span> account.
+                    </p>
+<!-- ButtonGroup -->
+<div class="flex w-full flex-col gap-3">
+<button class="btn-3d flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-[#FF3B30] text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-red-500 transition-all duration-300">
+<span class="truncate">Disconnect</span>
+</button>
+<button class="btn-3d flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-[#E5E5E7]/10 text-[#E5E5E7] text-base font-bold leading-normal tracking-[0.015em] hover:bg-[#E5E5E7]/20 transition-all duration-300">
+<span class="truncate">Cancel</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

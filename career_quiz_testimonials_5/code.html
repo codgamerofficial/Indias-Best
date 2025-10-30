@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>User Testimonials - India's Best</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+        }
+        .review-card {
+            transform-style: preserve-3d;
+            transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+            perspective: 1000px;
+        }
+        .review-card:hover {
+            transform: translateY(-8px) rotateX(5deg) rotateY(-5deg);
+            box-shadow: 0px 20px 40px rgba(229, 57, 53, 0.2), 0px 0px 0px 1px rgba(229, 57, 53, 0.5);
+        }
+        .cta-primary:hover {
+            box-shadow: 0 0 20px 5px rgba(255, 215, 0, 0.3);
+        }
+        body {
+            position: relative;
+        }
+        .bg-grid::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.5;
+            z-index: 0;
+        }
+    </style>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#FFD700",
+              "secondary": "#E53935",
+              "background-light": "#121212",
+              "background-dark": "#121212",
+              "text-primary": "#EAEAEA",
+              "text-secondary": "#bab29c",
+              "surface-dark": "rgba(24, 22, 17, 0.5)",
+              "border-dark": "rgba(57, 53, 40, 0.7)",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background-dark font-display text-text-primary">
+<div class="relative min-h-screen w-full flex-col overflow-x-hidden bg-grid">
+<div class="layout-container flex h-full grow flex-col">
+<div class="flex flex-1 justify-center px-4 py-5 sm:px-10 md:px-20 lg:px-40">
+<div class="layout-content-container z-10 flex w-full max-w-[960px] flex-1 flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-border-dark px-0 py-3 sm:px-10">
+<div class="flex items-center gap-4">
+<div class="size-6 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold leading-tight tracking-[-0.015em] text-text-primary">India's Best</h2>
+</div>
+<nav class="hidden flex-1 items-center justify-end gap-8 lg:flex">
+<div class="flex items-center gap-9">
+<a class="text-sm font-medium leading-normal text-text-primary transition-colors hover:text-primary" href="#">Home</a>
+<a class="text-sm font-medium leading-normal text-text-primary transition-colors hover:text-primary" href="#">Colleges</a>
+<a class="text-sm font-medium leading-normal text-text-primary transition-colors hover:text-primary" href="#">Exams</a>
+<a class="text-sm font-medium leading-normal text-text-primary transition-colors hover:text-primary" href="#">Careers</a>
+</div>
+<div class="flex gap-2">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] transition-shadow cta-primary">
+<span class="truncate">Take the Quiz</span>
+</button>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#393528] text-text-primary text-sm font-bold leading-normal tracking-[0.015em] transition-colors hover:bg-border-dark">
+<span class="truncate">Sign In</span>
+</button>
+</div>
+</nav>
+<button class="lg:hidden text-text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<main class="flex flex-col gap-12 py-10 md:py-20">
+<div class="flex flex-col gap-6 p-4 text-center md:text-left">
+<div class="flex flex-col gap-3">
+<h1 class="text-4xl font-black leading-tight tracking-[-0.033em] text-text-primary md:text-5xl">Hear What Our <span class="text-primary">Users Say</span></h1>
+<p class="text-base font-normal leading-normal text-text-secondary md:max-w-xl">Discover how our career assessment helped students like you find their perfect path.</p>
+</div>
+<div class="flex flex-col items-center gap-4 md:flex-row md:items-center">
+<span class="text-sm font-medium text-text-secondary">Sort by:</span>
+<div class="flex flex-wrap justify-center gap-2">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-3 bg-primary/20 text-primary text-sm font-medium leading-normal tracking-[0.015em] transition-colors border border-primary/50 hover:bg-primary/30">
+<span class="truncate">Most Helpful</span>
+</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-3 bg-surface-dark text-text-secondary text-sm font-medium leading-normal tracking-[0.015em] transition-colors border border-border-dark hover:bg-border-dark hover:text-text-primary">
+<span class="truncate">Most Recent</span>
+</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-3 bg-surface-dark text-text-secondary text-sm font-medium leading-normal tracking-[0.015em] transition-colors border border-border-dark hover:bg-border-dark hover:text-text-primary">
+<span class="truncate">Highest Rated</span>
+</button>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+<div class="review-card flex flex-col gap-4 rounded-xl border border-border-dark bg-surface-dark p-6 backdrop-blur-sm">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 border-2 border-primary/50" data-alt="Abstract avatar for Priya S." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuALMIbDaPRDbDqqsgU4hMxI2x0m258s781_sdirwUwGJnGmTSZCmXuThQg4UOlbPu8ecmbKm1XDtLvBYEQK7BILWm_v3DtOkd7ZLXT9HHK04CM4HbLYdgew21YGsmwzLTZ2BMS-qXahb8Ms9qMKhI7-IGUWclRIkGC1sAi20Op_WL-HYIxq7IMcuJl8xthMh1GbbiwUeOIR_w69u7HY36-ItRRzgeNaTlTqyloLWaqPFP8ROMysvIQJG0lVOMZODSOURiN9_Y64fiFN");'></div>
+<div class="flex-1">
+<p class="text-base font-medium leading-normal text-text-primary">Priya S.</p>
+<p class="text-sm font-normal leading-normal text-text-secondary">B.Tech, IIT Delhi</p>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex gap-0.5 text-primary">
+<span class="material-symbols-outlined !text-xl">star</span>
+<span class="material-symbols-outlined !text-xl">star</span>
+<span class="material-symbols-outlined !text-xl">star</span>
+<span class="material-symbols-outlined !text-xl">star</span>
+<span class="material-symbols-outlined !text-xl">star</span>
+</div>
+<button class="group flex items-center gap-2 rounded-full border border-border-dark bg-surface-dark px-3 py-1 text-sm text-text-secondary transition-colors hover:border-primary/50 hover:text-primary">
+<span class="material-symbols-outlined !text-base !font-light transition-colors group-hover:!font-bold" style="font-variation-settings: 'FILL' 0;">thumb_up</span>
+<span class="font-medium">128</span>
+</button>
+</div>
+<p class="text-base font-normal leading-normal text-text-primary">"The quiz was a game-changer! It gave me clarity and confidence in my choice to pursue engineering. The college recommendations were spot on."</p>
+</div>
+<div class="review-card flex flex-col gap-4 rounded-xl border border-border-dark bg-surface-dark p-6 backdrop-blur-sm">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 border-2 border-primary/50" data-alt="Abstract avatar for Rohan M." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBk7OXqR0UOVET-Zyfi0--o9GAUmhsyNY-PCYg0MfVgPJDZd7O1Ijl4LFLflNF5klAgBJFWw667AiuZvkN3dU05JMiRLJqgCd6FfCiZQNrTg7MtQjBZigv9xKu179VbX2JX4bfWYXRaoITkAy8u125SAK93PTW7Gt9RqlHTFqQ6TW-TgkGZQh7AWKCH3tqKTr38Y8B4YLK_s-YOSSJ155JyAnhcnduxz1q4vL7gDkwhJtKrBpyjiA8MaZqqSMWqq57wymlHLudFNGQG");'></div>
+<div class="flex-1">
+<p class="text-base font-medium leading-normal text-text-primary">Rohan M.</p>
+<p class="text-sm font-normal leading-normal text-text-secondary">MBBS, AIIMS</p>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex gap-0.5 text-primary">
+<span class="material-symbols-outlined !text-xl">star</span>
+<span class="material-symbols-outlined !text-xl">star</span>
+<span class="material-symbols-outlined !text-xl">star</span>
+<span class="material-symbols-outlined !text-xl">star</span>
+<span class="material-symbols-outlined !text-xl">star</span>
+</div>
+<button class="group flex items-center gap-2 rounded-full border border-border-dark bg-surface-dark px-3 py-1 text-sm text-text-secondary transition-colors hover:border-primary/50 hover:text-primary">
+<span class="material-symbols-outlined !text-base !font-light transition-colors group-hover:!font-bold" style="font-variation-settings: 'FILL' 0;">thumb_up</span>
+<span class="font-medium">94</span>
+</button>
+</div>
+<p class="text-base font-normal leading-normal text-text-primary">"I was completely lost about my career. The assessment opened my eyes to paths I had never considered. Highly recommend it to every student."</p>
+</div>
+<div class="review-card flex flex-col gap-4 rounded-xl border border-border-dark bg-surface-dark p-6 backdrop-blur-sm">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 border-2 border-primary/50" data-alt="Abstract avatar for Anjali K." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBVExWuJKAi8zXm1KueRBjmKJWoZP1d61GGvoZih3fdjByl5zhskRFRndB9L1wLGsYOu_gxDWXrwfbrobZtWMJ6AB-yopIYTyEKsciEPvO5YDOAg8AOktuEX0wZe4D_LZLHIEmgGRaD6UQEaqEIBaXlB13IYdJ5JGzE1ZmK0doPKj9L3E9X0rY3r20Pl5bAB5ak5SabKG9518q7F9Z0QzWc6APZdMMqGh7RDlxvcHFjur9T3mwu1H6Y0kOSpuRETSdj-Sna9CJodfz1");'></div>
+<div class="flex-1">
+<p class="text-base font-medium leading-normal text-text-primary">Anjali K.</p>
+<p class="text-sm font-normal leading-normal text-text-secondary">B.Com, SRCC</p>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex gap-0.5 text-primary">
+<span class="material-symbols-outlined !text-xl">star</span>
+<span class="material-symbols-outlined !text-xl">star</span>
+<span class="material-symbols-outlined !text-xl">star</span>
+<span class="material-symbols-outlined !text-xl">star</span>
+<span class="material-symbols-outlined !text-xl text-text-secondary/50" style="font-variation-settings: 'FILL' 0;">star</span>
+</div>
+<button class="group flex items-center gap-2 rounded-full border border-border-dark bg-surface-dark px-3 py-1 text-sm text-text-secondary transition-colors hover:border-primary/50 hover:text-primary">
+<span class="material-symbols-outlined !text-base !font-light transition-colors group-hover:!font-bold" style="font-variation-settings: 'FILL' 0;">thumb_up</span>
+<span class="font-medium">67</span>
+</button>
+</div>
+<p class="text-base font-normal leading-normal text-text-primary">"A very detailed and insightful quiz. It helped me narrow down my options and confirmed that commerce was the right stream for me. Thank you!"</p>
+</div>
+</div>
+<div class="flex justify-center pt-8">
+<div class="flex w-full max-w-lg flex-col gap-4 sm:flex-row">
+<button class="flex min-w-[84px] max-w-[480px] flex-1 cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-background-dark text-base font-bold leading-normal tracking-[0.015em] transition-shadow cta-primary">
+<span class="truncate">Take the Quiz</span>
+</button>
+<button class="group relative flex min-w-[84px] max-w-[480px] flex-1 cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-transparent text-text-primary text-base font-bold leading-normal tracking-[0.015em]">
+<span class="absolute inset-0 border-2 border-secondary rounded-lg"></span>
+<span class="absolute inset-0 bg-secondary opacity-0 transition-opacity duration-300 group-hover:opacity-20"></span>
+<span class="relative z-10 truncate">Write a Testimonial</span>
+</button>
+</div>
+</div>
+</main>
+<footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
+<div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
+<a class="min-w-40 text-base font-normal leading-normal text-text-secondary transition-colors hover:text-primary" href="#">About Us</a>
+<a class="min-w-40 text-base font-normal leading-normal text-text-secondary transition-colors hover:text-primary" href="#">Contact</a>
+<a class="min-w-40 text-base font-normal leading-normal text-text-secondary transition-colors hover:text-primary" href="#">Privacy Policy</a>
+<a class="min-w-40 text-base font-normal leading-normal text-text-secondary transition-colors hover:text-primary" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="text-text-secondary transition-colors hover:text-primary" href="#">
+<svg fill="currentColor" height="24" viewBox="0 0 16 16" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"></path>
+</svg>
+</a>
+<a class="text-text-secondary transition-colors hover:text-primary" href="#">
+<svg fill="currentColor" height="24" viewBox="0 0 16 16" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"></path>
+</svg>
+</a>
+<a class="text-text-secondary transition-colors hover:text-primary" href="#">
+<svg fill="currentColor" height="24" viewBox="0 0 16 16" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm0 1.442c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.231 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.843-.038 1.096-.047 3.232-.047zM8 3.882a4.102 4.102 0 1 0 0 8.204 4.102 4.102 0 0 0 0-8.204m0 6.762a2.662 2.662 0 1 1 0-5.324 2.662 2.662 0 0 1 0 5.324m4.232-6.71a.96.96 0 1 0 0-1.92.96.96 0 0 0 0 1.92"></path>
+</svg>
+</a>
+<a class="text-text-secondary transition-colors hover:text-primary" href="#">
+<svg fill="currentColor" height="24" viewBox="0 0 16 16" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.328 0-1.97.758-2.31 1.291h.02v-1.125H7.94v7.225z"></path>
+</svg>
+</a>
+</div>
+<p class="text-base font-normal leading-normal text-text-secondary">© 2024 India's Best. All rights reserved.</p>
+</footer>
+</div>
+</div>
+</div>
+</div>
+</body></html>

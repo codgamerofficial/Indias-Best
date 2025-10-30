@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>India's Best - Search Results</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#f2b90d",
+            "background-light": "#f8f8f5",
+            "background-dark": "#121212",
+          },
+          fontFamily: {
+            "display": ["Space Grotesk", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative w-full min-h-screen flex flex-col text-white antialiased">
+<!-- Sticky Header -->
+<header class="sticky top-0 z-10 flex items-center justify-between whitespace-nowrap border-b border-solid border-white/10 px-4 py-3 bg-background-dark/80 backdrop-blur-sm">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-2xl text-white">
+          arrow_back
+        </span>
+<h1 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">India's Best</h1>
+</div>
+<div class="flex flex-1 justify-end gap-2">
+<label class="flex flex-col w-full h-10 max-w-xs ml-4">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-white/70 flex bg-[#27241b] items-center justify-center pl-3 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg text-white focus:outline-0 focus:ring-0 border-none bg-[#27241b] focus:border-none h-full placeholder:text-white/50 px-2 text-base font-normal leading-normal" placeholder="Search..." value=""/>
+</div>
+</label>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 aspect-square bg-[#27241b] text-white">
+<span class="material-symbols-outlined text-2xl">person</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow px-4 sm:px-6 lg:px-8 py-5">
+<div class="mx-auto max-w-md">
+<!-- Search Results Headline -->
+<h2 class="text-white tracking-light text-2xl font-bold leading-tight px-1 pb-4 pt-2 text-left">Search Results for 'Engineering in Delhi'</h2>
+<!-- Filter/Sort Bar -->
+<div class="flex gap-3 px-1 pb-4 sticky top-[65px] bg-background-dark z-5">
+<button class="flex h-10 flex-1 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#27241b] pl-3 pr-3 text-white">
+<span class="material-symbols-outlined text-xl">tune</span>
+<p class="text-sm font-medium leading-normal">Filter</p>
+<span class="material-symbols-outlined text-xl">expand_more</span>
+</button>
+<button class="flex h-10 flex-1 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#27241b] pl-3 pr-3 text-white">
+<span class="material-symbols-outlined text-xl">swap_vert</span>
+<p class="text-sm font-medium leading-normal">Sort</p>
+<span class="material-symbols-outlined text-xl">expand_more</span>
+</button>
+</div>
+<!-- College Cards List -->
+<div class="flex flex-col gap-4">
+<!-- Card 1 -->
+<div class="w-full @container">
+<div class="flex flex-col items-stretch justify-start rounded-xl shadow-[0_0_10px_rgba(242,185,13,0.1)] bg-[#1a1a1a] border border-white/10" style="transform-style: preserve-3d; transition: transform 0.3s ease;">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-t-xl" data-alt="Abstract gradient image for a college card" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCzLDOy9nvNFbgVbtsgKfIEeHNsi-l3qA76HFTuyWMTZrWyq4Epp2PyFzxRa-68AEXcZz0H4M9snuiso0XgmlZlDjTF_TY5H3xvxwZ52kN4_ksBJPEuLIfcpo9Qv9MvERKjdShiHknvXMDBRIDYqICChVhfi_TmM5nl2KcGC3FzPH9ENLxIZ8ba_2RrEk1YzA6mW-FpAuMAG198MIy1aqIy0OnnXuOcWdqySJnrOi6ortuVF8LRw0SITSgQj_WpnbheetQrUhBPbOot");'></div>
+<div class="flex w-full grow flex-col items-stretch justify-center gap-2 p-4">
+<div class="flex items-start justify-between">
+<div>
+<p class="text-white/60 text-sm font-normal leading-normal">Public/Govt</p>
+<p class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Indian Institute of Technology, Delhi</p>
+</div>
+<button class="text-white/70 hover:text-primary">
+<span class="material-symbols-outlined text-2xl">bookmark_border</span>
+</button>
+</div>
+<div class="flex items-end gap-3 justify-between">
+<div class="flex flex-col gap-1">
+<p class="text-white/60 text-base font-normal leading-normal">New Delhi, Delhi</p>
+<p class="text-primary text-base font-bold leading-normal">NIRF Rank: #2</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary text-[#121212] text-sm font-bold leading-normal">
+<span class="truncate">View Details</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="w-full @container">
+<div class="flex flex-col items-stretch justify-start rounded-xl shadow-[0_0_10px_rgba(242,185,13,0.1)] bg-[#1a1a1a] border border-white/10" style="transform-style: preserve-3d; transition: transform 0.3s ease;">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-t-xl" data-alt="Abstract gradient image for a college card" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBMcNDUM1YXUvPxNxhPrQzrcrGdsLNeXuyA4CHW9s2mZKaxqPcOud6OB28hHe-mgxRdXP29Fru0aXJnarz8DX5kjVG5WCzqf5lWmrdv9cS051Dyssg14uimPsF9Y2eGefRd77nKR4TGW2LDzgzjHwQ3mmUmTiucqGODwkVn0xbkvc3KxF9S8wOmaYGFHHFdMw_ksf63gFUcGlFu0XjJHuH3x03Cttgc0YeJGwca0UR1eH4OHiMId7EUOqf-Kr0IqAEVGNzsw3F3CwhS");'></div>
+<div class="flex w-full grow flex-col items-stretch justify-center gap-2 p-4">
+<div class="flex items-start justify-between">
+<div>
+<p class="text-white/60 text-sm font-normal leading-normal">Public/Govt</p>
+<p class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Delhi Technological University</p>
+</div>
+<button class="text-primary hover:text-primary">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+<div class="flex items-end gap-3 justify-between">
+<div class="flex flex-col gap-1">
+<p class="text-white/60 text-base font-normal leading-normal">New Delhi, Delhi</p>
+<p class="text-primary text-base font-bold leading-normal">NIRF Rank: #29</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary text-[#121212] text-sm font-bold leading-normal">
+<span class="truncate">View Details</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="w-full @container">
+<div class="flex flex-col items-stretch justify-start rounded-xl shadow-[0_0_10px_rgba(242,185,13,0.1)] bg-[#1a1a1a] border border-white/10" style="transform-style: preserve-3d; transition: transform 0.3s ease;">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-t-xl" data-alt="Abstract gradient image for a college card" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCcyp9mZ42vdKFUtdNVNT5Te-0Wi67AZ5J2xbZ_P14pl1LKigjjZLOFZ5vih2VxyeMF6z-kYbckpFWnb8tt8jp3Cn0qCnn-bhctYB9ZUmN5lTVLRRH4CwoWAIQiDjTAtgVRahvDMY6YJ_KLXQNVTu6bmxKG7BeLYcEo4xMYaeweTBKASrq59qUEPi6mn9XVrkChwxIpPL0WGNERdAHv58baJ8nyf0Ln9PsGJn7oTpkiufqOa06etdyWRi2g0IxFg4eZe240N5Wc0TuJ");'></div>
+<div class="flex w-full grow flex-col items-stretch justify-center gap-2 p-4">
+<div class="flex items-start justify-between">
+<div>
+<p class="text-white/60 text-sm font-normal leading-normal">Public/Govt</p>
+<p class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Netaji Subhas University of Technology</p>
+</div>
+<button class="text-white/70 hover:text-primary">
+<span class="material-symbols-outlined text-2xl">bookmark_border</span>
+</button>
+</div>
+<div class="flex items-end gap-3 justify-between">
+<div class="flex flex-col gap-1">
+<p class="text-white/60 text-base font-normal leading-normal">New Delhi, Delhi</p>
+<p class="text-primary text-base font-bold leading-normal">NIRF Rank: #60</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary text-[#121212] text-sm font-bold leading-normal">
+<span class="truncate">View Details</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Load More Button -->
+<div class="pt-8 text-center">
+<button class="flex w-full min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-4 bg-[#27241b] text-white text-base font-medium leading-normal">
+<span class="truncate">Load More</span>
+</button>
+</div>
+</div>
+</main>
+</div>
+</body></html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Application Submitted Successfully</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#f2b90d",
+              "background-light": "#f8f8f5",
+              "background-dark": "#121212",
+              "accent-red": "#E53935",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            boxShadow: {
+              'primary-glow': '0 0 15px 5px rgba(242, 185, 13, 0.3)',
+              'red-glow': '0 0 15px 5px rgba(229, 57, 53, 0.2)'
+            },
+            animation: {
+                'fade-in-scale-up': 'fadeInScaleUp 0.5s ease-out forwards',
+            },
+            keyframes: {
+                fadeInScaleUp: {
+                    '0%': { opacity: '0', transform: 'scale(0.95)' },
+                    '100%': { opacity: '1', transform: 'scale(1)' },
+                },
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex min-h-screen w-full flex-col items-center justify-center p-4" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBGQfvvr4ZI26DSVE77JixWf_XyNiYHg1-BTJtlBDfWGGd7WwCg0OcI8HDfR8HZQQkY_dQ_GcOV2n-wcbii0gre-csgZ-xzEkDufvk4oEMwUAUc3a7DoEGDZttZ9EBgLHABwCUY-AoEj4rjtsr8VH853HvFV3_6_SdmZnKaU1sslwdaMrwQqx2TN_3y9rZm7TVLl1Szmo2wbZZI7URNvspUkyuGvgDXbF__BSXPzrP9i-C-uss2mZcnfk3wCoTtrfAp6tA-rgu2GQhO'); background-size: cover; background-position: center;">
+<div class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+<!-- Modal Container -->
+<div class="relative z-10 flex w-full max-w-lg animate-fade-in-scale-up flex-col gap-8 rounded-xl border border-white/10 bg-[#1A1A1A]/80 p-8 text-center text-white shadow-lg shadow-black/50 [transform-style:preserve-3d]">
+<!-- Close Button -->
+<button class="absolute -top-3 -right-3 flex h-8 w-8 items-center justify-center rounded-full border border-white/20 bg-[#2C2C2C] text-white/70 transition-colors hover:bg-white/10 hover:text-white">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+<!-- Iconography -->
+<div class="flex justify-center">
+<div class="relative flex h-24 w-24 items-center justify-center rounded-full bg-primary/10 shadow-primary-glow">
+<span class="material-symbols-outlined text-6xl text-primary">task_alt</span>
+<div class="absolute -bottom-2 -left-2 h-6 w-6 rounded-full bg-accent-red/20 shadow-red-glow"></div>
+</div>
+</div>
+<!-- Typography -->
+<div class="flex flex-col items-center gap-3">
+<h1 class="font-display text-4xl font-bold leading-tight tracking-tight text-white">Application Submitted!</h1>
+<p class="max-w-md font-display text-base font-normal leading-relaxed text-white/80">
+                    Your scholarship application has been successfully submitted. We will notify you of the outcome via email. You can track the status on your dashboard.
+                </p>
+</div>
+<!-- Buttons (CTAs) -->
+<div class="flex flex-col gap-4 sm:flex-row">
+<button class="flex h-12 flex-1 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-5 text-sm font-bold leading-normal tracking-[0.015em] text-black transition-transform hover:scale-105">
+<span class="truncate">Track My Application</span>
+</button>
+<button class="flex h-12 flex-1 cursor-pointer items-center justify-center overflow-hidden rounded-lg border border-white/20 bg-white/5 px-5 text-sm font-bold leading-normal tracking-[0.015em] text-white transition-colors hover:bg-white/10">
+<span class="truncate">Return to Listings</span>
+</button>
+</div>
+</div>
+</div>
+</body></html>

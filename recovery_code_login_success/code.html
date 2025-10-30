@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Success! - Login Complete</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2b90d",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#10121A",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .icon-shadow {
+            filter: drop-shadow(0 0 15px rgba(242, 185, 13, 0.4));
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex min-h-screen w-full flex-col items-center justify-center p-4">
+<!-- Background decorative elements -->
+<div class="absolute inset-0 overflow-hidden">
+<div class="absolute -top-1/4 -left-1/4 h-1/2 w-1/2 rounded-full bg-primary/10 blur-3xl"></div>
+<div class="absolute -bottom-1/4 -right-1/4 h-1/2 w-1/2 rounded-full bg-red-500/10 blur-3xl"></div>
+</div>
+<!-- Modal Container -->
+<div class="relative w-full max-w-md overflow-hidden rounded-xl border border-white/10 bg-black/30 shadow-2xl shadow-primary/10 backdrop-blur-lg">
+<div class="absolute right-4 top-4">
+<button class="flex h-8 w-8 items-center justify-center rounded-full text-gray-400 transition-colors hover:bg-white/10 hover:text-white">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+</div>
+<div class="flex flex-col items-center p-8 text-center">
+<!-- Success Icon -->
+<div class="mb-6 flex h-24 w-24 items-center justify-center rounded-full bg-primary/10">
+<div class="flex h-20 w-20 items-center justify-center rounded-full bg-primary/20">
+<span class="material-symbols-outlined text-6xl text-primary icon-shadow" data-icon="shield-check">verified_user</span>
+</div>
+</div>
+<!-- HeadlineText -->
+<h1 class="font-display text-3xl font-bold tracking-tight text-white">Success!</h1>
+<!-- BodyText -->
+<p class="font-display mt-2 text-base font-normal leading-relaxed text-gray-300">
+                    You have successfully logged in using your recovery code. Your account is now secure.
+                </p>
+<!-- SingleButton -->
+<div class="mt-8 w-full">
+<button class="flex h-12 w-full min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-5 text-base font-bold leading-normal tracking-[0.015em] text-[#10121A] transition-transform duration-200 ease-in-out hover:scale-[1.02] active:scale-[0.98]">
+<span class="truncate">Continue to Dashboard</span>
+</button>
+</div>
+<!-- ProgressBar -->
+<div class="mt-8 flex w-full flex-col gap-2">
+<div class="flex justify-between">
+<p class="font-display text-sm font-medium leading-normal text-gray-400">Redirecting automatically...</p>
+</div>
+<div class="h-1.5 w-full overflow-hidden rounded-full bg-white/10">
+<div class="h-full rounded-full bg-primary" style="width: 75%;"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

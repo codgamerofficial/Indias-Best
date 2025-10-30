@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>India's Best | Find Your Future College</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .hero-bg {
+      background-image:
+        radial-gradient(at 20% 20%, hsla(270, 70%, 30%, 0.3) 0px, transparent 50%),
+        radial-gradient(at 80% 10%, hsla(210, 80%, 40%, 0.2) 0px, transparent 50%),
+        radial-gradient(at 80% 80%, hsla(330, 80%, 50%, 0.2) 0px, transparent 50%);
+    }
+    .card-hover-glow {
+      transition: all 0.3s ease-in-out;
+    }
+    .card-hover-glow:hover {
+      box-shadow: 0 0 25px 5px rgba(255, 235, 59, 0.2), 0 0 10px 2px rgba(255, 235, 59, 0.1);
+      transform: translateY(-8px);
+    }
+    .card-hover-glow-red:hover {
+        box-shadow: 0 0 25px 5px rgba(220, 38, 38, 0.2), 0 0 10px 2px rgba(220, 38, 38, 0.1);
+    }
+    .animate-float {
+        animation: float 6s ease-in-out infinite;
+    }
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+        100% { transform: translateY(0px); }
+    }
+  </style>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+                DEFAULT: "#FDE047", // yellow-300
+                dark: "#FACC15"    // yellow-400
+            },
+            secondary: "#DC2626", // red-600
+            'background-light': "#F3F4F6", // gray-100
+            'background-dark': "#111827", // gray-900
+            'surface-light': "#FFFFFF",
+            'surface-dark': "#1F2937", // gray-800
+            'text-light': "#1F2937", // gray-800
+            'text-dark': "#F3F4F6", // gray-100
+            'text-muted-light': "#6B7280", // gray-500
+            'text-muted-dark': "#9CA3AF", // gray-400
+          },
+          fontFamily: {
+            display: ["Poppins", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.75rem", // 12px
+            lg: "1rem",
+            xl: "1.25rem",
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark antialiased">
+<div class="relative min-h-screen overflow-hidden">
+<div class="absolute inset-0 hero-bg"></div>
+<div class="absolute inset-0 bg-background-light/50 dark:bg-background-dark/50 backdrop-blur-sm"></div>
+<header class="relative z-10 p-4 md:p-6">
+<nav class="container mx-auto flex justify-between items-center">
+<a class="text-xl md:text-2xl font-bold text-text-light dark:text-text-dark" href="#">India's <span class="text-primary-dark">Best</span></a>
+<div class="flex items-center space-x-4">
+<a class="hidden md:inline text-sm font-medium text-text-muted-light dark:text-text-muted-dark hover:text-text-light dark:hover:text-text-dark transition-colors" href="#">About</a>
+<a class="hidden md:inline text-sm font-medium text-text-muted-light dark:text-text-muted-dark hover:text-text-light dark:hover:text-text-dark transition-colors" href="#">Contact</a>
+<button class="bg-surface-light dark:bg-surface-dark px-4 py-2 rounded-full text-sm font-semibold shadow-md hover:shadow-lg transition-shadow">
+            Login
+          </button>
+</div>
+</nav>
+</header>
+<main class="relative z-10">
+<section class="container mx-auto px-4 py-16 md:py-24 text-center">
+<h1 class="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter leading-tight md:leading-tight mb-6">
+<span class="bg-clip-text text-transparent bg-gradient-to-r from-primary-dark to-secondary">Discover</span> Your Path to Success
+        </h1>
+<p class="max-w-2xl mx-auto text-lg md:text-xl text-text-muted-light dark:text-text-muted-dark mb-10">
+          Find the perfect college or course in India. Your future starts here.
+        </p>
+<div class="max-w-2xl mx-auto mb-16">
+<form class="relative">
+<input class="w-full pl-12 pr-28 py-4 rounded-full bg-surface-light dark:bg-surface-dark border-2 border-transparent focus:ring-2 focus:ring-primary-dark focus:border-primary-dark shadow-lg transition-all text-text-light dark:text-text-dark placeholder-text-muted-light dark:placeholder-text-muted-dark" placeholder="Search for colleges, courses, or exams..." type="search"/>
+<div class="absolute left-4 top-1/2 -translate-y-1/2">
+<span class="material-symbols-outlined text-text-muted-light dark:text-text-muted-dark">search</span>
+</div>
+<button class="absolute right-2 top-1/2 -translate-y-1/2 bg-secondary text-white px-6 py-2.5 rounded-full font-semibold hover:bg-red-700 transition-colors" type="submit">
+              Search
+            </button>
+</form>
+</div>
+</section>
+<section class="container mx-auto px-4 pb-16 md:pb-24">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="relative col-span-1 md:col-span-2 p-8 rounded-xl bg-surface-light dark:bg-surface-dark shadow-xl overflow-hidden card-hover-glow">
+<div class="absolute -right-20 -bottom-20 w-64 h-64 bg-primary-dark/10 rounded-full blur-3xl"></div>
+<div class="absolute -left-10 -top-10 w-48 h-48 bg-blue-500/10 rounded-full blur-3xl"></div>
+<div class="relative z-10 flex flex-col h-full">
+<div class="flex-grow">
+<span class="material-symbols-outlined text-4xl text-primary-dark mb-4">school</span>
+<h3 class="text-2xl font-bold mb-2 text-text-light dark:text-text-dark">Government Colleges</h3>
+<p class="text-text-muted-light dark:text-text-muted-dark mb-6">Explore top-tier public institutions and secure your future with a government-backed education.</p>
+</div>
+<a class="mt-auto inline-flex items-center font-semibold text-primary-dark hover:underline" href="#">
+                  Explore Now <span class="material-symbols-outlined ml-1">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="relative p-8 rounded-xl bg-surface-light dark:bg-surface-dark shadow-xl overflow-hidden card-hover-glow-red card-hover-glow">
+<div class="absolute -right-10 -top-10 w-48 h-48 bg-secondary/10 rounded-full blur-3xl"></div>
+<div class="relative z-10 flex flex-col h-full">
+<div class="flex-grow">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4">business_center</span>
+<h3 class="text-2xl font-bold mb-2 text-text-light dark:text-text-dark">Private Colleges</h3>
+<p class="text-text-muted-light dark:text-text-muted-dark mb-6">Discover premier private universities with cutting-edge facilities and diverse programs.</p>
+</div>
+<a class="mt-auto inline-flex items-center font-semibold text-secondary hover:underline" href="#">
+                  View Listings <span class="material-symbols-outlined ml-1">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<div class="mt-8 relative p-8 rounded-xl bg-surface-light dark:bg-surface-dark shadow-xl overflow-hidden card-hover-glow flex flex-col md:flex-row items-center justify-between">
+<div class="absolute -left-20 -bottom-20 w-64 h-64 bg-green-500/10 rounded-full blur-3xl"></div>
+<div class="relative z-10 text-center md:text-left mb-6 md:mb-0">
+<span class="material-symbols-outlined text-4xl text-green-500 mb-4">cast_for_education</span>
+<h3 class="text-2xl font-bold mb-2 text-text-light dark:text-text-dark">Online &amp; Distance Learning</h3>
+<p class="text-text-muted-light dark:text-text-muted-dark max-w-xl">Flexible and accredited online programs to help you learn from anywhere, at your own pace.</p>
+</div>
+<a class="relative z-10 inline-flex items-center font-semibold text-green-500 hover:underline shrink-0" href="#">
+              Find Courses <span class="material-symbols-outlined ml-1">arrow_forward</span>
+</a>
+</div>
+</section>
+<div class="relative h-96 w-full flex items-center justify-center -mt-16 mb-16 px-4">
+<div class="absolute inset-0 opacity-20">
+<img alt="Abstract 3D geometric shapes representing educational paths" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkJVXxunVeHMxp0R4-30ZCwI2AakCVgEDDPTywwZZF6JiN-e6CQbUND15nmA1z36WB_5jAvKa8oHoSpuQ-7LL-DK79S_VFpPSf3y2A9u1LwS9L_bstO1EbvNFBZJi0I1ZzAS5qphRT4ZZ27y6g4Ylk0o0_Ap8QnuRH24Io7iXdsdCq2uX8n3t1JdPKTd0LG4miiPx_s1VZeo77pAniss36Wi-u-zIocomlIShePo28RyW2bRpywIL4Z6SiSgKPk520E__QO51TJejw"/>
+</div>
+<div class="animate-float">
+<img alt="Floating 3D cube representing knowledge block" class="w-48 h-48 object-cover rounded-3xl shadow-2xl opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwz9bnq12CALxUfLvhuHrE45Xmm9iFM55LeLmJ6IqKv0xE_xz8a7d9SrHvQqsypRR8QOhiR8glppUBZZWm3Vd6vTyxambTeSTZX22b_bDEOg2BlurFClwwfCthEAKHyw6JOVlf9PGrMCPzdZ8Qpmf3jXah1wAuka_mg16e2SZPHDI5yQiws_b72s3DCLPd4C6p2XEkaqDfe-ChQA3YxiKJeZqXtZtu3JaEqsglcWyf8xYj50csMdCf7weKeLLZ1rdyXDGXeaicOtiX"/>
+</div>
+<div class="hidden md:block absolute top-10 left-1/4 animate-float" style="animation-delay: -2s;">
+<img alt="Floating 3D sphere representing opportunity" class="w-24 h-24 object-cover rounded-full shadow-2xl opacity-70" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASj2WG7Yasjy8OfBLHcD9eYdyA-o6DtCaq8p9buvMki_zrvnyA9OXN1_PRnKut3ymhSCQn-rhSqR4hBS_h1tAiXmTLqjLz46esgDv9-W3rHiKfoFO2QKewpsMv9F_gDqWJ8414XM3YR6bGprFP70rZShateTI21aTx26WVTp3jRihyyJQX9LhWfyUhbAhLsXqgp-bUuZN6PNRub7nxBfypnGcy06PeYYFjhJ2FrjovvRfjSz3fh4mfXfmyCtvqyHB6CgJo_XsqhKx1"/>
+</div>
+<div class="hidden md:block absolute bottom-10 right-1/4 animate-float" style="animation-delay: -4s;">
+<img alt="Floating 3D pyramid representing growth" class="w-32 h-32 object-cover shadow-2xl opacity-70" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNYdziVdxg06gdc49oSfqtVHgPic9rFgNsbEHaBSZH06ktGQRFhk2sFz84X7fJ_L7WJ8eAf_MGOvAnvGdVXry_bfRaCxhkQjkQM49p2gPAiXyQRejOwfuCom1VbdfhXOTW7n50yUm_OZeKW8qkbrDjqRbcYlt5eACqYXvu7Cbmi8tlbOZK92uuoEmVAIjdqRYTcmZ0mKO_YdPDRhYTBPFQKBmj6c7hU2U9XJcQeycTbdnsWbyqrQ7XQCXS0_3YwwW_8i-97nEQ5iv5" style="clip-path: polygon(50% 0%, 0% 100%, 100% 100%);"/>
+</div>
+</div>
+</main>
+<footer class="relative z-10 border-t border-surface-light dark:border-surface-dark mt-16">
+<div class="container mx-auto px-4 py-6 text-center text-sm text-text-muted-light dark:text-text-muted-dark">
+            © 2024 India's Best. All rights reserved.
+        </div>
+</footer>
+</div>
+
+</body></html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>India's Best - My Scholarship Alerts</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+      .perspective-container {
+        perspective: 1000px;
+      }
+      .card-3d {
+        transform-style: preserve-3d;
+        transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        transform: rotateX(0) rotateY(0);
+      }
+      .perspective-container:hover .card-3d {
+        transform: rotateX(5deg) rotateY(-5deg) translateZ(15px);
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+      }
+      .icon-button:hover span {
+        color: #f2b90d; /* primary yellow */
+      }
+      .delete-button:hover span {
+        color: #E53935; /* red accent */
+      }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#f2b90d",
+              "background-light": "#f8f8f5",
+              "background-dark": "#121212",
+              "accent-red": "#E53935"
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-[#E0E0E0]">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- TopNavBar Component -->
+<header class="sticky top-0 z-50 border-b border-white/10 bg-background-dark/80 px-4 py-3 backdrop-blur-md sm:px-8 lg:px-20">
+<div class="mx-auto flex max-w-7xl items-center justify-between">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-2xl">school</span>
+<h2 class="text-white text-lg font-bold leading-tight">India's Best</h2>
+</div>
+<nav class="hidden items-center gap-8 md:flex">
+<a class="text-white/80 hover:text-primary text-sm font-medium transition-colors" href="#">Colleges</a>
+<a class="text-white/80 hover:text-primary text-sm font-medium transition-colors" href="#">Scholarships</a>
+<a class="text-white/80 hover:text-primary text-sm font-medium transition-colors" href="#">Exams</a>
+<a class="text-white/80 hover:text-primary text-sm font-medium transition-colors" href="#">Reviews</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold shadow-[0_0_15px_rgba(242,185,13,0.3)] transition-transform hover:scale-105">
+<span class="truncate">Sign Up</span>
+</button>
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-white/10 text-white/80 transition-colors hover:bg-white/20 hover:text-white">
+<span class="material-symbols-outlined text-xl">notifications</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/50" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA6BjiNSs_8CQlfFZB1Mi_416JNbK9Uk9wpGwwz4Ug3zqtvCIIk6Nu2Y9gGtfGOFQ_fgEbJ5vz_LsSmgt95V3QinLjQ0VIm_cQQG56NuI81gFuCnUE5WTVxNcmIfBRDvlheZ0eY77HRDf8CTEN1s2DaKx3tJ_sYUxufrr_UGKA5jkNGUXyR2uZs5B031AdP_uWW-OYMtW36jloORPWJtXSMoXFxvZeKEmaIYmhN-8l3knE56WK3m-1QP8HsyVlwO-h7t2mFtnJjBEUo");'></div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex flex-1 justify-center px-4 py-8 sm:px-8 lg:px-20">
+<div class="w-full max-w-7xl">
+<!-- PageHeading Component -->
+<div class="mb-8 flex flex-wrap items-end justify-between gap-4">
+<div class="flex flex-col gap-2">
+<p class="text-white text-4xl font-black tracking-tighter">My Scholarship Alerts</p>
+<p class="text-white/60 text-base font-normal">Manage all your created scholarship alerts in one place.</p>
+</div>
+</div>
+<!-- ToolBar & SearchBar Components -->
+<div class="mb-8 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+<div class="lg:col-span-2">
+<label class="flex flex-col w-full">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-12 bg-white/5 ring-1 ring-white/10 focus-within:ring-primary">
+<div class="text-white/60 flex items-center justify-center pl-4">
+<span class="material-symbols-outlined text-2xl">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg border-none bg-transparent text-white placeholder:text-white/40 focus:outline-none focus:ring-0 text-base" placeholder="Search alerts by name, course, or location..." value=""/>
+</div>
+</label>
+</div>
+<div class="flex items-center justify-end gap-4">
+<button class="p-2 text-white/60 transition-colors hover:text-primary">
+<span class="material-symbols-outlined text-2xl">filter_list</span>
+</button>
+<button class="p-2 text-white/60 transition-colors hover:text-primary">
+<span class="material-symbols-outlined text-2xl">swap_vert</span>
+</button>
+<button class="flex flex-1 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-12 px-4 bg-primary text-background-dark text-sm font-bold shadow-[0_0_20px_rgba(242,185,13,0.4)] transition-transform hover:scale-105 active:scale-100 md:flex-none">
+<span class="material-symbols-outlined text-xl">add_circle</span>
+<span class="truncate">Create New Alert</span>
+</button>
+</div>
+</div>
+<!-- Cards Grid -->
+<div class="grid grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-3">
+<!-- Card Component 1 -->
+<div class="perspective-container">
+<div class="card-3d flex flex-col rounded-xl border border-white/10 bg-white/5 shadow-lg backdrop-blur-sm">
+<div class="flex flex-col p-6">
+<div class="mb-4 flex items-center justify-between">
+<h3 class="text-white text-xl font-bold">IIT Engineering Scholarships</h3>
+<div class="flex items-center gap-2">
+<div class="h-2.5 w-2.5 rounded-full bg-green-400 shadow-[0_0_8px_rgba(74,222,128,0.7)]"></div>
+<span class="text-green-400 text-sm font-medium">Active</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="rounded-full bg-primary/20 px-3 py-1 text-xs font-medium text-primary">Engineering</span>
+<span class="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white/80">Fee: &lt; ₹1 Lakh</span>
+<span class="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white/80">Location: Delhi</span>
+</div>
+</div>
+<div class="mt-auto flex items-center justify-end gap-2 border-t border-white/10 p-4">
+<button class="icon-button flex h-9 w-9 items-center justify-center rounded-lg text-white/60 transition-colors hover:bg-white/10">
+<span class="material-symbols-outlined text-xl">edit</span>
+</button>
+<button class="icon-button flex h-9 w-9 items-center justify-center rounded-lg text-white/60 transition-colors hover:bg-white/10">
+<span class="material-symbols-outlined text-xl">pause_circle</span>
+</button>
+<button class="delete-button icon-button flex h-9 w-9 items-center justify-center rounded-lg text-white/60 transition-colors hover:bg-accent-red/20">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card Component 2 -->
+<div class="perspective-container">
+<div class="card-3d flex flex-col rounded-xl border border-white/10 bg-white/5 shadow-lg backdrop-blur-sm">
+<div class="flex flex-col p-6">
+<div class="mb-4 flex items-center justify-between">
+<h3 class="text-white text-xl font-bold">Medical Studies Grant</h3>
+<div class="flex items-center gap-2">
+<div class="h-2.5 w-2.5 rounded-full bg-orange-400 shadow-[0_0_8px_rgba(251,146,60,0.7)]"></div>
+<span class="text-orange-400 text-sm font-medium">Paused</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="rounded-full bg-primary/20 px-3 py-1 text-xs font-medium text-primary">Medicine</span>
+<span class="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white/80">Merit-based</span>
+<span class="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white/80">Location: Mumbai</span>
+</div>
+</div>
+<div class="mt-auto flex items-center justify-end gap-2 border-t border-white/10 p-4">
+<button class="icon-button flex h-9 w-9 items-center justify-center rounded-lg text-white/60 transition-colors hover:bg-white/10">
+<span class="material-symbols-outlined text-xl">edit</span>
+</button>
+<button class="icon-button flex h-9 w-9 items-center justify-center rounded-lg text-white/60 transition-colors hover:bg-white/10">
+<span class="material-symbols-outlined text-xl">play_circle</span>
+</button>
+<button class="delete-button icon-button flex h-9 w-9 items-center justify-center rounded-lg text-white/60 transition-colors hover:bg-accent-red/20">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card Component 3 -->
+<div class="perspective-container">
+<div class="card-3d flex flex-col rounded-xl border border-white/10 bg-white/5 shadow-lg backdrop-blur-sm">
+<div class="flex flex-col p-6">
+<div class="mb-4 flex items-center justify-between">
+<h3 class="text-white text-xl font-bold">Arts &amp; Humanities Fund</h3>
+<div class="flex items-center gap-2">
+<div class="h-2.5 w-2.5 rounded-full bg-green-400 shadow-[0_0_8px_rgba(74,222,128,0.7)]"></div>
+<span class="text-green-400 text-sm font-medium">Active</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="rounded-full bg-primary/20 px-3 py-1 text-xs font-medium text-primary">Arts</span>
+<span class="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white/80">Deadline: &lt; 3 months</span>
+<span class="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white/80">Fee: &lt; $5000</span>
+</div>
+</div>
+<div class="mt-auto flex items-center justify-end gap-2 border-t border-white/10 p-4">
+<button class="icon-button flex h-9 w-9 items-center justify-center rounded-lg text-white/60 transition-colors hover:bg-white/10">
+<span class="material-symbols-outlined text-xl">edit</span>
+</button>
+<button class="icon-button flex h-9 w-9 items-center justify-center rounded-lg text-white/60 transition-colors hover:bg-white/10">
+<span class="material-symbols-outlined text-xl">pause_circle</span>
+</button>
+<button class="delete-button icon-button flex h-9 w-9 items-center justify-center rounded-lg text-white/60 transition-colors hover:bg-accent-red/20">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Empty State Component -->
+<div class="lg:col-span-2 xl:col-span-3 mt-8">
+<div class="flex flex-col items-center justify-center rounded-xl border border-dashed border-white/20 bg-white/5 p-12 text-center">
+<span class="material-symbols-outlined text-5xl text-primary/50 mb-4">notifications_off</span>
+<h4 class="text-xl font-bold text-white">No More Alerts Found</h4>
+<p class="mt-2 max-w-sm text-white/60">Create your first alert to get notified about new scholarships that match your criteria!</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

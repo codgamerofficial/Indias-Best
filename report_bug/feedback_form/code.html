@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Report an Issue / Share Feedback</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#f2b90d",
+            "background-light": "#f8f8f5",
+            "background-dark": "#10121A",
+          },
+          fontFamily: {
+            "display": ["Space Grotesk", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+
+    .form-input {
+      transition: all 0.2s ease-in-out;
+    }
+
+    .form-input:focus-within,
+    .form-input:focus {
+      box-shadow: 0 0 10px 1px rgba(242, 185, 13, 0.4);
+      transform: translateY(-1px);
+    }
+
+    .submit-btn:hover {
+      box-shadow: 0 0 15px 2px rgba(242, 185, 13, 0.5);
+      transform: translateY(-2px);
+    }
+
+    .file-drop-area {
+      border: 2px dashed #393528;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .file-drop-area.dragover {
+      border-color: #f2b90d;
+      background-color: rgba(242, 185, 13, 0.1);
+      box-shadow: 0 0 10px 1px rgba(242, 185, 13, 0.4);
+    }
+  </style>
+</head>
+<body class="font-display">
+<div class="relative flex min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#393528] px-10 py-3 lg:px-40">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">India's Best</h2>
+</div>
+<div class="hidden lg:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-white/80 hover:text-white transition-colors text-sm font-medium leading-normal" href="#">Colleges</a>
+<a class="text-white/80 hover:text-white transition-colors text-sm font-medium leading-normal" href="#">Exams</a>
+<a class="text-white/80 hover:text-white transition-colors text-sm font-medium leading-normal" href="#">Reviews</a>
+<a class="text-white/80 hover:text-white transition-colors text-sm font-medium leading-normal" href="#">News</a>
+</div>
+<div class="flex gap-2 items-center">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Login</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBy64KMYjHYZZCWhfhJE3SaMjtJlaaQq-G0oRGZmfAYTgc6BCZ9GQ1RTmladkdKRrf3wTH99ftW3CWKdlAl0tNgiwLmUr8J-7VMAi5uJVtnY8cDnURenqckJrQz-YsqWAlvCy_mFEFtEdujV3Gt-ww3iMnyPcfcjykTwjcpe-1fWymb9ae0yKyYHFjzjt4_UKd3FnAelgycSFx-XnrLi_rm26mpudfmcwogUp_9t6vyDGSs_Ty3vQDFbwJbUs2go3t_GrFyRlfDvX-L");'></div>
+</div>
+</div>
+<button class="lg:hidden text-white">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</header>
+<main class="flex flex-1 justify-center py-5 sm:py-10 px-4">
+<div class="layout-content-container flex flex-col w-full max-w-[960px] flex-1 space-y-8">
+<div class="flex flex-wrap justify-between gap-3 p-4">
+<h1 class="text-[#E0E0E0] text-4xl sm:text-5xl font-black leading-tight tracking-tighter">Report an Issue / Share Feedback</h1>
+</div>
+<form class="flex flex-col space-y-6 px-4">
+<div class="flex">
+<div class="flex h-12 flex-1 items-center justify-center rounded-lg bg-[#27241b] p-1.5 max-w-md">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-md px-2 has-[:checked]:bg-[#10121A] has-[:checked]:shadow-[0_0_8px_rgba(242,185,13,0.3)] has-[:checked]:text-primary text-[#bab29c] text-sm font-bold leading-normal transition-all duration-200">
+<span class="truncate">Bug Report</span>
+<input checked="" class="invisible w-0" name="form-type" type="radio" value="Bug Report"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-md px-2 has-[:checked]:bg-[#10121A] has-[:checked]:shadow-[0_0_8px_rgba(242,185,13,0.3)] has-[:checked]:text-primary text-[#bab29c] text-sm font-bold leading-normal transition-all duration-200">
+<span class="truncate">Feedback</span>
+<input class="invisible w-0" name="form-type" type="radio" value="Feedback"/>
+</label>
+</div>
+</div>
+<div class="flex max-w-[720px] flex-wrap items-end gap-4">
+<label class="flex flex-col min-w-40 flex-1">
+<p class="text-[#E0E0E0] text-base font-medium leading-normal pb-2">Subject</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#E0E0E0] focus:outline-0 focus:ring-0 border border-[#544e3b] bg-[#27241b] focus:border-primary h-14 placeholder:text-[#bab29c] p-[15px] text-base font-normal leading-normal" placeholder="e.g., Login button not working on Chrome" value=""/>
+</label>
+</div>
+<div class="flex max-w-[720px] flex-wrap items-end gap-4">
+<label class="flex flex-col min-w-40 flex-1">
+<p class="text-[#E0E0E0] text-base font-medium leading-normal pb-2">Description</p>
+<textarea class="form-input flex w-full min-w-0 flex-1 resize-y overflow-hidden rounded-lg text-[#E0E0E0] focus:outline-0 focus:ring-0 border border-[#544e3b] bg-[#27241b] focus:border-primary min-h-36 placeholder:text-[#bab29c] p-[15px] text-base font-normal leading-normal" placeholder="Please describe the issue in detail..."></textarea>
+</label>
+</div>
+<div class="flex flex-col gap-4 max-w-[720px]">
+<p class="text-[#E0E0E0] text-base font-medium leading-normal">Attach Screenshot (Optional)</p>
+<div class="file-drop-area relative flex flex-col items-center justify-center rounded-lg bg-[#27241b] p-8 text-center cursor-pointer" id="file-drop-area">
+<input class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" id="file-input" type="file"/>
+<div class="flex flex-col items-center gap-4 text-[#bab29c]">
+<span class="material-symbols-outlined text-5xl text-primary">cloud_upload</span>
+<p class="font-bold text-[#E0E0E0]">Click to upload or drag and drop</p>
+<p class="text-sm">A screenshot helps us resolve issues faster. Max file size: 5MB.</p>
+</div>
+</div>
+</div>
+<div class="rounded-lg bg-[#27241b] border border-[#544e3b] p-4 max-w-[720px]">
+<details>
+<summary class="flex items-center gap-2 cursor-pointer text-primary font-bold">
+<span class="material-symbols-outlined">help</span>
+                  How to write a great bug report
+                </summary>
+<div class="mt-4 space-y-2 text-sm text-[#bab29c] pl-8">
+<p>• Mention the page URL where you found the issue.</p>
+<p>• Tell us which browser and operating system you're using.</p>
+<p>• Describe the steps to reproduce the bug.</p>
+<p>• Explain what you expected to happen vs. what actually happened.</p>
+</div>
+</details>
+</div>
+<div class="flex items-center gap-4 pt-4">
+<button class="submit-btn flex min-w-[140px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-background-dark text-base font-bold leading-normal tracking-[0.015em] transition-all duration-200" type="submit">
+<span class="truncate">Submit Report</span>
+</button>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-transparent text-[#bab29c] hover:bg-[#393528] hover:text-white transition-colors duration-200 text-base font-bold leading-normal tracking-[0.015em]" type="button">
+<span class="truncate">Cancel</span>
+</button>
+</div>
+</form>
+</div>
+</main>
+</div>
+</div>
+<script>
+    const fileDropArea = document.getElementById('file-drop-area');
+    const fileInput = document.getElementById('file-input');
+
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+      fileDropArea.addEventListener(eventName, preventDefaults, false);
+      document.body.addEventListener(eventName, preventDefaults, false);
+    });
+
+    function preventDefaults(e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+
+    ['dragenter', 'dragover'].forEach(eventName => {
+      fileDropArea.addEventListener(eventName, () => fileDropArea.classList.add('dragover'), false);
+    });
+
+    ['dragleave', 'drop'].forEach(eventName => {
+      fileDropArea.addEventListener(eventName, () => fileDropArea.classList.remove('dragover'), false);
+    });
+
+    fileDropArea.addEventListener('drop', handleDrop, false);
+
+    function handleDrop(e) {
+      const dt = e.dataTransfer;
+      const files = dt.files;
+      fileInput.files = files;
+      // You can add further logic here to display file names, etc.
+    }
+  </script>
+</body></html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>India's Best - College Search Results</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#FDE047", // Distressed Yellow
+            "background-light": "#F3F4F6", // Light Gray for light mode
+            "background-dark": "#111827", // Dark Blue/Gray for dark mode
+            "accent-red": "#DC2626" // Red from image for highlights
+          },
+          fontFamily: {
+            display: ["Anton", "sans-serif"],
+            sans: ["Inter", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "1rem", // 16px
+          },
+        },
+      },
+    };
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+    .card-3d {
+        transform-style: preserve-3d;
+        transition: transform 0.5s;
+    }
+    .card-3d:hover {
+        transform: rotateY(10deg) rotateX(5deg) scale(1.02);
+    }
+    .card-content {
+        transform: translateZ(20px);
+    }
+    .card-bg {
+        background-color: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .light .card-bg {
+        background-color: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-sans text-gray-800 dark:text-gray-200">
+<div class="min-h-screen p-4 sm:p-6 lg:p-8">
+<header class="flex flex-col sm:flex-row justify-between items-center mb-8">
+<h1 class="font-display text-4xl sm:text-5xl text-gray-900 dark:text-white uppercase tracking-wider">India's <span class="text-primary">Best</span></h1>
+<nav class="mt-4 sm:mt-0">
+<a class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition duration-300 mx-3" href="#">Home</a>
+<a class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition duration-300 mx-3" href="#">Compare</a>
+<a class="text-accent-red font-semibold mx-3" href="#">Login</a>
+</nav>
+</header>
+<main>
+<section class="mb-10">
+<div class="max-w-4xl mx-auto bg-gray-200 dark:bg-gray-800/50 p-6 rounded-lg shadow-lg">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-end">
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="branch">Branch / Course</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">school</span>
+<input class="w-full pl-10 pr-4 py-2 bg-white dark:bg-gray-900/50 border border-gray-300 dark:border-gray-700 rounded-md focus:ring-primary focus:border-primary" id="branch" type="text" value="Computer Science"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="college-type">College Type</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">apartment</span>
+<select class="w-full pl-10 pr-4 py-2 appearance-none bg-white dark:bg-gray-900/50 border border-gray-300 dark:border-gray-700 rounded-md focus:ring-primary focus:border-primary" id="college-type">
+<option>Government</option>
+<option>Private</option>
+<option>Deemed University</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">expand_more</span>
+</div>
+</div>
+<button class="w-full bg-accent-red text-white font-bold py-2 px-4 rounded-md flex items-center justify-center gap-2 hover:bg-red-700 transition duration-300 transform hover:scale-105">
+<span class="material-symbols-outlined">search</span>
+<span>Search</span>
+</button>
+</div>
+</div>
+</section>
+<div class="flex flex-col sm:flex-row justify-between items-center mb-6 px-2">
+<h2 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">Showing <span class="text-primary">12</span> Results</h2>
+<div class="flex items-center gap-2 mt-4 sm:mt-0">
+<label class="text-sm text-gray-600 dark:text-gray-400" for="sort-by">Sort by:</label>
+<div class="relative">
+<select class="appearance-none bg-gray-200 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 rounded-md pl-3 pr-8 py-1 text-sm focus:ring-primary focus:border-primary" id="sort-by">
+<option>Ranking</option>
+<option>Fees</option>
+<option>Placement</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none text-base">unfold_more</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" style="perspective: 1000px;">
+<div class="card-3d">
+<div class="relative w-full h-full p-6 rounded-lg shadow-2xl card-bg card-content">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-xs uppercase tracking-wider text-accent-red font-semibold">Government</p>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mt-1">Indian Institute of Technology, Bombay</h3>
+</div>
+<div class="flex flex-col items-center ml-4">
+<p class="text-xs text-gray-500 dark:text-gray-400">NIRF Rank</p>
+<p class="text-3xl font-display text-primary">3</p>
+</div>
+</div>
+<div class="mt-6 border-t border-gray-300 dark:border-gray-700 pt-4">
+<p class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Available Courses:</p>
+<div class="flex flex-wrap gap-2">
+<span class="text-xs bg-primary/20 text-yellow-800 dark:bg-primary/20 dark:text-primary py-1 px-2 rounded-full">CSE</span>
+<span class="text-xs bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 py-1 px-2 rounded-full">Mechanical</span>
+<span class="text-xs bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 py-1 px-2 rounded-full">Electrical</span>
+<span class="text-xs bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 py-1 px-2 rounded-full">+4 more</span>
+</div>
+</div>
+<div class="mt-6 flex justify-between items-center">
+<a class="text-accent-red font-semibold text-sm flex items-center gap-1 hover:underline" href="#">
+                View Details <span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+<button class="text-gray-400 hover:text-accent-red transition-colors">
+<span class="material-symbols-outlined">bookmark_add</span>
+</button>
+</div>
+</div>
+</div>
+<div class="card-3d">
+<div class="relative w-full h-full p-6 rounded-lg shadow-2xl card-bg card-content">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-xs uppercase tracking-wider text-accent-red font-semibold">Private</p>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mt-1">VIT, Vellore</h3>
+</div>
+<div class="flex flex-col items-center ml-4">
+<p class="text-xs text-gray-500 dark:text-gray-400">NIRF Rank</p>
+<p class="text-3xl font-display text-primary">11</p>
+</div>
+</div>
+<div class="mt-6 border-t border-gray-300 dark:border-gray-700 pt-4">
+<p class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Available Courses:</p>
+<div class="flex flex-wrap gap-2">
+<span class="text-xs bg-primary/20 text-yellow-800 dark:bg-primary/20 dark:text-primary py-1 px-2 rounded-full">CSE</span>
+<span class="text-xs bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 py-1 px-2 rounded-full">IT</span>
+<span class="text-xs bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 py-1 px-2 rounded-full">ECE</span>
+<span class="text-xs bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 py-1 px-2 rounded-full">+8 more</span>
+</div>
+</div>
+<div class="mt-6 flex justify-between items-center">
+<a class="text-accent-red font-semibold text-sm flex items-center gap-1 hover:underline" href="#">
+                View Details <span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+<button class="text-gray-400 hover:text-accent-red transition-colors">
+<span class="material-symbols-outlined">bookmark_add</span>
+</button>
+</div>
+</div>
+</div>
+<div class="card-3d">
+<div class="relative w-full h-full p-6 rounded-lg shadow-2xl card-bg card-content">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-xs uppercase tracking-wider text-accent-red font-semibold">Government</p>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mt-1">Indian Institute of Technology, Delhi</h3>
+</div>
+<div class="flex flex-col items-center ml-4">
+<p class="text-xs text-gray-500 dark:text-gray-400">NIRF Rank</p>
+<p class="text-3xl font-display text-primary">2</p>
+</div>
+</div>
+<div class="mt-6 border-t border-gray-300 dark:border-gray-700 pt-4">
+<p class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Available Courses:</p>
+<div class="flex flex-wrap gap-2">
+<span class="text-xs bg-primary/20 text-yellow-800 dark:bg-primary/20 dark:text-primary py-1 px-2 rounded-full">CSE</span>
+<span class="text-xs bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 py-1 px-2 rounded-full">Biotech</span>
+<span class="text-xs bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 py-1 px-2 rounded-full">Civil</span>
+<span class="text-xs bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 py-1 px-2 rounded-full">+5 more</span>
+</div>
+</div>
+<div class="mt-6 flex justify-between items-center">
+<a class="text-accent-red font-semibold text-sm flex items-center gap-1 hover:underline" href="#">
+                View Details <span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+<button class="text-gray-400 hover:text-accent-red transition-colors">
+<span class="material-symbols-outlined">bookmark_add</span>
+</button>
+</div>
+</div>
+</div>
+<div class="card-3d">
+<div class="relative w-full h-full p-6 rounded-lg shadow-2xl card-bg card-content">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-xs uppercase tracking-wider text-accent-red font-semibold">Deemed University</p>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mt-1">Manipal Institute of Technology</h3>
+</div>
+<div class="flex flex-col items-center ml-4">
+<p class="text-xs text-gray-500 dark:text-gray-400">NIRF Rank</p>
+<p class="text-3xl font-display text-primary">61</p>
+</div>
+</div>
+<div class="mt-6 border-t border-gray-300 dark:border-gray-700 pt-4">
+<p class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Available Courses:</p>
+<div class="flex flex-wrap gap-2">
+<span class="text-xs bg-primary/20 text-yellow-800 dark:bg-primary/20 dark:text-primary py-1 px-2 rounded-full">CSE</span>
+<span class="text-xs bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 py-1 px-2 rounded-full">Data Science</span>
+<span class="text-xs bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 py-1 px-2 rounded-full">Automobile</span>
+<span class="text-xs bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 py-1 px-2 rounded-full">+7 more</span>
+</div>
+</div>
+<div class="mt-6 flex justify-between items-center">
+<a class="text-accent-red font-semibold text-sm flex items-center gap-1 hover:underline" href="#">
+                  View Details <span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+<button class="text-gray-400 hover:text-accent-red transition-colors">
+<span class="material-symbols-outlined">bookmark_add</span>
+</button>
+</div>
+</div>
+</div>
+<div class="card-3d">
+<div class="relative w-full h-full p-6 rounded-lg shadow-2xl card-bg card-content">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-xs uppercase tracking-wider text-accent-red font-semibold">Private</p>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mt-1">Thapar Institute of Engg. &amp; Tech</h3>
+</div>
+<div class="flex flex-col items-center ml-4">
+<p class="text-xs text-gray-500 dark:text-gray-400">NIRF Rank</p>
+<p class="text-3xl font-display text-primary">22</p>
+</div>
+</div>
+<div class="mt-6 border-t border-gray-300 dark:border-gray-700 pt-4">
+<p class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Available Courses:</p>
+<div class="flex flex-wrap gap-2">
+<span class="text-xs bg-primary/20 text-yellow-800 dark:bg-primary/20 dark:text-primary py-1 px-2 rounded-full">CSE</span>
+<span class="text-xs bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 py-1 px-2 rounded-full">Mechatronics</span>
+<span class="text-xs bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 py-1 px-2 rounded-full">Civil</span>
+<span class="text-xs bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 py-1 px-2 rounded-full">+3 more</span>
+</div>
+</div>
+<div class="mt-6 flex justify-between items-center">
+<a class="text-accent-red font-semibold text-sm flex items-center gap-1 hover:underline" href="#">
+                  View Details <span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+<button class="text-gray-400 hover:text-accent-red transition-colors">
+<span class="material-symbols-outlined">bookmark_add</span>
+</button>
+</div>
+</div>
+</div>
+<div class="card-3d">
+<div class="relative w-full h-full p-6 rounded-lg shadow-2xl card-bg card-content">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-xs uppercase tracking-wider text-accent-red font-semibold">Government</p>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mt-1">NIT, Tiruchirappalli</h3>
+</div>
+<div class="flex flex-col items-center ml-4">
+<p class="text-xs text-gray-500 dark:text-gray-400">NIRF Rank</p>
+<p class="text-3xl font-display text-primary">9</p>
+</div>
+</div>
+<div class="mt-6 border-t border-gray-300 dark:border-gray-700 pt-4">
+<p class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Available Courses:</p>
+<div class="flex flex-wrap gap-2">
+<span class="text-xs bg-primary/20 text-yellow-800 dark:bg-primary/20 dark:text-primary py-1 px-2 rounded-full">CSE</span>
+<span class="text-xs bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 py-1 px-2 rounded-full">Metallurgy</span>
+<span class="text-xs bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 py-1 px-2 rounded-full">Chemical</span>
+<span class="text-xs bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 py-1 px-2 rounded-full">+6 more</span>
+</div>
+</div>
+<div class="mt-6 flex justify-between items-center">
+<a class="text-accent-red font-semibold text-sm flex items-center gap-1 hover:underline" href="#">
+                  View Details <span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+<button class="text-gray-400 hover:text-accent-red transition-colors">
+<span class="material-symbols-outlined">bookmark_add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

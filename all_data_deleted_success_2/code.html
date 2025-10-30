@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Deletion Successful</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#f20d0d",
+            "background-light": "#f8f5f5",
+            "background-dark": "#221010",
+          },
+          fontFamily: {
+            "display": ["Space Grotesk", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          keyframes: {
+            implodeFadeOut: {
+              '0%': { transform: 'scale(1) rotateY(15deg) rotateX(-10deg) translateZ(10px)', opacity: '1' },
+              '70%': { transform: 'scale(0.1) rotateY(0deg) rotateX(0deg) translateZ(0px)', opacity: '0.8' },
+              '100%': { transform: 'scale(0) rotateY(0deg) rotateX(0deg) translateZ(0px)', opacity: '0' },
+            },
+            dissolveOut: {
+              '0%': { opacity: '1', transform: 'translateY(0)' },
+              '100%': { opacity: '0', transform: 'translateY(10px)' },
+            },
+            fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+            }
+          },
+          animation: {
+            implode: 'implodeFadeOut 1.5s ease-in-out forwards',
+            dissolve: 'dissolveOut 1s ease-in-out 1.2s forwards',
+            'fade-in': 'fadeIn 1s ease-out forwards',
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+  </style>
+</head>
+<body class="font-display">
+<div class="relative flex min-h-screen w-full flex-col items-center justify-center bg-background-light dark:bg-background-dark overflow-hidden p-4">
+<div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?q=80&amp;w=2071&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center opacity-10 blur-sm"></div>
+<div class="absolute inset-0 bg-background-dark/80"></div>
+<div class="relative flex w-full max-w-md flex-col items-center justify-center rounded-xl border border-white/10 bg-black/30 p-8 text-center shadow-2xl shadow-primary/20 backdrop-blur-lg md:p-12 animate-fade-in">
+<div class="mb-6 flex h-24 w-24 items-center justify-center rounded-full bg-yellow-500/10 text-yellow-400 [perspective:800px]">
+<span class="material-symbols-outlined text-6xl animate-implode" style="text-shadow: 0 0 15px rgba(250, 204, 21, 0.5);">
+          delete_forever
+        </span>
+</div>
+<div class="animate-dissolve">
+<h1 class="text-2xl font-bold tracking-tight text-white md:text-3xl">All Data Deleted</h1>
+<p class="mt-2 max-w-sm text-sm text-white/70 md:text-base">Your account and all associated data have been permanently deleted. Goodbye.</p>
+</div>
+<div class="mt-4 h-px w-24 bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+<button class="mt-8 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 px-6 bg-primary text-white text-sm font-bold tracking-wide transition-all hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/30 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background-dark">
+<span class="truncate">Return to Homepage</span>
+</button>
+</div>
+</div>
+
+</body></html>

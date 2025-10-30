@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>India's Best - Compare Colleges</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f9d006",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#121212",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 sm:px-10 md:px-20 lg:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col w-full max-w-7xl flex-1">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-white/10 px-4 sm:px-10 py-3">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6 text-primary">
+<svg fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2L1 21h22L12 2zm0 3.84L19.08 20H4.92L12 5.84z"></path>
+<path d="M12 11a1 1 0 100-2 1 1 0 000 2zm0 1a1 1 0 100 2h.01a1 1 0 000-2H12zm-1 3a1 1 0 102 0v3a1 1 0 10-2 0v-3z"></path>
+</svg>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">India's Best</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-center gap-8">
+<div class="flex items-center gap-9">
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-primary text-sm font-bold leading-normal" href="#">Colleges</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Exams</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Reviews</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] hover:brightness-110 transition-all">
+<span class="truncate">Login</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDTjwULXWFuvd-uY9hqqaGVjYWeP1mindpv9ZAJu9b--YpqNOCrqSGUfn_3039UkqysiqC1eM2HoMclWho1UmzWxx2cbIJWA8XQaYj2MsUyW_Ur66MAYWA9z7Ta2wtWn9tyloTt8ychOW6cAp5-bkjVIDv79xZQ-xpHkob9HZmCicr-0b8kw0ESDKI70rSJageuePpK6BLbChK7Bo2Eth4UV6AH-dmlkr8RkSQTo-4fB1Nkk-fjEsMCA2V6IRKQCL5_Jqmh5xCuVkcB");'></div>
+</div>
+</header>
+<main class="flex-1 py-10 px-4">
+<div class="flex flex-wrap justify-between items-center gap-6 mb-8">
+<div class="flex min-w-72 flex-col gap-3">
+<p class="text-white text-4xl font-black leading-tight tracking-[-0.033em]">Compare Colleges</p>
+<p class="text-white/60 text-base font-normal leading-normal">Select and compare 2-4 colleges side-by-side on key metrics.</p>
+</div>
+<div class="flex w-full sm:w-auto">
+<div class="flex h-10 flex-1 items-center justify-center rounded-lg bg-white/5 p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-md px-3 has-[:checked]:bg-white/10 has-[:checked]:shadow-[0_0_4px_rgba(255,255,255,0.1)] has-[:checked]:text-white text-white/60 text-sm font-medium leading-normal transition-all">
+<span class="truncate">Show All</span>
+<input checked="" class="invisible w-0" name="filter-toggle" type="radio" value="Show All"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-md px-3 has-[:checked]:bg-white/10 has-[:checked]:shadow-[0_0_4px_rgba(255,255,255,0.1)] has-[:checked]:text-white text-white/60 text-sm font-medium leading-normal transition-all">
+<span class="truncate">Show Differences</span>
+<input class="invisible w-0" name="filter-toggle" type="radio" value="Show Differences"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-md px-3 has-[:checked]:bg-white/10 has-[:checked]:shadow-[0_0_4px_rgba(255,255,255,0.1)] has-[:checked]:text-white text-white/60 text-sm font-medium leading-normal transition-all">
+<span class="truncate">Reset</span>
+<input class="invisible w-0" name="filter-toggle" type="radio" value="Reset Comparison"/>
+</label>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" style="perspective: 1000px;">
+<!-- College Card 1 -->
+<div class="flex flex-col bg-white/[.03] border border-white/10 rounded-xl p-5 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20" style="transform-style: preserve-3d;">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="IIT Bombay Logo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDq-3Xohl09byv4_HhpCrfgc1CEHpujL6JejQGMuPvC6AFNr-RakUvKC2PGWrkb0M2lGr3pc-I2VgVyTqEM0MmA5sBx3JIg8LL96PK9SNMYjgHWcFU5s35boC6aPWEZN0zzMDGH_tnYlb9r_QoH6giZe042HjBsyk56dCnWDPpgOzU-zwf2wRqBlmC96SfTDzI2m_cWBIJRds9XGm19uPbRNclE-o9Yl1VKd0j0AdYYWSuIoCMR88pOIrl_VwRR9Z6h6nHNrJJ5E47j");'></div>
+<div>
+<p class="font-bold text-white">IIT Bombay</p>
+<p class="text-xs text-white/60">Mumbai, Maharashtra</p>
+</div>
+</div>
+<button class="text-red-500 hover:text-red-400 transition-colors p-1 rounded-full bg-red-500/10 hover:bg-red-500/20">
+<span class="material-symbols-outlined text-base">close</span>
+</button>
+</div>
+<div class="space-y-4 flex-grow">
+<div class="py-3 border-t border-white/10"><p class="text-xs text-white/60 mb-1">NIRF Ranking</p><p class="font-bold text-lg">3</p></div>
+<div class="py-3 border-t border-white/10"><p class="text-xs text-white/60 mb-1">Avg. Annual Fees</p><p class="font-bold text-lg">₹2.2 Lakhs</p></div>
+<div class="py-3 border-t border-white/10"><p class="text-xs text-white/60 mb-1">Popular Courses</p><p class="text-sm">CSE, EE, ME</p></div>
+<div class="py-3 border-t border-white/10"><p class="text-xs text-white/60 mb-1">Review Score</p><p class="font-bold text-lg text-primary">4.8 / 5</p></div>
+<div class="py-3 border-t border-white/10"><p class="text-xs text-white/60 mb-1">Avg. Salary</p><p class="font-bold text-lg">₹25 LPA</p></div>
+</div>
+<div class="flex gap-3 mt-6">
+<button class="flex flex-1 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] transition-transform hover:scale-105">
+<span class="truncate">Apply Now</span>
+</button>
+<button class="flex flex-1 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-white/10 text-white text-sm font-bold leading-normal tracking-[0.015em] transition-transform hover:scale-105">
+<span class="truncate">Details</span>
+</button>
+</div>
+</div>
+<!-- College Card 2 -->
+<div class="flex flex-col bg-white/[.03] border border-white/10 rounded-xl p-5 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20" style="transform-style: preserve-3d;">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="IIT Delhi Logo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDkJq8Rf6NswFB2PZvZSfT0CFRdOulcjwRZ_U9jV3ioY1aGQjpiuNMDmEcAcI-bSzCfgN3KRqi-NqGCX0Ayb3ohX2B51j6SPOP8uupO2zpPs3De2DKtKc9EL1Z17kPVFcxkyCHL7g3LfR38_rWaCn_VzvSIYofxBy_cMoiLnD_iOM6ErqyFVl0TAfTfCpEagDJ11i47olXgzE2FndboNCL04uPrRyMjYk3JVa2EUUENvSeIaiheHpZ-hO7osPX88T40NXqbT2qHK2S9");'></div>
+<div>
+<p class="font-bold text-white">IIT Delhi</p>
+<p class="text-xs text-white/60">New Delhi, Delhi</p>
+</div>
+</div>
+<button class="text-red-500 hover:text-red-400 transition-colors p-1 rounded-full bg-red-500/10 hover:bg-red-500/20">
+<span class="material-symbols-outlined text-base">close</span>
+</button>
+</div>
+<div class="space-y-4 flex-grow">
+<div class="py-3 border-t border-white/10"><p class="text-xs text-white/60 mb-1">NIRF Ranking</p><p class="font-bold text-lg">2</p></div>
+<div class="py-3 border-t border-white/10"><p class="text-xs text-white/60 mb-1">Avg. Annual Fees</p><p class="font-bold text-lg">₹2.3 Lakhs</p></div>
+<div class="py-3 border-t border-white/10"><p class="text-xs text-white/60 mb-1">Popular Courses</p><p class="text-sm">CSE, Civil, ECE</p></div>
+<div class="py-3 border-t border-white/10"><p class="text-xs text-white/60 mb-1">Review Score</p><p class="font-bold text-lg text-primary">4.7 / 5</p></div>
+<div class="py-3 border-t border-white/10"><p class="text-xs text-white/60 mb-1">Avg. Salary</p><p class="font-bold text-lg">₹22 LPA</p></div>
+</div>
+<div class="flex gap-3 mt-6">
+<button class="flex flex-1 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] transition-transform hover:scale-105">
+<span class="truncate">Apply Now</span>
+</button>
+<button class="flex flex-1 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-white/10 text-white text-sm font-bold leading-normal tracking-[0.015em] transition-transform hover:scale-105">
+<span class="truncate">Details</span>
+</button>
+</div>
+</div>
+<!-- Add College Slot -->
+<div class="flex flex-col items-center justify-center border-2 border-dashed border-white/20 rounded-xl p-5 min-h-[400px] text-white/60 hover:border-primary hover:text-primary transition-all duration-300 cursor-pointer group">
+<span class="material-symbols-outlined text-5xl mb-4 transition-transform group-hover:scale-110">add_circle</span>
+<p class="font-bold text-lg">Add College</p>
+<p class="text-sm text-center">Add another college to compare</p>
+</div>
+</div>
+</main>
+</div>
+</div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Activity Log - India's Best</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2b90d",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#121212",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #121212;
+            background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%231a1a1a" fill-opacity="0.4"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-[#EAEAEA]">
+<div class="flex min-h-screen w-full">
+<!-- SideNavBar -->
+<aside class="w-64 flex-shrink-0 bg-[#181611]/50 border-r border-white/10 p-4 flex flex-col justify-between">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3 p-2">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCZHSR-WwjOPC2R8IOUrMK4mnqcfM7GMQVgHik03O-jIqkQSR4pJUr-IxYD1fdhgEZ2ygUKnOjDKTf8a4LtyWqQqIqO6hzRBlGuJcc9HVaJz06jLZAo7c4aN6a0y2mwmLVtOlCOkTbVUKoy85tzvnKsJieBTeLNVQIcfJ5xFWjDqlRYpGXCY4WOgRJeMq7Lw7gLo8DMbj8Gi8UfN3oEsjl5o_wSsMN0Y2I-yOqTNaT1OjZqRwsAiOouOJLoyc4K-bwwHTeDMa6Uywyt");'></div>
+<div class="flex flex-col">
+<h1 class="text-white text-base font-medium leading-normal">Rohan Sharma</h1>
+<p class="text-gray-400 text-sm font-normal leading-normal">ro.sharma@email.com</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2 mt-4">
+<a class="flex items-center gap-3 px-3 py-2 text-gray-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">home</span>
+<p class="text-sm font-medium leading-normal">Home</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-gray-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">school</span>
+<p class="text-sm font-medium leading-normal">Colleges</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-gray-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">edit_document</span>
+<p class="text-sm font-medium leading-normal">Exams</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-gray-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">reviews</span>
+<p class="text-sm font-medium leading-normal">Reviews</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/20 text-primary ring-1 ring-primary/50" href="#">
+<span class="material-symbols-outlined text-2xl">history</span>
+<p class="text-sm font-medium leading-normal">Activity Log</p>
+</a>
+</nav>
+</div>
+<div class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 text-gray-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">settings</span>
+<p class="text-sm font-medium leading-normal">Settings</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-gray-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">logout</span>
+<p class="text-sm font-medium leading-normal">Log out</p>
+</a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 p-6 lg:p-10 grid grid-cols-12 gap-8">
+<div class="col-span-12 lg:col-span-8 xl:col-span-9 flex flex-col gap-8">
+<!-- PageHeading -->
+<div class="flex flex-wrap justify-between items-center gap-3">
+<p class="text-white text-4xl font-black leading-tight tracking-[-0.033em]">Activity Log</p>
+</div>
+<!-- Activity Log Timeline -->
+<div class="flex flex-col gap-6">
+<!-- Date Group -->
+<div>
+<h3 class="text-lg font-bold text-gray-300 mb-4">Today</h3>
+<div class="flex flex-col gap-4">
+<!-- Log Entry Card -->
+<div class="flex items-start gap-4 p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 hover:border-white/20 transition-all duration-300 transform hover:-translate-y-1">
+<div class="flex items-center justify-center size-10 rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined">visibility</span>
+</div>
+<div class="flex-1">
+<p class="text-white">Viewed profile of <span class="font-semibold text-primary/90">'IIT Bombay - Computer Science'</span>.</p>
+<p class="text-sm text-gray-400 mt-1">10:45 AM</p>
+</div>
+</div>
+<!-- Log Entry Card -->
+<div class="flex items-start gap-4 p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 hover:border-white/20 transition-all duration-300 transform hover:-translate-y-1">
+<div class="flex items-center justify-center size-10 rounded-full bg-red-500/20 text-red-400">
+<span class="material-symbols-outlined">send</span>
+</div>
+<div class="flex-1">
+<p class="text-white">Submitted application to <span class="font-semibold text-red-400/90">'Delhi University - B.A. Honours'</span>.</p>
+<p class="text-sm text-gray-400 mt-1">09:12 AM</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Date Group -->
+<div>
+<h3 class="text-lg font-bold text-gray-300 mb-4">Yesterday</h3>
+<div class="flex flex-col gap-4">
+<!-- Log Entry Card -->
+<div class="flex items-start gap-4 p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 hover:border-white/20 transition-all duration-300 transform hover:-translate-y-1">
+<div class="flex items-center justify-center size-10 rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined">bookmark_added</span>
+</div>
+<div class="flex-1">
+<p class="text-white">Saved a new filter set named <span class="font-semibold text-primary/90">'Top Engineering in South'</span>.</p>
+<p class="text-sm text-gray-400 mt-1">6:30 PM</p>
+</div>
+</div>
+<!-- Log Entry Card -->
+<div class="flex items-start gap-4 p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 hover:border-white/20 transition-all duration-300 transform hover:-translate-y-1">
+<div class="flex items-center justify-center size-10 rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined">quiz</span>
+</div>
+<div class="flex-1">
+<p class="text-white">Completed the <span class="font-semibold text-primary/90">'Career Aptitude Quiz'</span> with a score of 85%.</p>
+<p class="text-sm text-gray-400 mt-1">4:02 PM</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 hover:border-white/20 transition-all duration-300 transform hover:-translate-y-1">
+<div class="flex items-center justify-center size-10 rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined">visibility</span>
+</div>
+<div class="flex-1">
+<p class="text-white">Viewed profile of <span class="font-semibold text-primary/90">'BITS Pilani - Electrical Engineering'</span>.</p>
+<p class="text-sm text-gray-400 mt-1">11:20 AM</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Date Group -->
+<div>
+<h3 class="text-lg font-bold text-gray-300 mb-4">October 15, 2023</h3>
+<div class="flex flex-col gap-4">
+<!-- Log Entry Card -->
+<div class="flex items-start gap-4 p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 hover:border-white/20 transition-all duration-300 transform hover:-translate-y-1">
+<div class="flex items-center justify-center size-10 rounded-full bg-gray-500/20 text-gray-400">
+<span class="material-symbols-outlined">lock_reset</span>
+</div>
+<div class="flex-1">
+<p class="text-white">Updated your profile password.</p>
+<p class="text-sm text-gray-400 mt-1">2:15 PM</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Search & Filter Sidebar -->
+<div class="col-span-12 lg:col-span-4 xl:col-span-3 bg-[#181611]/50 border border-white/10 rounded-xl p-6 self-start">
+<div class="flex flex-col gap-6">
+<!-- SearchBar -->
+<div>
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-gray-400 flex bg-black/20 items-center justify-center pl-4 rounded-l-lg border border-r-0 border-white/10">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg text-white focus:outline-none focus:ring-1 focus:ring-primary border-white/10 bg-black/20 h-full placeholder:text-gray-400 px-4 pl-2 text-base font-normal leading-normal" placeholder="Search logs..." value=""/>
+</div>
+</label>
+</div>
+<!-- Filter by Activity Type -->
+<div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] text-left pb-2">Filter by Activity Type</h2>
+<div class="flex flex-col gap-1">
+<label class="flex items-center gap-x-3 p-3 rounded-lg hover:bg-white/5 transition-colors cursor-pointer">
+<input checked="" class="h-5 w-5 rounded border-gray-600 border-2 bg-transparent text-primary checked:bg-primary checked:border-primary focus:ring-0 focus:ring-offset-0 focus:border-gray-500" type="checkbox"/>
+<p class="text-white text-base font-normal leading-normal">Colleges Viewed</p>
+</label>
+<label class="flex items-center gap-x-3 p-3 rounded-lg hover:bg-white/5 transition-colors cursor-pointer">
+<input checked="" class="h-5 w-5 rounded border-gray-600 border-2 bg-transparent text-primary checked:bg-primary checked:border-primary focus:ring-0 focus:ring-offset-0 focus:border-gray-500" type="checkbox"/>
+<p class="text-white text-base font-normal leading-normal">Applications Submitted</p>
+</label>
+<label class="flex items-center gap-x-3 p-3 rounded-lg hover:bg-white/5 transition-colors cursor-pointer">
+<input class="h-5 w-5 rounded border-gray-600 border-2 bg-transparent text-primary checked:bg-primary checked:border-primary focus:ring-0 focus:ring-offset-0 focus:border-gray-500" type="checkbox"/>
+<p class="text-white text-base font-normal leading-normal">Filters Saved</p>
+</label>
+<label class="flex items-center gap-x-3 p-3 rounded-lg hover:bg-white/5 transition-colors cursor-pointer">
+<input class="h-5 w-5 rounded border-gray-600 border-2 bg-transparent text-primary checked:bg-primary checked:border-primary focus:ring-0 focus:ring-offset-0 focus:border-gray-500" type="checkbox"/>
+<p class="text-white text-base font-normal leading-normal">Quizzes Taken</p>
+</label>
+</div>
+</div>
+<!-- Filter by Date Range -->
+<div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] text-left pb-2">Filter by Date</h2>
+<div class="relative">
+<input class="form-input w-full rounded-lg text-white bg-black/20 border-white/10 placeholder:text-gray-400 focus:ring-1 focus:ring-primary focus:border-primary pl-10" type="text" value="Last 30 Days"/>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">calendar_today</span>
+</div>
+</div>
+<!-- Apply Filters Button -->
+<button class="w-full bg-primary text-background-dark font-bold py-3 px-4 rounded-lg hover:bg-primary/90 transition-colors duration-300 transform hover:scale-105">
+                        Apply Filters
+                    </button>
+</div>
+</div>
+</main>
+</div>
+</body></html>

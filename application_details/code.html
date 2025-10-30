@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Application Details: IIT Bombay - Computer Science</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#f2b90d",
+              "background-light": "#f8f8f5",
+              "background-dark": "#121212",
+              "destructive": "#E53935",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            boxShadow: {
+              'primary-glow': '0 0 15px 0 rgba(242, 185, 13, 0.4)',
+              'destructive-glow': '0 0 15px 0 rgba(229, 57, 53, 0.4)'
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .glass-card {
+        background-color: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-white">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- TopNavBar -->
+<div class="px-4 sm:px-10 md:px-20 lg:px-40 flex justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-white/10 px-4 sm:px-10 py-3">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">India's Best</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal" href="#">Dashboard</a>
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal" href="#">Colleges</a>
+<a class="text-primary text-sm font-medium leading-normal" href="#">Applications</a>
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal" href="#">Profile</a>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-[#181611] text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity">
+<span class="truncate">New Application</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User avatar image with a colorful abstract pattern" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAWm9PkOoALG1YVOWHG68Rj6VHmpt18xwNBiA79IE3oF-NqjdKSRosMNYhpToTAN9oXiaOrims46dSsVXTKOkjKj3BvKbIrTcPiL5ISuVPBQHBplIQdbcv7lmhdQgP3E3ItKm_qZHdlA4QNEU3OuC6jVi4HzpFKQ66FwG8nG1IF470B913OekwcEi5dBEpZK4cm_sx12H-mraTpfGP-KxNgwsAZ6cvQeRGLZe2QBd_DP-mzW2au8ymAtOLZS2rID6XGwOpieAUngi4N");'></div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="mt-8 px-4 sm:px-10">
+<!-- Breadcrumbs -->
+<div class="flex flex-wrap gap-2 mb-6">
+<a class="text-white/60 hover:text-primary text-sm font-medium leading-normal" href="#">Home</a>
+<span class="text-white/60 text-sm font-medium leading-normal">/</span>
+<a class="text-white/60 hover:text-primary text-sm font-medium leading-normal" href="#">Application Tracking</a>
+<span class="text-white/60 text-sm font-medium leading-normal">/</span>
+<span class="text-white text-sm font-medium leading-normal">IIT Bombay - Computer Science</span>
+</div>
+<!-- PageHeading -->
+<div class="flex flex-wrap items-start justify-between gap-4 mb-10">
+<div class="flex min-w-72 flex-col gap-2">
+<p class="text-primary text-4xl font-black leading-tight tracking-[-0.033em]">IIT Bombay - B.Tech in Computer Science</p>
+<p class="text-white/70 text-base font-normal leading-normal">Manage your application details and track its progress.</p>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-white/10 text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-white/20 transition-colors">
+<span class="truncate">Edit</span>
+</button>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-destructive/80 text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-destructive shadow-destructive-glow transition-all">
+<span class="truncate">Delete</span>
+</button>
+</div>
+</div>
+<!-- Main Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Left Column -->
+<div class="lg:col-span-2 flex flex-col gap-8">
+<!-- Timeline Section -->
+<div class="glass-card rounded-xl p-6">
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] mb-6">Application Journey</h2>
+<div class="grid grid-cols-[40px_1fr] gap-x-2">
+<!-- Step 1: Submitted -->
+<div class="flex flex-col items-center gap-1 pt-3">
+<div class="text-primary size-8 flex items-center justify-center rounded-full bg-primary/20">
+<span class="material-symbols-outlined text-xl">check_circle</span>
+</div>
+<div class="w-[2px] bg-primary/50 h-2 grow"></div>
+</div>
+<div class="flex flex-1 flex-col pb-6 pt-2 border-b border-white/10">
+<p class="text-white text-base font-medium leading-normal">Submitted</p>
+<p class="text-white/70 text-sm font-normal leading-normal">June 1, 2024</p>
+</div>
+<!-- Step 2: Under Review -->
+<div class="flex flex-col items-center gap-1">
+<div class="w-[2px] bg-primary/50 h-2"></div>
+<div class="text-primary size-8 flex items-center justify-center rounded-full bg-primary/20">
+<span class="material-symbols-outlined text-xl animate-spin">progress_activity</span>
+</div>
+<div class="w-[2px] bg-white/10 h-2 grow"></div>
+</div>
+<div class="flex flex-1 flex-col py-6 border-b border-white/10">
+<p class="text-white text-base font-medium leading-normal">Under Review</p>
+<p class="text-white/70 text-sm font-normal leading-normal">Updated: June 15, 2024</p>
+</div>
+<!-- Step 3: Interview -->
+<div class="flex flex-col items-center gap-1">
+<div class="w-[2px] bg-white/10 h-2"></div>
+<div class="text-white/40 size-8 flex items-center justify-center rounded-full bg-white/5">
+<span class="material-symbols-outlined text-xl">calendar_month</span>
+</div>
+<div class="w-[2px] bg-white/10 h-2 grow"></div>
+</div>
+<div class="flex flex-1 flex-col py-6 border-b border-white/10">
+<p class="text-white/60 text-base font-medium leading-normal">Interview</p>
+<p class="text-white/50 text-sm font-normal leading-normal">July 10, 2024</p>
+</div>
+<!-- Step 4: Decision -->
+<div class="flex flex-col items-center gap-1 pb-3">
+<div class="w-[2px] bg-white/10 h-2"></div>
+<div class="text-white/40 size-8 flex items-center justify-center rounded-full bg-white/5">
+<span class="material-symbols-outlined text-xl">hourglass_empty</span>
+</div>
+</div>
+<div class="flex flex-1 flex-col pt-6">
+<p class="text-white/60 text-base font-medium leading-normal">Decision</p>
+<p class="text-white/50 text-sm font-normal leading-normal">Awaiting</p>
+</div>
+</div>
+</div>
+<!-- Document Management -->
+<div class="glass-card rounded-xl p-6">
+<div class="flex justify-between items-center mb-6">
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em]">Document Management</h2>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-10 px-4 bg-primary text-black text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity shadow-primary-glow">
+<span class="material-symbols-outlined text-base">upload_file</span>
+<span class="truncate">Upload</span>
+</button>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Document Item -->
+<div class="flex items-center justify-between p-3 bg-white/5 rounded-lg">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<p class="text-white text-sm">Transcripts.pdf</p>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-white/60 text-xs">Uploaded 2 days ago</span>
+<button class="text-white/60 hover:text-white"><span class="material-symbols-outlined text-lg">visibility</span></button>
+<button class="text-destructive/80 hover:text-destructive"><span class="material-symbols-outlined text-lg">delete</span></button>
+</div>
+</div>
+<!-- Document Item -->
+<div class="flex items-center justify-between p-3 bg-white/5 rounded-lg">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<p class="text-white text-sm">Letter_of_Rec_1.pdf</p>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-white/60 text-xs">Uploaded 2 days ago</span>
+<button class="text-white/60 hover:text-white"><span class="material-symbols-outlined text-lg">visibility</span></button>
+<button class="text-destructive/80 hover:text-destructive"><span class="material-symbols-outlined text-lg">delete</span></button>
+</div>
+</div>
+<!-- Document Item - Missing -->
+<div class="flex items-center justify-between p-3 bg-destructive/10 border border-destructive/50 rounded-lg">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-destructive text-lg">error</span>
+<p class="text-white text-sm">Statement of Purpose</p>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-destructive text-xs">Missing</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column -->
+<div class="lg:col-span-1 flex flex-col gap-8">
+<!-- Key Information -->
+<div class="glass-card rounded-xl p-6">
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] mb-6">Key Information</h2>
+<div class="space-y-4">
+<div class="flex justify-between items-center">
+<p class="text-white/70 text-sm">Application ID</p>
+<p class="text-white font-mono text-sm">#8B6C-F4E7</p>
+</div>
+<div class="flex justify-between items-center">
+<p class="text-white/70 text-sm">Submission Date</p>
+<p class="text-white text-sm">June 1, 2024</p>
+</div>
+<div class="flex justify-between items-center">
+<p class="text-white/70 text-sm">Est. Decision Date</p>
+<p class="text-white text-sm">August 15, 2024</p>
+</div>
+</div>
+</div>
+<!-- Status Update -->
+<div class="glass-card rounded-xl p-6">
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] mb-6">Update Status</h2>
+<p class="text-white/60 text-sm mb-4">Manually update the status if you have received a decision.</p>
+<select class="w-full bg-white/10 border-white/20 rounded-lg h-10 px-3 text-white focus:ring-primary focus:border-primary">
+<option>Select Status</option>
+<option>Accepted</option>
+<option>Waitlisted</option>
+<option>Rejected</option>
+</select>
+<button class="mt-4 w-full flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 text-primary text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/30 transition-colors">
+<span class="truncate">Save Status</span>
+</button>
+</div>
+<!-- Upcoming Deadlines -->
+<div class="glass-card rounded-xl p-6">
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] mb-6">Upcoming Events</h2>
+<div class="space-y-4">
+<div class="flex items-start gap-4">
+<div class="bg-destructive/20 text-destructive p-2 rounded-lg mt-1">
+<span class="material-symbols-outlined">event</span>
+</div>
+<div>
+<p class="font-bold text-white">Document Deadline</p>
+<p class="text-white/70 text-sm">July 1, 2024</p>
+<p class="text-destructive font-mono text-xs mt-1">Due in 7 days</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-primary/20 text-primary p-2 rounded-lg mt-1">
+<span class="material-symbols-outlined">group</span>
+</div>
+<div>
+<p class="font-bold text-white">Interview Schedule</p>
+<p class="text-white/70 text-sm">July 10, 2024 at 2:00 PM</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</div>
+</div>
+</body></html>

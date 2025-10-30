@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Success Confirmation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#f2b90d",
+              "background-light": "#f8f8f5",
+              "background-dark": "#221e10",
+              "custom-charcoal": "#1A1A1A",
+              "custom-red": "#FF4136",
+              "custom-off-white": "#E0E0E0",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            boxShadow: {
+                'primary-glow': '0 0 15px 5px rgba(242, 185, 13, 0.3)',
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-display">
+<div class="relative flex h-screen w-full flex-col items-center justify-center bg-background-light dark:bg-background-dark p-4 group/design-root" style="background: radial-gradient(circle at center, #221e10, #1A1A1A);">
+<div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+<div class="relative flex w-full max-w-md flex-col items-center gap-4 rounded-xl border border-primary/20 bg-custom-charcoal p-8 text-center shadow-2xl shadow-primary/10">
+<button class="absolute top-4 right-4 text-custom-off-white/50 transition-colors hover:text-custom-off-white">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+<div class="relative flex h-24 w-24 items-center justify-center rounded-full bg-primary/10">
+<div class="absolute inset-0 animate-ping rounded-full border-2 border-primary/30"></div>
+<div class="absolute inset-2 animate-pulse rounded-full bg-primary/20"></div>
+<span class="material-symbols-outlined text-5xl text-primary" data-icon="thumb_up">thumb_up</span>
+</div>
+<h1 class="text-custom-off-white tracking-light text-[32px] font-bold leading-tight pt-4">Success!</h1>
+<p class="text-custom-off-white/80 text-base font-normal leading-normal max-w-sm">
+              Your feedback has been submitted. We appreciate your input and will review it shortly. Your contribution helps us improve the platform.
+            </p>
+<div class="w-full pt-4">
+<button class="flex w-full min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-background-dark text-base font-bold leading-normal tracking-[0.015em] transition-all hover:shadow-primary-glow">
+<span class="truncate">Continue</span>
+</button>
+</div>
+</div>
+</div>
+</body></html>

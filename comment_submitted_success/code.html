@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Success Notification</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#f9d006",
+              "background-light": "#f8f8f5",
+              "background-dark": "#231f0f",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#EFEFEF]">
+<div class="relative flex h-screen min-h-[600px] w-full items-center justify-center overflow-hidden p-4">
+<!-- Background elements for visual depth -->
+<div class="absolute inset-0 z-0 bg-background-dark/50 backdrop-blur-sm"></div>
+<div class="absolute -top-1/4 -left-1/4 h-1/2 w-1/2 rounded-full bg-primary/20 blur-3xl"></div>
+<div class="absolute -bottom-1/4 -right-1/4 h-1/2 w-1/2 rounded-full bg-[#C3073F]/20 blur-3xl"></div>
+<!-- Modal Container -->
+<div class="relative z-10 flex w-full max-w-md flex-col overflow-hidden rounded-xl border border-white/10 bg-black/30 backdrop-blur-xl shadow-2xl shadow-primary/10">
+<div class="flex flex-col items-center justify-center gap-4 p-8 text-center md:p-12">
+<!-- Success Icon -->
+<div class="relative flex h-20 w-20 items-center justify-center rounded-full bg-primary/20 shadow-lg shadow-primary/20 ring-1 ring-primary/30">
+<span class="material-symbols-outlined text-5xl text-primary" data-icon="check_circle">
+                        check_circle
+                    </span>
+<!-- Glow effect -->
+<div class="absolute inset-0 animate-pulse rounded-full border-2 border-primary/50"></div>
+</div>
+<!-- HeadlineText -->
+<h1 class="text-white font-display text-3xl font-bold leading-tight tracking-tight">Success!</h1>
+<!-- BodyText -->
+<p class="text-white/80 font-display text-base font-normal leading-normal">Your insights have been shared with the community.</p>
+<!-- SingleButton -->
+<div class="mt-4 w-full pt-2">
+<button class="flex h-12 w-full min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-5 text-background-dark text-base font-bold leading-normal tracking-[0.015em] transition-transform duration-200 hover:scale-105 active:scale-100">
+<span class="truncate">Got It</span>
+</button>
+</div>
+</div>
+<!-- ProgressBar -->
+<div class="absolute bottom-0 left-0 w-full p-0">
+<div class="w-full rounded-b-xl bg-primary/20">
+<div class="h-1.5 rounded-b-xl bg-primary" style="width: 100%;"></div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

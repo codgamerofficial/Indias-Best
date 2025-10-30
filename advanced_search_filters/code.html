@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>India's Best - Advanced College Search</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f9d006",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#1A1A1A",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #1A1A1A;
+            background-image:
+                radial-gradient(circle at 10% 10%, rgba(249, 208, 6, 0.1) 0%, transparent 30%),
+                radial-gradient(circle at 90% 80%, rgba(229, 57, 53, 0.1) 0%, transparent 30%);
+        }
+    </style>
+</head>
+<body class="font-display bg-background-dark text-white">
+<div class="relative flex min-h-screen w-full flex-col items-center p-4 sm:p-6 md:p-8">
+<!-- TopNavBar Component -->
+<header class="w-full max-w-7xl flex items-center justify-between whitespace-nowrap border-b border-solid border-white/10 px-6 py-3">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6 text-primary">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">India's Best</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end items-center gap-8">
+<div class="flex items-center gap-9">
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Home</a>
+<a class="text-white text-sm font-bold leading-normal" href="#">Colleges</a>
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Exams</a>
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Reviews</a>
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">News</a>
+</div>
+<div class="flex gap-2 items-center">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-black text-sm font-bold leading-normal tracking-[0.015em] hover:brightness-110 transition-all">
+<span class="truncate">Login</span>
+</button>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-white/10 hover:bg-white/20 text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5 transition-colors">
+<span class="material-symbols-outlined text-white text-xl">notifications</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-white/20" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDAD9D2kyXiUUYj6t59dUVAJk7oLjI2b92UOJ9WQjfCvtkg7G5kRiWCgiK0Ho011b1vFrb-3g6dIdpS86jzIqcO8oImKjJLbSTpQhLlQf0Mgd_jusBW3b7Ykt39n5zUPBq_SK3p8WPXafvWqEewLCMST9tj-5fCPbKUuIXMpvkFsJ336SbNaz2j7pbe1QF85ECeWBszeoK5Us8n3VqEXTUNg4CLItG4RIHAL-tXeJ_wK4stNzqXgF1L6Ab4uf8kxNT7j_-7F0C1Xo-M");'></div>
+</div>
+</div>
+<button class="md:hidden flex items-center justify-center rounded-lg p-2 text-white hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+</header>
+<main class="w-full max-w-7xl flex-1 flex flex-col items-center py-10 md:py-16 px-4">
+<!-- PageHeading Component -->
+<div class="flex w-full flex-wrap justify-center text-center gap-3 p-4 mb-8">
+<div class="flex flex-col gap-3">
+<p class="text-white text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em]">Find Your Perfect College</p>
+<p class="text-white/60 text-base font-normal leading-normal max-w-2xl mx-auto">
+                        Use the advanced filters below to narrow down your options and discover the best institution for you.
+                    </p>
+</div>
+</div>
+<!-- Main Filter Card -->
+<div class="w-full max-w-4xl p-6 md:p-10 bg-black/30 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl shadow-primary/10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10">
+<!-- Basic Criteria Section -->
+<div class="md:col-span-2">
+<h2 class="text-primary text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 mb-4 border-b border-white/10" style="text-shadow: 0 0 8px rgba(249, 208, 6, 0.5);">Basic Criteria</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-6">
+<!-- Location Input -->
+<label class="flex flex-col w-full">
+<p class="text-white text-base font-medium leading-normal pb-2">Location</p>
+<div class="relative flex w-full items-stretch">
+<input class="form-input flex w-full flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-white/20 bg-white/5 h-12 placeholder:text-white/40 p-3 text-base font-normal leading-normal" placeholder="Enter City or State" value=""/>
+<span class="material-symbols-outlined text-white/50 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">search</span>
+</div>
+</label>
+<!-- College Type Dropdown -->
+<label class="flex flex-col w-full">
+<p class="text-white text-base font-medium leading-normal pb-2">College Type</p>
+<select class="form-select flex w-full flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-white/20 bg-white/5 h-12 p-3 text-base font-normal leading-normal">
+<option class="bg-background-dark" value="all">All Types</option>
+<option class="bg-background-dark" value="government">Government</option>
+<option class="bg-background-dark" value="private">Private</option>
+<option class="bg-background-dark" value="online">Online</option>
+</select>
+</label>
+</div>
+</div>
+<!-- Academics Section -->
+<div class="md:col-span-2">
+<h2 class="text-primary text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 mb-4 border-b border-white/10" style="text-shadow: 0 0 8px rgba(249, 208, 6, 0.5);">Academics</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-6">
+<!-- Courses/Streams Dropdown -->
+<label class="flex flex-col w-full">
+<p class="text-white text-base font-medium leading-normal pb-2">Courses / Streams</p>
+<select class="form-select flex w-full flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-white/20 bg-white/5 h-12 p-3 text-base font-normal leading-normal">
+<option class="bg-background-dark" value="">Select Course</option>
+<option class="bg-background-dark" value="engineering">Engineering (B.Tech)</option>
+<option class="bg-background-dark" value="medical">Medical (MBBS)</option>
+<option class="bg-background-dark" value="commerce">Commerce (B.Com)</option>
+<option class="bg-background-dark" value="arts">Arts (B.A.)</option>
+</select>
+</label>
+<!-- National Ranking Slider -->
+<div class="flex flex-col w-full">
+<div class="flex justify-between items-center pb-2">
+<p class="text-white text-base font-medium leading-normal">National Ranking</p>
+<p class="text-primary text-sm font-bold">1 - 200</p>
+</div>
+<input class="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer accent-primary" max="200" min="1" type="range" value="100"/>
+</div>
+</div>
+</div>
+<!-- Financials Section -->
+<div class="md:col-span-2">
+<h2 class="text-primary text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 mb-4 border-b border-white/10" style="text-shadow: 0 0 8px rgba(249, 208, 6, 0.5);">Financials</h2>
+<div class="flex flex-col w-full">
+<div class="flex justify-between items-center pb-2">
+<p class="text-white text-base font-medium leading-normal">Annual Fee Range (Tuition)</p>
+<p class="text-primary text-sm font-bold">₹50k - ₹10L+</p>
+</div>
+<input class="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer accent-primary" max="1000000" min="50000" step="10000" type="range" value="250000"/>
+</div>
+</div>
+<!-- Facilities Section -->
+<div class="md:col-span-2">
+<h2 class="text-primary text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 mb-4 border-b border-white/10" style="text-shadow: 0 0 8px rgba(249, 208, 6, 0.5);">Facilities &amp; Amenities</h2>
+<div class="flex flex-wrap gap-3">
+<label class="cursor-pointer">
+<input class="peer sr-only" name="amenities" type="checkbox"/>
+<div class="px-4 py-2 rounded-full bg-white/10 text-white/70 peer-checked:bg-primary peer-checked:text-black peer-checked:font-bold transition-all hover:bg-white/20">Hostel</div>
+</label>
+<label class="cursor-pointer">
+<input checked="" class="peer sr-only" name="amenities" type="checkbox"/>
+<div class="px-4 py-2 rounded-full bg-white/10 text-white/70 peer-checked:bg-primary peer-checked:text-black peer-checked:font-bold transition-all hover:bg-white/20">Library</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="amenities" type="checkbox"/>
+<div class="px-4 py-2 rounded-full bg-white/10 text-white/70 peer-checked:bg-primary peer-checked:text-black peer-checked:font-bold transition-all hover:bg-white/20">Sports Facilities</div>
+</label>
+<label class="cursor-pointer">
+<input checked="" class="peer sr-only" name="amenities" type="checkbox"/>
+<div class="px-4 py-2 rounded-full bg-white/10 text-white/70 peer-checked:bg-primary peer-checked:text-black peer-checked:font-bold transition-all hover:bg-white/20">Wi-Fi Campus</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="amenities" type="checkbox"/>
+<div class="px-4 py-2 rounded-full bg-white/10 text-white/70 peer-checked:bg-primary peer-checked:text-black peer-checked:font-bold transition-all hover:bg-white/20">Auditorium</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="amenities" type="checkbox"/>
+<div class="px-4 py-2 rounded-full bg-white/10 text-white/70 peer-checked:bg-primary peer-checked:text-black peer-checked:font-bold transition-all hover:bg-white/20">Cafeteria</div>
+</label>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="md:col-span-2 flex flex-col sm:flex-row items-center justify-center gap-4 pt-6 border-t border-white/10">
+<button class="w-full sm:w-auto flex min-w-[180px] max-w-sm cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-black text-base font-bold leading-normal tracking-wide hover:brightness-110 active:scale-95 transition-all shadow-lg shadow-primary/20">
+<span class="truncate">Apply Filters</span>
+</button>
+<button class="w-full sm:w-auto flex items-center justify-center h-12 px-6 text-red-500 font-medium hover:bg-red-500/10 rounded-lg transition-colors">
+<span>Clear All</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us - India's Best</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#f9d006",
+            "background-light": "#f8f8f5",
+            "background-dark": "#231f0f",
+          },
+          fontFamily: {
+            display: ["Space Grotesk", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px",
+          },
+          keyframes: {
+            marquee: {
+              '0%': { transform: 'translateX(0%)' },
+              '100%': { transform: 'translateX(-100%)' }
+            }
+          },
+          animation: {
+            marquee: 'marquee 40s linear infinite',
+          },
+        },
+      },
+    };
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+    }
+    .perspective-card {
+      transform-style: preserve-3d;
+      transition: transform 0.5s;
+    }
+    .perspective-card:hover {
+      transform: perspective(1000px) rotateY(5deg) rotateX(10deg) scale3d(1.05, 1.05, 1.05);
+    }
+    .glow-effect {
+      position: relative;
+    }
+    .glow-effect::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 0.75rem;background: radial-gradient(circle at 50% 100%, rgba(249, 208, 6, 0.15), transparent 70%);
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      z-index: -1;
+    }
+    .group:hover .glow-effect::before {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-white/10 bg-background-dark/80 px-4 py-3 backdrop-blur-sm sm:px-6 md:px-10 lg:px-20">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">India's Best</h2>
+</div>
+<div class="hidden flex-1 items-center justify-end gap-8 md:flex">
+<nav class="flex items-center gap-9">
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Home</a>
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Colleges</a>
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Exams</a>
+<a class="text-primary text-sm font-medium leading-normal" href="#">About Us</a>
+</nav>
+<div class="flex gap-2">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] transition-transform hover:scale-105">
+<span class="truncate">Sign Up</span>
+</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-white/10 text-white text-sm font-bold leading-normal tracking-[0.015em] transition-colors hover:bg-white/20">
+<span class="truncate">Login</span>
+</button>
+</div>
+</div>
+<button class="md:hidden text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<main class="flex-grow">
+<section class="relative flex min-h-[80vh] w-full items-center justify-center overflow-hidden bg-cover bg-center bg-no-repeat p-4" style='background-image: linear-gradient(rgba(35, 31, 15, 0.6) 0%, rgba(35, 31, 15, 1) 100%), url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3");'>
+<div class="flex max-w-4xl flex-col items-center gap-6 text-center">
+<h1 class="text-4xl font-black leading-tight tracking-[-0.033em] text-white md:text-6xl">Revolutionizing India's Educational Journey</h1>
+<p class="text-base font-normal leading-normal text-white/80 md:text-lg">Empowering students with data-driven clarity to choose the best colleges for their future.</p>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-background-dark text-base font-bold leading-normal tracking-[0.015em] transition-transform hover:scale-105">
+<span class="truncate">Explore Colleges</span>
+</button>
+</div>
+<div class="absolute bottom-0 h-20 w-full bg-gradient-to-t from-background-dark to-transparent"></div>
+</section>
+<div class="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+<section class="mb-16 text-center lg:mb-24">
+<h2 class="text-3xl font-bold leading-tight tracking-[-0.015em] text-white md:text-4xl">Our Vision &amp; Story</h2>
+<p class="mx-auto mt-4 max-w-3xl text-base font-normal leading-normal text-white/70">Discover the origins of 'India's Best' and our long-term vision for the future of Indian education. We are committed to providing transparent, data-driven insights to help every student find their perfect path.</p>
+</section>
+<section class="mb-16 lg:mb-24">
+<div class="grid grid-cols-[auto_1fr] gap-x-4 px-4 md:gap-x-6">
+<div class="flex flex-col items-center gap-1.5 pt-3">
+<div class="flex size-10 items-center justify-center rounded-full bg-white/10 text-primary">
+<span class="material-symbols-outlined">lightbulb</span>
+</div>
+<div class="w-[2px] grow bg-white/10"></div>
+</div>
+<div class="flex flex-1 flex-col pb-10 pt-3">
+<p class="text-lg font-medium leading-normal text-white">The Idea</p>
+<p class="text-base font-normal leading-normal text-white/60">2021</p>
+</div>
+<div class="flex flex-col items-center gap-1.5">
+<div class="w-[2px] h-2 bg-white/10"></div>
+<div class="flex size-10 items-center justify-center rounded-full bg-white/10 text-primary">
+<span class="material-symbols-outlined">rocket_launch</span>
+</div>
+<div class="w-[2px] grow bg-white/10"></div>
+</div>
+<div class="flex flex-1 flex-col pb-10 pt-3">
+<p class="text-lg font-medium leading-normal text-white">Platform Launch</p>
+<p class="text-base font-normal leading-normal text-white/60">2022</p>
+</div>
+<div class="flex flex-col items-center gap-1.5">
+<div class="w-[2px] h-2 bg-white/10"></div>
+<div class="flex size-10 items-center justify-center rounded-full bg-white/10 text-primary">
+<span class="material-symbols-outlined">school</span>
+</div>
+<div class="w-[2px] grow bg-white/10"></div>
+</div>
+<div class="flex flex-1 flex-col pb-10 pt-3">
+<p class="text-lg font-medium leading-normal text-white">10,000 Students Guided</p>
+<p class="text-base font-normal leading-normal text-white/60">2023</p>
+</div>
+<div class="flex flex-col items-center gap-1.5 pb-3">
+<div class="w-[2px] h-2 bg-white/10"></div>
+<div class="flex size-10 items-center justify-center rounded-full bg-white/10 text-primary">
+<span class="material-symbols-outlined">all_inclusive</span>
+</div>
+</div>
+<div class="flex flex-1 flex-col pt-3">
+<p class="text-lg font-medium leading-normal text-white">Future of Education</p>
+<p class="text-base font-normal leading-normal text-white/60">Ongoing</p>
+</div>
+</div>
+</section>
+<section class="mb-16 text-center lg:mb-24">
+<h2 class="text-3xl font-bold leading-tight tracking-[-0.015em] text-white md:text-4xl">Our Impact</h2>
+<p class="mx-auto mt-4 max-w-3xl text-base font-normal leading-normal text-white/70">We measure our success by the success of the students we guide. Here's a look at our journey so far.</p>
+<div class="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-3">
+<div class="flex flex-col items-center justify-center rounded-xl bg-white/5 p-8 transition-transform hover:scale-105 perspective-card">
+<span class="text-5xl font-bold text-primary">10k+</span>
+<p class="mt-2 text-lg text-white/80">Students Guided</p>
+</div>
+<div class="flex flex-col items-center justify-center rounded-xl bg-white/5 p-8 transition-transform hover:scale-105 perspective-card">
+<span class="text-5xl font-bold text-primary">500+</span>
+<p class="mt-2 text-lg text-white/80">Colleges Profiled</p>
+</div>
+<div class="flex flex-col items-center justify-center rounded-xl bg-white/5 p-8 transition-transform hover:scale-105 perspective-card">
+<span class="text-5xl font-bold text-primary">98%</span>
+<p class="mt-2 text-lg text-white/80">Success Stories</p>
+</div>
+</div>
+</section>
+<section class="mb-16 lg:mb-24">
+<div class="text-center">
+<h2 class="text-3xl font-bold leading-tight tracking-[-0.015em] text-white md:text-4xl">Success Stories</h2>
+<p class="mx-auto mt-4 max-w-3xl text-base font-normal leading-normal text-white/70">Hear from the students who found their path with us. Their success is our greatest achievement.</p>
+</div>
+<div class="relative mt-12 flex w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]">
+<div class="flex w-max animate-marquee items-stretch">
+<div class="mx-4 flex w-[350px] flex-shrink-0 flex-col rounded-xl border border-white/10 bg-white/5 p-6 group">
+<div class="glow-effect flex-grow">
+<p class="text-lg font-medium italic text-white/90">"India's Best was a game-changer for my career. The detailed college comparisons and honest reviews helped me choose the perfect engineering college."</p>
+</div>
+<div class="mt-4 flex items-center gap-4 border-t border-white/10 pt-4">
+<img alt="Photo of Sameer Verma" class="h-12 w-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6RUXJmVeICTTmsdGwxSTBzrUu7O-ejPxUkZ1nquWQp_qn-hafPkjxvqcEzcDI5NotW9Mr9dDRI4YouFXJRnxisuMPzflhhF7tZ3RARWXHkdK5RVu2dnvTNHHVpDawltdCi8Xa0gsnonVadWqMMZhm5bLUKDf1-zq7bPYZMDqw_du7HgDwBY9UfuLY2MMUCa_eNijOcmsva_TKWm-mENrVP4enjNjspAWVnMen4iAR_lRwbG-C2cYi62XqlkrAVjMW3igivc5eUMS1"/>
+<div>
+<h4 class="font-bold text-white">Sameer Verma</h4>
+<p class="text-sm text-primary">IIT Bombay</p>
+</div>
+</div>
+</div>
+<div class="mx-4 flex w-[350px] flex-shrink-0 flex-col rounded-xl border border-white/10 bg-white/5 p-6 group">
+<div class="glow-effect flex-grow">
+<p class="text-lg font-medium italic text-white/90">"I was completely lost after my 12th exams. The counseling sessions provided clarity and confidence. I'm now studying my dream course!"</p>
+</div>
+<div class="mt-4 flex items-center gap-4 border-t border-white/10 pt-4">
+<img alt="Photo of Neha Reddy" class="h-12 w-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCaAZRQ3Diuzsaffq8QXaWkYE2ifkN3JDeXLH7kbE2IeqXc2X_kPIyexTed_7GB2S6JsrvaAXgP5Ms5Rpdk8OHWb83xHtKTe4RXzJsdPPtvtQo864ffFb5jpc4qYSXrHXr3K-RG_GWiNXclSUvvj9Az0oeBkRvM-LWWmO_JgV4rhZKqADayHRnoWZjpx_jObBEGF_2O5xfLXFyz8C_w_bZn7PlEl3VGcEPatDpushRIqG_tgAPTslsb1L_5DeX4802xK5awJ4Wkh8r"/>
+<div>
+<h4 class="font-bold text-white">Neha Reddy</h4>
+<p class="text-sm text-primary">Delhi University</p>
+</div>
+</div>
+</div>
+<div class="mx-4 flex w-[350px] flex-shrink-0 flex-col rounded-xl border border-white/10 bg-white/5 p-6 group">
+<div class="glow-effect flex-grow">
+<p class="text-lg font-medium italic text-white/90">"The exam preparation guides are top-notch. They provided the strategy I needed to crack one of the toughest entrance exams."</p>
+</div>
+<div class="mt-4 flex items-center gap-4 border-t border-white/10 pt-4">
+<img alt="Photo of Arjun Patel" class="h-12 w-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiwoEQnpbxtbyhQ2KE_B-LpVLajoXV2tANe6AsrlQi1TvtD0PnlCAyYRx49TXCHMK5CBewdhBNhsDe2hPKESuY74OuDqE21FfgTgWZ3qwCaRQSqZ4s8m7eOQMQHci4QPC6XXbPshFKeJdE1nhvlZ04-4PyiGwqCkza1rVg1kzvzw76d7di2eJKuIqKJaXx4gREroZUIHUeJAEDl5mMtm0nbO8nmqjd0Nt95zejQbVF_T0NSRt306QVFx8GWg68lww7eShFvcALB1om"/>
+<div>
+<h4 class="font-bold text-white">Arjun Patel</h4>
+<p class="text-sm text-primary">AIIMS New Delhi</p>
+</div>
+</div>
+</div>
+<div class="mx-4 flex w-[350px] flex-shrink-0 flex-col rounded-xl border border-white/10 bg-white/5 p-6 group">
+<div class="glow-effect flex-grow">
+<p class="text-lg font-medium italic text-white/90">"Finding the right MBA college felt overwhelming. This platform simplified everything, from applications to interview prep. Highly recommended!"</p>
+</div>
+<div class="mt-4 flex items-center gap-4 border-t border-white/10 pt-4">
+<img alt="Photo of Aisha Khan" class="h-12 w-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARuRTwm5iCfVh0ewZwsNPsjAM8trLnAAbmKwC5tqrc6ht1FKmtwiLp1GplzWKEpioS6W1kCVArwL2a_KnoxY9NVjM9IsHx98S1odSJDy6R23w79QltSIrOK2TLEQM9MQGCj41KNuiq5bwI9ItHMcwRL88nyqkHDlobq5Ffr2HwyE0nfWjpFu89M8HpsEiGaYe2eIp0-qnuTwACGu6Qz7gDCUClvSPBTnLotpLTF9ZvdvZczgA_JrWVnaQ07ULYTw_xgelPWregFwib"/>
+<div>
+<h4 class="font-bold text-white">Aisha Khan</h4>
+<p class="text-sm text-primary">IIM Ahmedabad</p>
+</div>
+</div>
+</div>
+<div class="mx-4 flex w-[350px] flex-shrink-0 flex-col rounded-xl border border-white/10 bg-white/5 p-6 group">
+<div class="glow-effect flex-grow">
+<p class="text-lg font-medium italic text-white/90">"India's Best was a game-changer for my career. The detailed college comparisons and honest reviews helped me choose the perfect engineering college."</p>
+</div>
+<div class="mt-4 flex items-center gap-4 border-t border-white/10 pt-4">
+<img alt="Photo of Sameer Verma" class="h-12 w-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqjrRttH7ToEYGny5pWiTd_b3c_SmbtTc-RcnVrhJJXfE6WG50GIMQIxR6YIA6h6BxxHwVn-7fE3zZSIobfViA8VrGMEtdrCQueodFxq4x8817Bn1m0Ts1k4JHtmQAeHY_vg99Vs1ev__LT4T4ekou5lkjWG2TXVZzbP_qvoBDYuVPtWsUI6NynFHSGJymcbxSRpwuCDukqNFNdQjRrCn_eDSNu9PaZKzEUaxG8UC-nBSRZySP5FBIoD7EjVetAyhjK78D23HhvBaS"/>
+<div>
+<h4 class="font-bold text-white">Sameer Verma</h4>
+<p class="text-sm text-primary">IIT Bombay</p>
+</div>
+</div>
+</div>
+<div class="mx-4 flex w-[350px] flex-shrink-0 flex-col rounded-xl border border-white/10 bg-white/5 p-6 group">
+<div class="glow-effect flex-grow">
+<p class="text-lg font-medium italic text-white/90">"I was completely lost after my 12th exams. The counseling sessions provided clarity and confidence. I'm now studying my dream course!"</p>
+</div>
+<div class="mt-4 flex items-center gap-4 border-t border-white/10 pt-4">
+<img alt="Photo of Neha Reddy" class="h-12 w-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_CKsBiS00_u3tZptxFxLDvLzl-wPG4QiMCfSOa4EuG1-uk-G2PQRLBJchRgLNa42A-gJynGp8if1FpfpEdExYLQCN5Q1n35Qjkll75AxY_-IkYbwOuUpYUSopiNa5lGjgjd8hVqCjgnRtbYAWVEDNHvb5iKpc5D-Jwr_NDJNy0Ln5XAaEApd58AeAUA2QeslS0OmTocyhJDVg-GgHyUy9WcOPpS2HhVALpl-P0Jy6Zm9K7bMzHyQRadplzwXp2LdZh-icwCtosB9a"/>
+<div>
+<h4 class="font-bold text-white">Neha Reddy</h4>
+<p class="text-sm text-primary">Delhi University</p>
+</div>
+</div>
+</div>
+<div class="mx-4 flex w-[350px] flex-shrink-0 flex-col rounded-xl border border-white/10 bg-white/5 p-6 group">
+<div class="glow-effect flex-grow">
+<p class="text-lg font-medium italic text-white/90">"The exam preparation guides are top-notch. They provided the strategy I needed to crack one of the toughest entrance exams."</p>
+</div>
+<div class="mt-4 flex items-center gap-4 border-t border-white/10 pt-4">
+<img alt="Photo of Arjun Patel" class="h-12 w-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXHKFuDfcyNSPVAPyoVNwnOW788dyjgzc4ennWS0daRE0q4S3jESMvAmlm5Ew7s0vekEHyZtw7YbAbr_lHXxXQextKiXcKkIqJcsYcJdID2ytoNTWZQpGbCSUBv7IXZOsaRPKAGuZTPUVwmebHUW9sxWvQUQWbrjO8qjxwhnvVDzGzBV-NO-VKbuQzsTPeoHNzqz3WV8dfSfZpPX6xkOH9BhZgUlou8TwLYtd-K2JV2b3i51Z0qx1-GBKRHqNsohlaiq1SXM-X9OyW"/>
+<div>
+<h4 class="font-bold text-white">Arjun Patel</h4>
+<p class="text-sm text-primary">AIIMS New Delhi</p>
+</div>
+</div>
+</div>
+<div class="mx-4 flex w-[350px] flex-shrink-0 flex-col rounded-xl border border-white/10 bg-white/5 p-6 group">
+<div class="glow-effect flex-grow">
+<p class="text-lg font-medium italic text-white/90">"Finding the right MBA college felt overwhelming. This platform simplified everything, from applications to interview prep. Highly recommended!"</p>
+</div>
+<div class="mt-4 flex items-center gap-4 border-t border-white/10 pt-4">
+<img alt="Photo of Aisha Khan" class="h-12 w-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAX5HvxqmVAPRaHwbIeCC5mLtS_7dlPw94DqACVNNs3RSeSXz3jqu7pEYfJP0L9dfYn9OteD5mW_XiO_SKPpBeCre9JC_9YothQKLQGBhI89duEWiZFwxdmMrqFIaHQ_RSIdSeo8uvEMTdCmlNYjKrccS_GW8BRQNgxvhCC3HcC2sFE0zabrLclGaTPeev7tzH68GWrf-muqaOtGoBfO3C8lAH4SeUaGltqofffQ3YXLXqhADBW57koeyEpGxxgRUyxcL9huM1B2ZpN"/>
+<div>
+<h4 class="font-bold text-white">Aisha Khan</h4>
+<p class="text-sm text-primary">IIM Ahmedabad</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="mb-16 lg:mb-24">
+<div class="text-center">
+<h2 class="text-3xl font-bold leading-tight tracking-[-0.015em] text-white md:text-4xl">Meet the Team</h2>
+<p class="mx-auto mt-4 max-w-3xl text-base font-normal leading-normal text-white/70">The passionate minds behind our mission to reshape educational guidance in India.</p>
+</div>
+<div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+<div class="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/20 perspective-card">
+<div class="absolute inset-0 bg-gradient-to-t from-red-500/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+<img class="mx-auto h-24 w-24 rounded-full" data-alt="Photo of Priya Sharma" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCm2AQnQDb-zHdNqqeyVTYcA4miiSIw58_L81aPisxuby4FrW7kBEYGtWC4eSkfdVFUpT-pLT8tVLCFdZyYsvhHEDOYWMD-VSlwF8MgJC0V9z8HGDk-0rlQBMFGjTxwXu2pP6uLIUsRnYNX7rkWlgntJ2-iepS37t1hsHMxhPLOeZ90ZyO-HNGGPe2jrnrvq6j1KE6ascQC4epl84ObDKVMLSPoaDQxBlssEYrpGuHm2Z9-f_7CunxTPgsxS2MaJ1rd6gg-iQvcTEnI"/>
+<h3 class="mt-4 text-xl font-bold text-white">Priya Sharma</h3>
+<p class="text-sm text-primary">Founder &amp; CEO</p>
+<p class="mt-2 text-sm text-white/70">"Every student deserves a clear path to their dreams. We're here to build that path."</p>
+</div>
+<div class="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/20 perspective-card">
+<div class="absolute inset-0 bg-gradient-to-t from-red-500/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+<img class="mx-auto h-24 w-24 rounded-full" data-alt="Photo of Rohan Mehta" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKQugKVIq6K7Azf6JZcN-5T5V5UpGhyPSi9ElUWUo3ux_YATJAMdeB8QeWadg8j_2pkjxZ0hxO06qjNne-_ir8I1xttityy6eIFQe974nLR5XZ8bc_8wbl3NbXH83d7b8243tMN1I3Sxgtem3f6Yqd8m-TF2U8wmM_o_1tcP_QgEPS8cIZ2DlffQlpjwNhIuxpD_zFb0ov7SugcyzdKmC65vh-IesalFxUSHqVOkv0KAdIXhjuk6FGsaMGvy_bBgglCE_Hut3RUEEL"/>
+<h3 class="mt-4 text-xl font-bold text-white">Rohan Mehta</h3>
+<p class="text-sm text-primary">Head of Technology</p>
+<p class="mt-2 text-sm text-white/70">"Leveraging technology to create transparent and accessible educational resources for all."</p>
+</div>
+<div class="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/20 perspective-card">
+<div class="absolute inset-0 bg-gradient-to-t from-red-500/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+<img class="mx-auto h-24 w-24 rounded-full" data-alt="Photo of Anjali Singh" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8eiEKPahoidrT_HLJT21phCBT5mpJRmttDo6DRTkFT4GSL_uiV6V-Po589WdJmpWYD05C0CMtS1ga5EIo_h9cSRYx_LY84rQdroKIDzScqeaz_tqEdd4UQmW1In8y73Yo9i_lkctChKgprMVLcF9SFKhsEWDXEdVOzhd97KwDKIwfuSIlVEeTmfIFqrT_UNI5UQDAHrfulNhGfoGs3FRTiLCg0DNRrj_hZkfnJZ2QTdW4Tyw6kK35L9wMEqs3pIAHF7W5fj83r14O"/>
+<h3 class="mt-4 text-xl font-bold text-white">Anjali Singh</h3>
+<p class="text-sm text-primary">Lead Counselor</p>
+<p class="mt-2 text-sm text-white/70">"Guiding students isn't just a job; it's about shaping the future of our nation, one career at a time."</p>
+</div>
+</div>
+</section>
+<section>
+<div class="text-center">
+<h2 class="text-3xl font-bold leading-tight tracking-[-0.015em] text-white md:text-4xl">Our Values</h2>
+<p class="mx-auto mt-4 max-w-3xl text-base font-normal leading-normal text-white/70">The core principles that drive our commitment to students and the educational community.</p>
+</div>
+<div class="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
+<div class="flex flex-col items-center rounded-xl p-6 text-center transition-transform hover:scale-105 perspective-card">
+<div class="flex size-16 items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-4xl">visibility</span>
+</div>
+<h3 class="mt-4 text-xl font-bold text-white">Transparency</h3>
+<p class="mt-2 text-sm text-white/70">Providing clear, unbiased, and data-backed information to help you make informed decisions.</p>
+</div>
+<div class="flex flex-col items-center rounded-xl p-6 text-center transition-transform hover:scale-105 perspective-card">
+<div class="flex size-16 items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-4xl">verified_user</span>
+</div>
+<h3 class="mt-4 text-xl font-bold text-white">Integrity</h3>
+<p class="mt-2 text-sm text-white/70">Upholding the highest ethical standards, putting the student's best interest first, always.</p>
+</div>
+<div class="flex flex-col items-center rounded-xl p-6 text-center transition-transform hover:scale-105 perspective-card">
+<div class="flex size-16 items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-4xl">auto_awesome</span>
+</div>
+<h3 class="mt-4 text-xl font-bold text-white">Innovation</h3>
+<p class="mt-2 text-sm text-white/70">Continuously evolving our platform with cutting-edge technology to better serve our users.</p>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+
+</body></html>

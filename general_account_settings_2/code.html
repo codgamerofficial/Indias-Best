@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Account Settings - India's Best</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+      .btn-save-changes:disabled {
+        background-color: #55503a;
+        color: #bbb69b;
+        cursor: not-allowed;
+        box-shadow: none;
+        transform: none;
+      }
+      .btn-save-changes:not(:disabled):hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px 0 rgba(249, 208, 6, 0.3);
+      }
+      .form-select-custom {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-position: right 1rem center;
+        background-repeat: no-repeat;
+        background-size: 1.5em 1.5em;
+        padding-right: 2.5rem;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23bbb69b' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+      }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#f9d006",
+              "background-light": "#f8f8f5",
+              "background-dark": "#121212",
+              "accent-red": "#FF4136",
+              "surface-dark": "#181711",
+              "border-dark": "#3a3727",
+              "input-dark": "#27251b",
+              "text-light": "#E0E0E0",
+              "text-muted": "#A0A0A0",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px"},
+            boxShadow: {
+              'glow-yellow': '0 0 15px rgba(249, 208, 6, 0.2)',
+              'glow-yellow-hover': '0 0 20px rgba(249, 208, 6, 0.4)',
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background-dark font-display">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-border-dark px-6 sm:px-10 md:px-20 lg:px-40 py-3 bg-surface-dark/80 backdrop-blur-sm sticky top-0 z-10">
+<div class="flex items-center gap-4 text-text-light">
+<div class="size-6 text-primary">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-text-light text-lg font-bold leading-tight tracking-[-0.015em]">India's Best</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end items-center gap-8">
+<div class="flex items-center gap-9">
+<a class="text-text-light text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-text-light text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Colleges</a>
+<a class="text-text-light text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Exams</a>
+<a class="text-text-light text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Reviews</a>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity">
+<span class="truncate">Login</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-border-dark" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDG-P7PAHAbaWYYx4KKXp7iCFzIkZqaq0klZvnJNzYc9-P7nqPk8KhtdjA_vuRTjU95WHLJt1AAoI1Z-MupxaqYu_Mr7XEE5gUAGLhMQA19VD4d_LN_nRvDlSc1fsUK6IJ4r_4Sh0vFac_dGaYKXzJP2k6ACmVQauVn1Tz2MRxQplPQAZaGZmPRuHUzxaKioWRNaxRhIz8Au6zTzNxkmHffXURZngHiLUEH_MdQ8c_4x42eMhug5uqXdicwrqj99AyESXL9FJlx4xrY");'></div>
+</div>
+<button class="md:hidden text-text-light">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<main class="flex flex-1 justify-center py-10 sm:py-16 px-4">
+<div class="layout-content-container flex flex-col w-full max-w-3xl flex-1">
+<div class="flex flex-wrap justify-between gap-3 p-4">
+<h1 class="text-text-light text-4xl font-black leading-tight tracking-[-0.033em] min-w-72">Account Settings</h1>
+</div>
+<div class="mt-8 bg-surface-dark border border-border-dark rounded-xl shadow-lg shadow-black/20">
+<div class="p-6 sm:p-8 space-y-8">
+<!-- Profile Information Section -->
+<section>
+<h2 class="text-text-light text-[22px] font-bold leading-tight tracking-[-0.015em] pb-5">Profile Information</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<label class="flex flex-col">
+<p class="text-text-muted text-base font-medium leading-normal pb-2">Full Name</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light focus:outline-none focus:ring-2 focus:ring-primary/50 border border-border-dark bg-input-dark focus:border-primary/80 h-14 placeholder:text-text-muted p-[15px] text-base font-normal leading-normal transition-all" value="Aarav Sharma"/>
+</label>
+<label class="flex flex-col">
+<p class="text-text-muted text-base font-medium leading-normal pb-2">Email Address</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light focus:outline-none focus:ring-2 focus:ring-primary/50 border border-border-dark bg-input-dark focus:border-primary/80 h-14 placeholder:text-text-muted p-[15px] text-base font-normal leading-normal transition-all" value="aarav.sharma@email.com"/>
+</label>
+</div>
+<a class="inline-block mt-4 text-primary hover:text-yellow-300 text-sm font-medium transition-colors" href="#">Change Password</a>
+</section>
+<hr class="border-border-dark"/>
+<!-- Localization Preferences Section -->
+<section>
+<h2 class="text-text-light text-[22px] font-bold leading-tight tracking-[-0.015em] pb-5">Localization Preferences</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<label class="flex flex-col">
+<p class="text-text-muted text-base font-medium leading-normal pb-2">Language</p>
+<select class="form-select-custom w-full min-w-0 flex-1 rounded-lg text-text-light focus:outline-none focus:ring-2 focus:ring-primary/50 border border-border-dark bg-input-dark focus:border-primary/80 h-14 placeholder:text-text-muted px-[15px] text-base font-normal leading-normal transition-all">
+<option>English (United States)</option>
+<option>Hindi</option>
+<option>Bengali</option>
+</select>
+</label>
+<label class="flex flex-col">
+<p class="text-text-muted text-base font-medium leading-normal pb-2">Region / Country</p>
+<select class="form-select-custom w-full min-w-0 flex-1 rounded-lg text-text-light focus:outline-none focus:ring-2 focus:ring-primary/50 border border-border-dark bg-input-dark focus:border-primary/80 h-14 placeholder:text-text-muted px-[15px] text-base font-normal leading-normal transition-all">
+<option>India</option>
+<option>United States</option>
+<option>United Kingdom</option>
+</select>
+</label>
+<div class="md:col-span-2">
+<label class="flex flex-col">
+<p class="text-text-muted text-base font-medium leading-normal pb-2">Time Zone</p>
+<select class="form-select-custom w-full min-w-0 flex-1 rounded-lg text-text-light focus:outline-none focus:ring-2 focus:ring-primary/50 border border-border-dark bg-input-dark focus:border-primary/80 h-14 placeholder:text-text-muted px-[15px] text-base font-normal leading-normal transition-all">
+<option>(GMT+5:30) Kolkata</option>
+<option>(GMT-5:00) Eastern Time</option>
+<option>(GMT+0:00) Greenwich Mean Time</option>
+</select>
+</label>
+</div>
+</div>
+</section>
+<hr class="border-border-dark"/>
+<!-- Notifications Section -->
+<section>
+<h2 class="text-text-light text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3">Notifications</h2>
+<div class="flex items-center justify-between p-2 rounded-lg hover:bg-input-dark/50 transition-colors">
+<label class="text-text-muted font-medium cursor-pointer" for="notifications">Receive email updates and newsletters</label>
+<button aria-checked="true" class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent bg-primary transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-surface-dark" id="notifications" role="switch">
+<span class="pointer-events-none inline-block h-5 w-5 translate-x-5 transform rounded-full bg-background-dark shadow ring-0 transition duration-200 ease-in-out"></span>
+</button>
+</div>
+</section>
+</div>
+<!-- Action Bar -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4 bg-black/20 p-6 sm:p-8 border-t border-border-dark rounded-b-xl">
+<a class="text-accent-red hover:underline text-sm font-medium" href="#">Delete Account</a>
+<div class="flex items-center gap-4">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-transparent text-text-light text-sm font-bold leading-normal tracking-[0.015em] hover:bg-border-dark transition-colors">
+<span class="truncate">Cancel</span>
+</button>
+<button class="btn-save-changes flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] transition-all duration-200 ease-in-out" disabled="">
+<span class="truncate">Save Changes</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

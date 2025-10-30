@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Success Notification</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2b90d",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#121212",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.5s ease-out forwards',
+                        'data-wipe': 'dataWipe 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards',
+                        'dissolve-out': 'dissolveOut 1s ease-in forwards 3s'
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: 0, transform: 'translateY(20px) scale(0.95)' },
+                            '100%': { opacity: 1, transform: 'translateY(0) scale(1)' },
+                        },
+                        dataWipe: {
+                            '0%': { clipPath: 'polygon(0 0, 0 0, 0 100%, 0 100%)', transform: 'scale(1.2)' },
+                            '50%': { clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', transform: 'scale(1)' },
+                            '100%': { clipPath: 'polygon(100% 0, 100% 0, 100% 100%, 100% 100%)', transform: 'scale(1)' },
+                        },
+                        dissolveOut: {
+                            '0%': { opacity: 1, filter: 'blur(0)' },
+                            '100%': { opacity: 0, filter: 'blur(8px)', transform: 'scale(0.95)' },
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+            font-size: 64px;
+        }
+    </style>
+</head>
+<body class="font-display">
+<div class="relative flex min-h-screen w-full flex-col items-center justify-center bg-background-light dark:bg-background-dark p-4 group/design-root">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Abstract background with colorful swirling paint patterns." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB9-0EATL-X0Abxa73vYtiQzudu_BuPUX-NN5_HqXenbYKODpETCySxm3YIKU6F7qOb7xqasDM0c-vXCinljMesQAiUUcFSKz-KcZ4Q9nUE-vnUq2dDU1HjFx1R1CDf-aVZILITLvRHKfBcQbgT2qI_Z-PY1XZqbfmT24SnHlE3eMGcsGGo81TyXyiUMIb4K6pB7kNZhK07nZPxlp4wA1oHbbSAzfyVvsQF10I0M-UYj2VMNdIxucJiPv8cji9Nc-vP15Smrl1UHmqN');"></div>
+<div class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+<div class="relative flex w-full max-w-md animate-fade-in-up flex-col items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-[rgba(25,25,25,0.8)] p-8 shadow-2xl shadow-primary/10 backdrop-blur-lg animate-dissolve-out">
+<div class="absolute -top-1/2 left-1/2 -translate-x-1/2 h-full w-full rounded-full bg-primary/20 blur-3xl" data-alt="A soft yellow glowing orb effect for background lighting."></div>
+<div class="relative mb-6 flex h-28 w-28 items-center justify-center rounded-full bg-slate-900/50 shadow-inner shadow-black/50">
+<div class="absolute inset-0 rounded-full" style="background: conic-gradient(from 180deg at 50% 50%, #FF41361A 0deg, #FFD7001A 120deg, transparent 360deg);"></div>
+<div class="relative flex h-[108px] w-[108px] items-center justify-center rounded-full bg-[#191919]">
+<span class="material-symbols-outlined text-primary/30 absolute">
+                        delete_sweep
+                    </span>
+<span class="material-symbols-outlined text-primary animate-data-wipe">
+                        task_alt
+                    </span>
+</div>
+</div>
+<h1 class="text-white tracking-tight text-2xl font-bold leading-tight text-center pb-2 pt-2 font-display">Success!</h1>
+<p class="text-slate-300 text-base font-normal leading-normal pb-8 text-center font-display">Activity logs cleared successfully!</p>
+<div class="flex w-full justify-center">
+<button class="flex min-w-[84px] w-full max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-[#181611] text-base font-bold leading-normal tracking-[0.015em] transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-primary/40 hover:scale-105 active:scale-100 font-display">
+<span class="truncate">Got It</span>
+</button>
+</div>
+</div>
+</div>
+
+</body></html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>India's Best - Personalised Recommendations</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#FFD700", // Distressed Yellow
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#121212",
+                        "accent-red": "#E53E3E"
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .recommendation-card {
+            transform-style: preserve-3d;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transform: perspective(1000px);
+        }
+
+        .recommendation-card:hover {
+            transform: perspective(1000px) rotateY(-5deg) rotateX(5deg) scale(1.05);
+            box-shadow: 0 10px 30px -5px rgba(255, 215, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#EAEAEA]">
+<div class="relative flex min-h-screen w-full flex-col">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 sm:px-10 md:px-20 lg:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col w-full max-w-[1200px] flex-1">
+<!-- TopNavBar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-white/10 px-4 md:px-10 py-3">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">India's Best</h2>
+</div>
+<div class="hidden md:flex items-center gap-9">
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-primary text-sm font-bold leading-normal" href="#">Search</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Profile</a>
+</div>
+</div>
+<div class="flex flex-1 justify-end gap-4 md:gap-8 items-center">
+<label class="hidden sm:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-white/50 flex border-none bg-white/5 items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white/80 focus:outline-0 focus:ring-2 focus:ring-primary/50 border-none bg-white/5 focus:border-none h-full placeholder:text-white/50 px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Search Colleges..." value=""/>
+</div>
+</label>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] hover:brightness-110 transition-all">
+<span class="truncate">Login</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBZCcQaMYfCuraBctzl86kStGdc7tGtPGfe1HipV8MD29KkOnYVGeBBu6lQ4hulci0CqKu5qfAeY0NlXS02QnJjPrsMyHNveiGTmS5UMmBClu0UzYC1afwTveGNdzwC18-Q884gxQuv2QOVnwNraA2YwX-DOrS-tX-U8yt6Uzu12e9d11taX-JphOvbqzpL0xAKsxsG7nlX14jC4uKCtvCtltreH7wTsCkpUlzWRRhDasbasouqRnYtKRyngHLmWmdUWFbuor0_XDwB");'></div>
+</div>
+</header>
+<main class="mt-8">
+<!-- PageHeading -->
+<div class="flex flex-wrap justify-between gap-3 p-4">
+<div class="flex min-w-72 flex-col gap-3">
+<p class="text-white text-4xl font-black leading-tight tracking-[-0.033em]">Discover Your Future</p>
+<p class="text-white/60 text-base font-normal leading-normal">Colleges, courses, and scholarships tailored just for you.</p>
+</div>
+</div>
+<!-- Chips / Filters -->
+<div class="flex gap-3 p-3 overflow-x-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary/20 pl-3 pr-3 text-primary ring-1 ring-primary">
+<span class="material-symbols-outlined text-base">tune</span>
+<p class="text-sm font-medium leading-normal">All</p>
+<span class="material-symbols-outlined text-base">expand_more</span>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white/5 pl-3 pr-3 hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-base">engineering</span>
+<p class="text-white text-sm font-medium leading-normal">Engineering</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white/5 pl-3 pr-3 hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-base">palette</span>
+<p class="text-white text-sm font-medium leading-normal">Arts</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white/5 pl-3 pr-3 hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-base">business_center</span>
+<p class="text-white text-sm font-medium leading-normal">Business</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white/5 pl-3 pr-3 hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-base">biotech</span>
+<p class="text-white text-sm font-medium leading-normal">Science</p>
+</button>
+</div>
+<!-- Section 1: Top Picks -->
+<section class="mt-8">
+<div class="flex items-center gap-2 px-4 pb-3 pt-5">
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em]">Top Picks for You</h2>
+<span class="material-symbols-outlined text-white/50 text-xl cursor-pointer" title="Based on your profile and preferences">info</span>
+</div>
+<div class="overflow-x-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<div class="flex items-stretch p-4 gap-6">
+<!-- Card 1 -->
+<div class="recommendation-card flex h-full w-64 shrink-0 flex-col gap-4 rounded-xl bg-[#1A1A1A] border border-white/10 shadow-lg">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-t-xl flex flex-col relative" data-alt="IIT Delhi campus building" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDHp13JOnARaB2blqNrtPc5r3wkWRwyWss8KW5uuPZl7js3Aw0B07ooySefPoKSj07ZdgvUk6YLxCqnfV2mhxD3balczWicFEoG75DjYFTYtdHl5arTGwygKzynrQMSUV9wzalsxJIw1XD6_wvS6H2eaFgk0_BiCnzTwAtGxJq7OO2dnv7THtxLCQh1L_quMpiLB-BseFFVxEf_mMHGFmJu4zfBHOC5TB93rHWWb5f7BkOeWGP_q5zB3CVhUnMUkF16Nc3TLSTkoWde");'>
+<div class="absolute top-3 right-3 flex items-center justify-center size-12 rounded-full bg-primary/90 border-2 border-primary">
+<p class="text-background-dark font-bold text-lg">92%</p>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-black/80 to-transparent"></div>
+</div>
+<div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+<div>
+<p class="text-white text-lg font-bold leading-normal">IIT Delhi</p>
+<p class="text-white/60 text-sm font-normal leading-normal">New Delhi</p>
+</div>
+<div class="flex items-center justify-between gap-2">
+<button class="flex-1 flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] hover:brightness-110 transition-all">
+<span class="truncate">View Details</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-white/10 hover:bg-white/20 text-white transition-colors">
+<span class="material-symbols-outlined">bookmark_border</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-white/10 hover:bg-accent-red/50 text-white transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="recommendation-card flex h-full w-64 shrink-0 flex-col gap-4 rounded-xl bg-[#1A1A1A] border border-white/10 shadow-lg">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-t-xl flex flex-col relative" data-alt="IIM Ahmedabad modern architecture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCNTLWnMc-7kYuMOFGAKEfas1XQlsQLd36JlXS_KQXgCL2lXoyMTtIFOSSMcjp7Z4DHUspPYVAm_pb3m9X6yqB6Z_3mUHJBbM3wkg2I0RqXt-147-ceWjsOJkg2GprjRIZDosVS37jsLfsxMAM2y-szVLA6EUw8_Y_VOpIzfgZMY1Tcpj_dfGRtYUGy-aElMOcjNlJ23qahIiyvjjrItSr0qopKWjMWAkj2cKKjbYmSoksgT8ocuzR_NM9p_fIUhMu1vg-GBmN_31hb");'>
+<div class="absolute top-3 right-3 flex items-center justify-center size-12 rounded-full bg-primary/90 border-2 border-primary">
+<p class="text-background-dark font-bold text-lg">90%</p>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-black/80 to-transparent"></div>
+</div>
+<div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+<div>
+<p class="text-white text-lg font-bold leading-normal">IIM Ahmedabad</p>
+<p class="text-white/60 text-sm font-normal leading-normal">Ahmedabad</p>
+</div>
+<div class="flex items-center justify-between gap-2">
+<button class="flex-1 flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] hover:brightness-110 transition-all">
+<span class="truncate">View Details</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-white/10 hover:bg-white/20 text-white transition-colors">
+<span class="material-symbols-outlined">bookmark_border</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-white/10 hover:bg-accent-red/50 text-white transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="recommendation-card flex h-full w-64 shrink-0 flex-col gap-4 rounded-xl bg-[#1A1A1A] border border-white/10 shadow-lg">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-t-xl flex flex-col relative" data-alt="BITS Pilani clock tower" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBlzVvmA8Zj9vEjyzzidpVtcbO7MlyO4NaNlRLCG7U1JuVjzj2X0tGqsoWFPFoZ1Rzr4G4XF6E5nE2dRqtg_bUAHqFYSTbXOfZToC49_ACbmMOQRkvgSX-3hBgFxvbHjJlOEGt2XTooqTjpAgR7TwBxw483Kby8VBJsmD7JUiFFWEOqGBuc5jryxhkNVYE0WEbIZhwUdJIf_whDR69I29OWKXvvrczywxhPE9KDNXKNUuQ8vluhkoI-CDc4tyKiQ8CYCXE7-DOp1GPv");'>
+<div class="absolute top-3 right-3 flex items-center justify-center size-12 rounded-full bg-primary/90 border-2 border-primary">
+<p class="text-background-dark font-bold text-lg">88%</p>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-black/80 to-transparent"></div>
+</div>
+<div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+<div>
+<p class="text-white text-lg font-bold leading-normal">BITS Pilani</p>
+<p class="text-white/60 text-sm font-normal leading-normal">Pilani</p>
+</div>
+<div class="flex items-center justify-between gap-2">
+<button class="flex-1 flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] hover:brightness-110 transition-all">
+<span class="truncate">View Details</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-white/10 hover:bg-white/20 text-white transition-colors">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-white/10 hover:bg-accent-red/50 text-white transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="recommendation-card flex h-full w-64 shrink-0 flex-col gap-4 rounded-xl bg-[#1A1A1A] border border-white/10 shadow-lg">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-t-xl flex flex-col relative" data-alt="Christ University campus with lush greenery" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAX6d2w2gNTt-L1OHCjQykTCx2u8lF1r22394xQKAg-LR3VYR4KMlxruCPVHftBMes8K6b8YlzlqTW0FhhBw26gCjJd52GVFHdBHx8XqEngW-S1vh-DTXz0nebtBYWezED7QI8kuE51FvRk4jDQJtw-VqZrPjQYhRJu2704fuz2POcD6nrCauE9Y7oxvB91qJ9axGr_wpi8BFjQXvsgiYqv2MEn6kpa8HENm6ZgbE5k86spqyaoedRtZOK0gBi7m3VSSB2003TBlusU");'>
+<div class="absolute top-3 right-3 flex items-center justify-center size-12 rounded-full bg-primary/90 border-2 border-primary">
+<p class="text-background-dark font-bold text-lg">85%</p>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-black/80 to-transparent"></div>
+</div>
+<div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+<div>
+<p class="text-white text-lg font-bold leading-normal">Christ University</p>
+<p class="text-white/60 text-sm font-normal leading-normal">Bangalore</p>
+</div>
+<div class="flex items-center justify-between gap-2">
+<button class="flex-1 flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] hover:brightness-110 transition-all">
+<span class="truncate">View Details</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-white/10 hover:bg-white/20 text-white transition-colors">
+<span class="material-symbols-outlined">bookmark_border</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-white/10 hover:bg-accent-red/50 text-white transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Based on your recent searches -->
+<section class="mt-8">
+<div class="flex items-center gap-2 px-4 pb-3 pt-5">
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em]">Based on Your Recent Searches</h2>
+<span class="material-symbols-outlined text-white/50 text-xl cursor-pointer" title="Inspired by your search for 'Computer Science'">info</span>
+</div>
+<div class="overflow-x-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<div class="flex items-stretch p-4 gap-6">
+<!-- Card 1 -->
+<div class="recommendation-card flex h-full w-64 shrink-0 flex-col gap-4 rounded-xl bg-[#1A1A1A] border border-white/10 shadow-lg">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-t-xl flex flex-col relative" data-alt="IIT Bombay campus view" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDgg066aXsVB0qFCM2LNyQE23BVoVFEUEzLx_A3y_ZhJ0LZUQ7BDYqhREKoHAzFaAko78lDXuoDs-2hmExqfNE3pFeHaSMabmTrx9WKks3Mkp2vnUknqlnNp3PHerB-MKcUxV0MUJWyKyfMuDJwic4wNklx1hwYkciNS1f-dbj6RTm7Q5iwiwaF7PY7oubu2P_TCZrITh7Fs47MgW4gqWgWhFv0aXwK-Z1goAuPtnZ1Dsh7Bo1vG29p7Rk1FImqQbH1pmuX0b3Fb9dK");'>
+<div class="absolute top-3 right-3 flex items-center justify-center size-12 rounded-full bg-primary/90 border-2 border-primary">
+<p class="text-background-dark font-bold text-lg">95%</p>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-black/80 to-transparent"></div>
+</div>
+<div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+<div>
+<p class="text-white text-lg font-bold leading-normal">IIT Bombay</p>
+<p class="text-white/60 text-sm font-normal leading-normal">Mumbai</p>
+</div>
+<div class="flex items-center justify-between gap-2">
+<button class="flex-1 flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] hover:brightness-110 transition-all">
+<span class="truncate">View Details</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-white/10 hover:bg-white/20 text-white transition-colors">
+<span class="material-symbols-outlined">bookmark_border</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-white/10 hover:bg-accent-red/50 text-white transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="recommendation-card flex h-full w-64 shrink-0 flex-col gap-4 rounded-xl bg-[#1A1A1A] border border-white/10 shadow-lg">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-t-xl flex flex-col relative" data-alt="VIT Vellore library exterior" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB3MvnPiMr2t4ViTXA2mcXL3nmpej3YDwuDMV8Zg3nb9vNgXZMlrtmKJGwQkPuou_Y6s4ekPwD6CLst0bmfzRpoaRn8nPyATQW0MZgLbU-n2a8tbwzZaiVvg43XxlQm67eTYp6uGUzzZPVLLX5O7ZfKph8XcZMzAxglvjSxAgUPkAUVb6i2DyygcSL9536vpHqrwqCxpUZraKsZ1_7LGzb-_OWoCwYWtEzrUpjQiJb7QrSw0aOaU8iOL3UYKyhLLLJNWyeGLMU7jJ1f");'>
+<div class="absolute top-3 right-3 flex items-center justify-center size-12 rounded-full bg-primary/90 border-2 border-primary">
+<p class="text-background-dark font-bold text-lg">87%</p>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-black/80 to-transparent"></div>
+</div>
+<div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+<div>
+<p class="text-white text-lg font-bold leading-normal">VIT Vellore</p>
+<p class="text-white/60 text-sm font-normal leading-normal">Vellore</p>
+</div>
+<div class="flex items-center justify-between gap-2">
+<button class="flex-1 flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] hover:brightness-110 transition-all">
+<span class="truncate">View Details</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-white/10 hover:bg-white/20 text-white transition-colors">
+<span class="material-symbols-outlined">bookmark_border</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-white/10 hover:bg-accent-red/50 text-white transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="recommendation-card flex h-full w-64 shrink-0 flex-col gap-4 rounded-xl bg-[#1A1A1A] border border-white/10 shadow-lg">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-t-xl flex flex-col relative" data-alt="IIIT Hyderabad campus building" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC71TPvKxbWVfbz5_vstG6VSf9KwPtRDjF8sXfsXD7Vqf5ECcFI2sD-Y5TajgAFthWuCxWaRn95hOYBMHwlJHXvJsI1v3knCZr1VseYqR_n1H5N2aGd1tQzIxhrZtsiQbHSyHAvD8EDXi0tNSeI_5zG0-DVif8wlO_FKf1e95YKTmn94KppdDUvufwKKs0dEd3mOKduVGXf45qDUoZvxtr7JHe4zV4iy8xhiLxE3Hj_v_VcQcbk0rfI0w1NcECOmKsoiW_ttZKEAR1H");'>
+<div class="absolute top-3 right-3 flex items-center justify-center size-12 rounded-full bg-primary/90 border-2 border-primary">
+<p class="text-background-dark font-bold text-lg">84%</p>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-black/80 to-transparent"></div>
+</div>
+<div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+<div>
+<p class="text-white text-lg font-bold leading-normal">IIIT Hyderabad</p>
+<p class="text-white/60 text-sm font-normal leading-normal">Hyderabad</p>
+</div>
+<div class="flex items-center justify-between gap-2">
+<button class="flex-1 flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] hover:brightness-110 transition-all">
+<span class="truncate">View Details</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-white/10 hover:bg-white/20 text-white transition-colors">
+<span class="material-symbols-outlined">bookmark_border</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-white/10 hover:bg-accent-red/50 text-white transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+</div>
+</div>
+</div>
+</div>
+</body></html>

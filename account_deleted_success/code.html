@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Account Deleted</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+        .icon-shadow {
+            text-shadow: 0px 4px 15px rgba(249, 208, 6, 0.4);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f9d006",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#121212",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-display">
+<div class="relative flex min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<div class="fixed inset-0 bg-background-dark/80 backdrop-blur-sm z-10"></div>
+<div class="relative z-20 flex h-full min-h-screen grow flex-col items-center justify-center p-4">
+<div class="flex flex-col items-center gap-8 rounded-xl bg-background-dark/50 border border-white/10 p-8 sm:p-12 md:p-16 w-full max-w-lg shadow-2xl shadow-primary/10">
+<div class="flex items-center justify-center h-24 w-24 rounded-full bg-primary/10 border-2 border-primary/30 text-primary">
+<span class="material-symbols-outlined text-6xl icon-shadow" data-icon="check_circle">check_circle</span>
+</div>
+<div class="flex max-w-md flex-col items-center gap-3 text-center">
+<h1 class="text-white text-2xl sm:text-3xl font-bold tracking-tight">Success: Your Account Has Been Deleted</h1>
+<p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+                        All of your personal data has been permanently removed. We wish you the best in your future endeavors.
+                    </p>
+</div>
+<button class="flex min-w-[84px] w-full max-w-xs cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-background-dark text-base font-bold transition-all hover:shadow-lg hover:shadow-primary/40 hover:scale-105 active:scale-100">
+<span class="truncate">Return to Homepage</span>
+</button>
+<div class="flex items-center gap-4 text-gray-400 mt-4">
+<p class="text-xs">Redirecting in</p>
+<div class="flex items-center justify-center gap-2">
+<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-white/5">
+<p class="text-white text-lg font-bold">10</p>
+</div>
+<p class="text-xs">seconds</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

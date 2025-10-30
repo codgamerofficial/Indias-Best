@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Careers - India's Best</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+        .job-card {
+            transform-style: preserve-3d;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .job-card:hover {
+            transform: perspective(1000px) rotateY(-5deg) rotateX(10deg) scale(1.05);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        .job-card-inner {
+            transform: translateZ(20px);
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#f9d006",
+              "background-light": "#f8f8f5",
+              "background-dark": "#231f0f",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 flex items-center justify-center border-b border-white/10 bg-background-dark/80 px-4 py-3 backdrop-blur-sm sm:px-10">
+<div class="flex w-full max-w-7xl items-center justify-between">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">India's Best</h2>
+</div>
+<div class="hidden items-center gap-8 md:flex">
+<a class="text-sm font-medium text-white/80 transition-colors hover:text-white" href="#">Home</a>
+<a class="text-sm font-medium text-white/80 transition-colors hover:text-white" href="#">Colleges</a>
+<a class="text-sm font-medium text-white/80 transition-colors hover:text-white" href="#">Exams</a>
+<a class="text-sm font-medium text-white transition-colors hover:text-white" href="#">Careers</a>
+</div>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] transition-transform hover:scale-105">
+<span class="truncate">Log In</span>
+</button>
+</div>
+</header>
+<main class="flex flex-1 flex-col items-center px-4 py-10 sm:px-6 lg:px-8">
+<div class="w-full max-w-7xl">
+<!-- Hero Section -->
+<div class="w-full @container">
+<div class="flex min-h-[480px] flex-col items-center justify-center gap-6 rounded-xl bg-cover bg-center p-4 text-center" data-alt="Abstract blue and yellow gradient" style="background-image: linear-gradient(rgba(35, 31, 15, 0.6) 0%, rgba(35, 31, 15, 0.9) 100%), url('https://lh3.googleusercontent.com/aida-public/AB6AXuAmnK_HoNk89qEUwqE6IRUubX3G54U6WSMG7wfRnMBUFCd2RB5RM6YqqS98eLa0j4fcPiAXTRYFJ8sapvIfNLelPonIKE2SDoD_olHBwGd8MezQ2w3YjwQYmd58QNMiHM57rOlEC3T9g6Sy-IZ0lUXyaPbmngreRYRPgnFZbp-_wtTXU9rS9KM4SSirO6kD1I4fSDEd8N0U9yXOSmn4_by61awUISEJn2xQPiMApvmAfySL6pcE6OXMoByuaG-yLngzPLQGl3HTZ3fA');">
+<h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-6xl">Shape the Future of Education</h1>
+<p class="max-w-2xl text-base text-white/80 @[480px]:text-lg">Join our mission to build the future of learning with India's Best. We're looking for passionate innovators to join our team.</p>
+<button class="mt-4 flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-background-dark text-base font-bold tracking-[0.015em] transition-transform hover:scale-105">
+<span class="truncate">View Openings</span>
+</button>
+</div>
+</div>
+<!-- Main Content: Jobs List -->
+<div class="mt-16">
+<!-- Section Header -->
+<h2 class="text-white text-3xl font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Current Openings</h2>
+<!-- Search and Filters -->
+<div class="flex flex-col gap-4 p-4 md:flex-row md:items-center">
+<label class="flex flex-col h-12 w-full flex-1">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-white/50 flex items-center justify-center rounded-l-lg bg-white/10 pl-4">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg border-none bg-white/10 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-primary h-full px-4 text-base" placeholder="Search for job titles or keywords" value=""/>
+</div>
+</label>
+<div class="flex flex-wrap items-center gap-3">
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white/10 px-4 transition-colors hover:bg-white/20">
+<p class="text-white text-sm font-medium">Department</p>
+<span class="material-symbols-outlined text-white">expand_more</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white/10 px-4 transition-colors hover:bg-white/20">
+<p class="text-white text-sm font-medium">Location</p>
+<span class="material-symbols-outlined text-white">expand_more</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white/10 px-4 transition-colors hover:bg-white/20">
+<p class="text-white text-sm font-medium">Job Type</p>
+<span class="material-symbols-outlined text-white">expand_more</span>
+</button>
+<button class="h-10 text-sm text-white/60 transition-colors hover:text-white">Clear Filters</button>
+</div>
+</div>
+</div>
+<!-- Job Card Grid -->
+<div class="grid grid-cols-1 gap-8 p-4 md:grid-cols-2 lg:grid-cols-3">
+<!-- Job Card 1 -->
+<div class="job-card rounded-xl bg-[#2a261a] border border-white/10 p-6 shadow-lg">
+<div class="job-card-inner flex h-full flex-col">
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<h3 class="text-xl font-bold text-white">Senior Frontend Developer</h3>
+<span class="rounded-full bg-[#B83B5E]/30 px-3 py-1 text-xs font-semibold text-[#f7a6b8]">Full-Time</span>
+</div>
+<p class="mt-2 text-sm text-white/60">Engineering | Mumbai, IN</p>
+<p class="mt-4 text-sm text-white/80">Join our team to build immersive user experiences for millions of students across the country.</p>
+</div>
+<button class="mt-6 flex w-full items-center justify-center rounded-lg h-11 bg-primary px-5 text-sm font-bold text-background-dark transition-all hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/30">Apply Now</button>
+</div>
+</div>
+<!-- Job Card 2 -->
+<div class="job-card rounded-xl bg-[#2a261a] border border-white/10 p-6 shadow-lg">
+<div class="job-card-inner flex h-full flex-col">
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<h3 class="text-xl font-bold text-white">Product Manager</h3>
+<span class="rounded-full bg-[#B83B5E]/30 px-3 py-1 text-xs font-semibold text-[#f7a6b8]">Full-Time</span>
+</div>
+<p class="mt-2 text-sm text-white/60">Product | Bangalore, IN</p>
+<p class="mt-4 text-sm text-white/80">Define the future of our educational platform, leading cross-functional teams to deliver impactful features.</p>
+</div>
+<button class="mt-6 flex w-full items-center justify-center rounded-lg h-11 bg-primary px-5 text-sm font-bold text-background-dark transition-all hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/30">Apply Now</button>
+</div>
+</div>
+<!-- Job Card 3 -->
+<div class="job-card rounded-xl bg-[#2a261a] border border-white/10 p-6 shadow-lg">
+<div class="job-card-inner flex h-full flex-col">
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<h3 class="text-xl font-bold text-white">UX/UI Design Intern</h3>
+<span class="rounded-full bg-primary/30 px-3 py-1 text-xs font-semibold text-primary">Internship</span>
+</div>
+<p class="mt-2 text-sm text-white/60">Design | Remote</p>
+<p class="mt-4 text-sm text-white/80">A hands-on opportunity for a creative student to contribute to real-world design challenges.</p>
+</div>
+<button class="mt-6 flex w-full items-center justify-center rounded-lg h-11 bg-primary px-5 text-sm font-bold text-background-dark transition-all hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/30">Apply Now</button>
+</div>
+</div>
+<!-- Job Card 4 -->
+<div class="job-card rounded-xl bg-[#2a261a] border border-white/10 p-6 shadow-lg">
+<div class="job-card-inner flex h-full flex-col">
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<h3 class="text-xl font-bold text-white">Data Scientist</h3>
+<span class="rounded-full bg-[#B83B5E]/30 px-3 py-1 text-xs font-semibold text-[#f7a6b8]">Full-Time</span>
+</div>
+<p class="mt-2 text-sm text-white/60">Data &amp; Analytics | Delhi, IN</p>
+<p class="mt-4 text-sm text-white/80">Analyze vast datasets to uncover insights that will drive strategic decisions and personalize student learning paths.</p>
+</div>
+<button class="mt-6 flex w-full items-center justify-center rounded-lg h-11 bg-primary px-5 text-sm font-bold text-background-dark transition-all hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/30">Apply Now</button>
+</div>
+</div>
+<!-- Job Card 5 -->
+<div class="job-card rounded-xl bg-[#2a261a] border border-white/10 p-6 shadow-lg">
+<div class="job-card-inner flex h-full flex-col">
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<h3 class="text-xl font-bold text-white">Marketing Specialist</h3>
+<span class="rounded-full bg-primary/30 px-3 py-1 text-xs font-semibold text-primary">Part-Time</span>
+</div>
+<p class="mt-2 text-sm text-white/60">Marketing | Remote</p>
+<p class="mt-4 text-sm text-white/80">Develop and execute innovative marketing campaigns to grow our user base and brand presence.</p>
+</div>
+<button class="mt-6 flex w-full items-center justify-center rounded-lg h-11 bg-primary px-5 text-sm font-bold text-background-dark transition-all hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/30">Apply Now</button>
+</div>
+</div>
+<!-- Job Card 6 -->
+<div class="job-card rounded-xl bg-[#2a261a] border border-white/10 p-6 shadow-lg">
+<div class="job-card-inner flex h-full flex-col">
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<h3 class="text-xl font-bold text-white">Backend Engineer (Go)</h3>
+<span class="rounded-full bg-[#B83B5E]/30 px-3 py-1 text-xs font-semibold text-[#f7a6b8]">Full-Time</span>
+</div>
+<p class="mt-2 text-sm text-white/60">Engineering | Bangalore, IN</p>
+<p class="mt-4 text-sm text-white/80">Build scalable and robust backend systems that power our entire platform, ensuring high performance.</p>
+</div>
+<button class="mt-6 flex w-full items-center justify-center rounded-lg h-11 bg-primary px-5 text-sm font-bold text-background-dark transition-all hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/30">Apply Now</button>
+</div>
+</div>
+</div>
+<!-- Pagination/Load More -->
+<div class="mt-12 flex justify-center">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 border border-primary/50 bg-primary/20 text-primary text-base font-bold tracking-[0.015em] transition-all hover:bg-primary/30">
+<span class="truncate">Load More</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="mt-20 w-full border-t border-white/10 bg-background-dark text-white">
+<div class="mx-auto max-w-7xl px-6 py-12 lg:px-8">
+<div class="xl:grid xl:grid-cols-3 xl:gap-8">
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<div class="size-7">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<p class="text-xl font-bold">India's Best</p>
+</div>
+<p class="text-sm leading-6 text-white/60">Empowering the next generation of leaders through education and opportunity.</p>
+</div>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm font-semibold leading-6 text-white">Solutions</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li><a class="text-sm leading-6 text-white/60 hover:text-white" href="#">Colleges</a></li>
+<li><a class="text-sm leading-6 text-white/60 hover:text-white" href="#">Exams</a></li>
+<li><a class="text-sm leading-6 text-white/60 hover:text-white" href="#">Careers</a></li>
+<li><a class="text-sm leading-6 text-white/60 hover:text-white" href="#">Admissions</a></li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm font-semibold leading-6 text-white">Company</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li><a class="text-sm leading-6 text-white/60 hover:text-white" href="#">About</a></li>
+<li><a class="text-sm leading-6 text-white/60 hover:text-white" href="#">Press</a></li>
+<li><a class="text-sm leading-6 text-white/60 hover:text-white" href="#">Jobs</a></li>
+<li><a class="text-sm leading-6 text-white/60 hover:text-white" href="#">Contact</a></li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm font-semibold leading-6 text-white">Legal</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li><a class="text-sm leading-6 text-white/60 hover:text-white" href="#">Privacy</a></li>
+<li><a class="text-sm leading-6 text-white/60 hover:text-white" href="#">Terms</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-16 border-t border-white/10 pt-8">
+<p class="text-center text-xs leading-5 text-white/60">© 2024 India's Best. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

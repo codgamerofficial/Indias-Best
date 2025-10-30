@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>User Dashboard - India's Best</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#f2b90d",
+              "secondary": "#E53935",
+              "background-light": "#f8f8f5",
+              "background-dark": "#121212",
+              "surface-light": "#ffffff",
+              "surface-dark": "#1e1e1e",
+              "text-light": "#121212",
+              "text-dark": "#E0E0E0",
+              "text-muted-light": "#6b7280",
+              "text-muted-dark": "#9ca3af",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px"},
+            boxShadow: {
+                'glow-primary': '0 0 15px 0 rgba(242, 185, 13, 0.5)',
+                'glow-secondary': '0 0 15px 0 rgba(229, 57, 53, 0.5)',
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-grid {
+            background-image:
+                linear-gradient(to right, rgba(242, 185, 13, 0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(242, 185, 13, 0.1) 1px, transparent 1px);
+            background-size: 3rem 3rem;
+        }
+        input[type="checkbox"] {
+            -webkit-appearance: none;
+            appearance: none;
+            background-color: #333;
+            width: 2.75rem;
+            height: 1.5rem;
+            border-radius: 9999px;
+            position: relative;
+            cursor: pointer;
+            transition: background-color .3s ease;
+        }
+        input[type="checkbox"]::before {
+            content: '';
+            position: absolute;
+            top: 0.25rem;
+            left: 0.25rem;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            background-color: #fff;
+            transition: transform .3s ease;
+        }
+        input[type="checkbox"]:checked {
+            background-color: #f2b90d;
+        }
+        input[type="checkbox"]:checked::before {
+            transform: translateX(1.25rem);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-display antialiased">
+<div class="relative min-h-screen w-full overflow-x-hidden bg-grid">
+<div class="absolute inset-0 bg-background-dark/80 bg-gradient-to-b from-background-dark/50 to-background-dark"></div>
+<div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-white/10 py-4">
+<div class="flex items-center gap-4">
+<div class="size-8 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold leading-tight tracking-[-0.015em]">India's Best</h2>
+</div>
+<div class="hidden flex-1 justify-center md:flex">
+<div class="flex items-center gap-9 rounded-full bg-surface-dark/50 px-6 py-2 backdrop-blur-sm border border-white/10">
+<a class="text-sm font-medium leading-normal text-text-muted-dark hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-medium leading-normal text-text-muted-dark hover:text-primary transition-colors" href="#">Search</a>
+<a class="text-sm font-medium leading-normal text-primary" href="#">Dashboard</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-surface-dark/50 text-text-muted-dark hover:bg-surface-dark hover:text-primary transition-colors border border-white/10 relative">
+<span class="material-symbols-outlined text-xl">notifications</span>
+<span class="absolute top-2 right-2.5 h-2 w-2 rounded-full bg-secondary ring-2 ring-surface-dark"></span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/50" data-alt="User profile avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD8D0ekp4mhh9SioEJDgrOe4W4RJOZtV2DA8Ov20FzN1KHzaQQE_Q8hBx9i2Z5U4nfOpd7c-Oj_tBOzZYFKdYdQFwuAgPDgRzcftSzaQCQXzAemFP9NCOy0gPwEMdbW7_oLgQPaHOWeoHfkpVsXA2tatS4FuXp9m3qZjNYa9oxX52LqmqRcsmzFGrPZGXDspRjUEptW9PYQRrn1nbaHo5pHIZG2FJsjQGP8S4332J_WkmWSgksyRBmkCsH3Fcr0fD6sP4SEY5R3hE7M");'></div>
+</div>
+</header>
+<main class="py-10">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+<div class="col-span-1 lg:col-span-2">
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 p-6 rounded-xl bg-surface-dark/50 border border-white/10 backdrop-blur-sm">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-24 w-24 border-4 border-primary shadow-glow-primary" data-alt="User profile picture of Sanjana Sharma" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB18mfcnu1VfuhLrLuqXjwOST3MRAzPKFYWJQzdeo6XVZ9yqBKXd9nY7fU3xcjaIlDU9y6-Woo-CgEjoZDUUyxbNnef7afBlHbaRceWQH73XzbMZ9nlHodQCR4Kf5OcKgy8wLnOi35iPJ4krnrUsB_ljZZM8ZY__coRABNRaShhYaeBa-6W_B1XTImByRaHqauZ377x_gklnqTu5ScbNtmwnNi0fKfKXx9r6AOk9JXW6S-M-0LaMMwdpBXgJa62wIevxjvQs3PkZwV9");'></div>
+<div class="flex flex-col justify-center">
+<p class="text-3xl font-bold leading-tight tracking-tighter">Sanjana Sharma</p>
+<p class="text-text-muted-dark text-lg font-normal leading-normal">Aspiring Engineer</p>
+</div>
+</div>
+</div>
+<div class="col-span-1">
+<div class="flex flex-col gap-3 p-6 rounded-xl bg-surface-dark/50 border border-white/10 backdrop-blur-sm h-full justify-center">
+<div class="flex gap-6 justify-between items-center"><p class="text-base font-medium leading-normal">Profile Completion</p><span class="font-bold text-primary">85%</span></div>
+<div class="rounded-full bg-white/10 h-2"><div class="h-2 rounded-full bg-primary shadow-glow-primary" style="width: 85%;"></div></div>
+</div>
+</div>
+</div>
+<div class="border-b border-white/10 mb-8">
+<nav aria-label="Tabs" class="-mb-px flex space-x-8">
+<a aria-current="page" class="border-primary text-primary whitespace-nowrap py-4 px-1 border-b-2 font-medium text-lg" href="#">Dashboard</a>
+<a class="border-transparent text-text-muted-dark hover:text-primary hover:border-primary whitespace-nowrap py-4 px-1 border-b-2 font-medium text-lg" href="#">Settings</a>
+</nav>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 space-y-8">
+<div class="rounded-xl bg-surface-dark/50 border border-white/10 backdrop-blur-sm p-6 @container">
+<h2 class="text-2xl font-bold leading-tight tracking-tighter mb-6">Application Progress</h2>
+<div class="flex flex-wrap gap-4">
+<div class="flex min-w-72 flex-1 flex-col gap-2">
+<p class="text-base font-medium leading-normal text-text-muted-dark">My Application Status</p>
+<p class="text-4xl font-bold leading-tight truncate">8 Total</p>
+<div class="flex gap-2 items-center">
+<p class="text-text-muted-dark text-base font-normal leading-normal">Overall</p>
+<p class="text-green-400 text-base font-medium leading-normal flex items-center gap-1">
+<span class="material-symbols-outlined text-lg">arrow_upward</span>
+<span>2 this week</span>
+</p>
+</div>
+</div>
+<div class="w-full @[480px]:w-auto flex-1 flex justify-center items-center">
+<div class="relative w-48 h-48">
+<svg class="w-full h-full" viewBox="0 0 36 36">
+<path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#ffffff1a" stroke-width="3"></path>
+<path class="stroke-primary drop-shadow-[0_0_5px_var(--tw-shadow-color)] shadow-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831" fill="none" stroke-dasharray="25, 100" stroke-linecap="round" stroke-width="3"></path>
+<path class="stroke-secondary drop-shadow-[0_0_5px_var(--tw-shadow-color)] shadow-secondary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831" fill="none" stroke-dasharray="15, 100" stroke-dashoffset="-25" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-4xl font-bold">2</span>
+<span class="text-sm text-text-muted-dark">Admitted</span>
+</div>
+</div>
+</div>
+<div class="w-full flex justify-center gap-6 text-sm mt-4">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-primary"></div><span>Shortlisted</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-secondary"></div><span>Applied</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-green-400"></div><span>Admitted</span>
+</div>
+</div>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center mb-4 px-2">
+<h2 class="text-2xl font-bold leading-tight tracking-tighter">Saved Colleges</h2>
+<a class="text-sm font-medium text-primary hover:underline" href="#">View All</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="p-4 rounded-lg bg-surface-dark/50 border border-white/10 backdrop-blur-sm flex items-center gap-4 hover:border-primary/50 transition-colors">
+<div class="flex-shrink-0 w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center"><img class="h-8 w-8 object-contain" data-alt="IIT Delhi logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6bxjz1senR9E1LJqmiIsZW1PQ_6hwLHh-6pJtOh4t-xw6N-wF6AOvAvlXO0vvkAr4eq4pRYeGOkxyAtHQFRaOaJut0xDfA5Gr-flJCe7lIdP4f4d4Vu6c6HAAOnaG8V_--sAa0JEt-7XlADRW68ELMgqetKOUprsHg_Nl1iWRF4SYu5P_5h91bgUV0o9bKh-8tc0c07OjR2Lne0UECi0X7piImkBUiHJfIWpuqTtMww6xBWH8amd0RPeUL5a85eohXsP9q69u6NRv"/></div>
+<div>
+<p class="font-bold">IIT Delhi</p>
+<p class="text-sm text-text-muted-dark">New Delhi, Delhi</p>
+</div>
+</div>
+<div class="p-4 rounded-lg bg-surface-dark/50 border border-white/10 backdrop-blur-sm flex items-center gap-4 hover:border-primary/50 transition-colors">
+<div class="flex-shrink-0 w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center"><img class="h-8 w-8 object-contain" data-alt="IIT Bombay logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcD_HvDssuTbuLJpqje99fZJ4UxeSNrO0Hj2lE3VPLlYZC4ePkjQfyRmR8k_OTfYMmA8tf33WFpossmhbOyO0H8xRJ_dEru1BbJ80-yTjtWqGGdS1YPHO53p0CayM1hZSK6Ip7bfr05ys4bnPQREKHE7TtLsZEeQyKg0b0fYbVHY7GYfmW1ju1SuFkydRgjzsOCFm4d8eQRNVWD7yqGXy1jOOksOT-0h4SvAtCoEjAfqnodM1KAfmOlQ0iYPCLcBc0X_-JHyDuGxsB"/></div>
+<div>
+<p class="font-bold">IIT Bombay</p>
+<p class="text-sm text-text-muted-dark">Mumbai, Maharashtra</p>
+</div>
+</div>
+<div class="p-4 rounded-lg bg-surface-dark/50 border border-white/10 backdrop-blur-sm flex items-center gap-4 hover:border-primary/50 transition-colors">
+<div class="flex-shrink-0 w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center"><img class="h-8 w-8 object-contain" data-alt="BITS Pilani logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHu5XXQC40pHz4zKkQMWeENV1oqZCeGgXb9P0bGhH98zeLx6GxNdWWYUbYWjU531_fsuiD65mE_NTNYNXi2-24zYLsd5JsQzkxpYsjYdHJedYrXb7SXvXd9psh3e27bzsOGEo9YyNJxBXiS5wcXJAzWFgaA_k1bSwLcUoMlJIf5d_2PTdVMSIzE6pg6sJAKqZ1XAvdiN4sZnao656n4ljlwNZnAWgnwjh7UUBZ9Y39C0FVhzGjJNMmoLe9Y7yBhB1ZjiVYNWa0y6YU"/></div>
+<div>
+<p class="font-bold">BITS Pilani</p>
+<p class="text-sm text-text-muted-dark">Pilani, Rajasthan</p>
+</div>
+</div>
+<div class="p-4 rounded-lg bg-surface-dark/50 border border-white/10 backdrop-blur-sm flex items-center gap-4 hover:border-primary/50 transition-colors">
+<div class="flex-shrink-0 w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center"><img class="h-8 w-8 object-contain" data-alt="VIT Vellore logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY6s0pkUm7Txv53sSUIUs6s72scfEJqG6J9rKWjZi1HZ0EsKFnE70DbvjXH79fTMVF3iSiL-FTZSjn42WdRkzPHYwxSn65m1rAoPI8DugW0Tkz8OoR0m3RKDQ9xEx83waEU3RezW_gRXiGjdwdb2sv20IdGm2TZ_fTnfKOt6EsOdN2EFAOsw0rICKcxYxKlPKeK1TQMZLM57V-p9ewIvuNgr2_PRXQPy-X7t6ONUv0_7yoyuNRZYBVogjeojHBTNT9xSDZzXP_gH39"/></div>
+<div>
+<p class="font-bold">VIT Vellore</p>
+<p class="text-sm text-text-muted-dark">Vellore, Tamil Nadu</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-1 space-y-8">
+<div class="rounded-xl bg-surface-dark/50 border border-white/10 backdrop-blur-sm p-6 h-full">
+<h2 class="text-2xl font-bold leading-tight tracking-tighter mb-6">Personalized Recommendations</h2>
+<div class="space-y-4">
+<div class="p-4 rounded-lg bg-white/5 border border-transparent hover:border-primary/50 transition-colors group">
+<p class="font-bold">IIIT Hyderabad</p>
+<p class="text-sm text-text-muted-dark">Matches your interest in <span class="text-primary/80 font-medium">AI &amp; ML</span></p>
+</div>
+<div class="p-4 rounded-lg bg-white/5 border border-transparent hover:border-primary/50 transition-colors group">
+<p class="font-bold">NIT Trichy</p>
+<p class="text-sm text-text-muted-dark">High placement rate in <span class="text-primary/80 font-medium">Computer Science</span></p>
+</div>
+<div class="p-4 rounded-lg bg-white/5 border border-transparent hover:border-primary/50 transition-colors group">
+<p class="font-bold">Manipal Institute of Technology</p>
+<p class="text-sm text-text-muted-dark">Strong curriculum in <span class="text-primary/80 font-medium">Data Analytics</span></p>
+</div>
+</div>
+</div>
+<div class="rounded-xl bg-surface-dark/50 border border-white/10 backdrop-blur-sm p-6">
+<h2 class="text-2xl font-bold leading-tight tracking-tighter mb-6">Favorite Courses</h2>
+<div class="space-y-3">
+<div class="flex items-center gap-4 rounded-lg p-3 bg-white/5 hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl">computer</span>
+<p class="font-medium">Computer Science</p>
+</div>
+<div class="flex items-center gap-4 rounded-lg p-3 bg-white/5 hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl">analytics</span>
+<p class="font-medium">Data Analytics</p>
+</div>
+<div class="flex items-center gap-4 rounded-lg p-3 bg-white/5 hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl">smart_toy</span>
+<p class="font-medium">Artificial Intelligence</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

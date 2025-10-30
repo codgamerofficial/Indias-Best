@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>India's Best - My Application Pipeline</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+    </style>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#f2b90d",
+              "background-light": "#f8f8f5",
+              "background-dark": "#121212",
+              "accent-red": "#DC143C",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"]
+            },
+            borderRadius: {
+              "DEFAULT": "0.5rem",
+              "lg": "0.75rem",
+              "xl": "1rem",
+              "full": "9999px"
+            },
+            boxShadow: {
+                'glow-primary': '0 0 15px 5px rgba(242, 185, 13, 0.3)',
+                'glow-red': '0 0 15px 5px rgba(220, 20, 60, 0.3)',
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#E0E0E0]">
+<div class="relative flex min-h-screen w-full flex-col">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-white/10 bg-background-dark/80 px-4 py-3 backdrop-blur-sm sm:px-8 md:px-16">
+<div class="flex items-center gap-4">
+<div class="text-primary text-3xl">
+<span class="material-symbols-outlined !text-3xl">hub</span>
+</div>
+<h1 class="text-xl font-bold leading-tight tracking-[-0.015em] text-white">India's Best</h1>
+</div>
+<nav class="hidden items-center gap-9 lg:flex">
+<a class="text-sm font-medium leading-normal text-white hover:text-primary" href="#">Dashboard</a>
+<a class="text-sm font-medium leading-normal text-primary" href="#">My Application Pipeline</a>
+<a class="text-sm font-medium leading-normal text-white hover:text-primary" href="#">College Search</a>
+<a class="text-sm font-medium leading-normal text-white hover:text-primary" href="#">Resources</a>
+</nav>
+<div class="flex flex-1 items-center justify-end gap-4">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] transition-transform hover:scale-105">
+<span class="truncate">Add New Application</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/50" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBO45wAPcPvGLg18BvdG4G08fx-TN_eESxicEZypbTDL_-uVZTQI_N6GrQ2ct3awyuFjwfKfpM4ZBnQ5aQLQElaLvL54IwIvPyG47n7Abg_GazBE5bVGJ1m41kDcpcxBQa9xt8NzkoBZa7V-27sfHojI0wrLlprAKG4m_Cg70X4HDZeWBTbY5AIPULORcdzrrNVOmOvrnHbk3LBXW8wrlSlGy4OVUZq_Yv3HithohPEbWBzMbzyVtZj9STLJxqu322vgjcote2m1qgk");'></div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex h-full grow flex-col px-4 py-8 sm:px-8 md:px-16">
+<!-- Page Heading -->
+<div class="flex flex-wrap items-center justify-between gap-4">
+<div class="flex flex-col gap-2">
+<p class="text-4xl font-black leading-tight tracking-[-0.033em] text-white">My Application Pipeline</p>
+<p class="text-base font-normal leading-normal text-white/70">Visualize and manage your college application journey.</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-10 px-4 bg-white/10 text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-white/20">
+<span class="material-symbols-outlined">play_circle</span>
+<span class="truncate">View Tutorial</span>
+</button>
+</div>
+<!-- Filters -->
+<div class="my-6 flex flex-wrap gap-3">
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white/10 pl-4 pr-3 text-white hover:bg-white/20">
+<p class="text-sm font-medium leading-normal">Filter by Year</p>
+<span class="material-symbols-outlined text-base">expand_more</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white/10 pl-4 pr-3 text-white hover:bg-white/20">
+<p class="text-sm font-medium leading-normal">Sort by Deadline</p>
+<span class="material-symbols-outlined text-base">expand_more</span>
+</button>
+</div>
+<!-- 3D Pipeline Visualization -->
+<div class="flex-1 overflow-x-auto py-8">
+<div class="inline-grid min-w-full auto-cols-[minmax(300px,_1fr)] grid-flow-col gap-6">
+<!-- Stage: Research -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.05] p-4 shadow-lg">
+<div class="flex size-10 items-center justify-center rounded-lg bg-primary/20 text-primary">
+<span class="material-symbols-outlined">search</span>
+</div>
+<div>
+<h3 class="text-lg font-bold text-white">Research</h3>
+<p class="text-sm text-white/70">5 Applications</p>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Application Card -->
+<div class="group cursor-grab rounded-xl border border-white/10 bg-white/[0.05] p-4 transition-all hover:border-primary hover:shadow-glow-primary active:cursor-grabbing">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-10 bg-white/5" data-alt="University Logo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDaRW3_J4C5tkJYeeu0HqUKQ7JTFl-zvxVnmxMl8VVVPK9O43z-gwB1DftpEZ6IE16VFskzfkoHic8eegeh5-4LbkljAxHOEDdPZ_7NIaZtHuVZUjsMqn5zZ5qvNBOxA4hyccgZdqd8zSy7-tRIB5gPr2gdWS88sreaoFDtOgcBbtnAiNWFm9fMMFKszUjdUSk8opFtxXISWtdp3k0ZnzLzId6GozXkruP8WlPYO6SY2T_5W8PGSpqckyycq_dhsnfVY82GWLdPrYQ5");'></div>
+<div>
+<p class="font-bold text-white">IIT Bombay</p>
+<p class="text-sm text-white/70">Computer Science</p>
+</div>
+</div>
+<span class="text-xs font-medium text-white/50">ID: 9821</span>
+</div>
+<div class="mt-4 flex items-end justify-between">
+<div class="text-sm">
+<p class="text-white/70">Deadline</p>
+<p class="font-medium text-white">Dec 15, 2024</p>
+</div>
+<div class="rounded-full bg-primary/20 px-3 py-1 text-xs font-medium text-primary">Shortlisted</div>
+</div>
+</div>
+<!-- Application Card -->
+<div class="group cursor-grab rounded-xl border border-white/10 bg-white/[0.05] p-4 transition-all hover:border-primary hover:shadow-glow-primary active:cursor-grabbing">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-10 bg-white/5" data-alt="University Logo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBchi-rQUUJ7RZVJhFhGjRj5kzNEPyrCeO3MserU4jg-PlR5r5HSxqKxbSFJZRAc0OOTCA7Iw3NCdvDB-gYICWl_Q7MmotElhR41V8TbiNylyy7CtLUX12INFeKSp4wBJ1GEqQUp1rfEksd5OfsfTK90WqYxEZCbmeT294Na8uOCzI33TxAtQ47QMs9H6shsotAiiU5yEPx8338a_auw8HfwCJ_e_IyehXstlBCpywMcwXGxoqqadj2kFn4utG15kK_FMmsYsqbyhyT");'></div>
+<div>
+<p class="font-bold text-white">IIM Ahmedabad</p>
+<p class="text-sm text-white/70">MBA Program</p>
+</div>
+</div>
+<span class="text-xs font-medium text-white/50">ID: 7534</span>
+</div>
+<div class="mt-4 flex items-end justify-between">
+<div class="text-sm">
+<p class="text-white/70">Deadline</p>
+<p class="font-medium text-white">Jan 10, 2025</p>
+</div>
+<div class="rounded-full bg-primary/20 px-3 py-1 text-xs font-medium text-primary">Shortlisted</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Stage: Applied -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.05] p-4 shadow-lg">
+<div class="flex size-10 items-center justify-center rounded-lg bg-blue-500/20 text-blue-400">
+<span class="material-symbols-outlined">send</span>
+</div>
+<div>
+<h3 class="text-lg font-bold text-white">Applied</h3>
+<p class="text-sm text-white/70">2 Applications</p>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Application Card -->
+<div class="group cursor-grab rounded-xl border border-white/10 bg-white/[0.05] p-4 transition-all hover:border-blue-400 hover:shadow-[0_0_15px_5px_rgba(96,165,250,0.3)] active:cursor-grabbing">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-10 bg-white/5" data-alt="University Logo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCE2W_VYue9XiGXEBT4JNEHc5OTQ5iHBRQRYahyrqNyHWn_XtMAkYvsqFFH9IQmeydC2uXGCgxjgUAyqDdNMSYlA_gLqdw0UOqHOYWrApbaPPPV_1R9U0HlkphDNS0XiOHF52gxpN_G72zddPIzO3tq7uO_Uq7qyFYqCfE1MLFAJOAyL0RrlwQmNYuf3usGoz_Uuq3jyZEgUw2E6oCat1O49sxiYjn3siHdrM1FK7RgKjXZYhYzt5L9DQE2GXu2j2vSHOJoutuGq3YF");'></div>
+<div>
+<p class="font-bold text-white">BITS Pilani</p>
+<p class="text-sm text-white/70">Electrical Engineering</p>
+</div>
+</div>
+<span class="text-xs font-medium text-white/50">ID: 6423</span>
+</div>
+<div class="mt-4 flex items-end justify-between">
+<div class="text-sm">
+<p class="text-white/70">Submitted</p>
+<p class="font-medium text-white">Nov 28, 2024</p>
+</div>
+<div class="rounded-full bg-blue-500/20 px-3 py-1 text-xs font-medium text-blue-400">Pending Review</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Stage: Interview -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.05] p-4 shadow-lg">
+<div class="flex size-10 items-center justify-center rounded-lg bg-purple-500/20 text-purple-400">
+<span class="material-symbols-outlined">group</span>
+</div>
+<div>
+<h3 class="text-lg font-bold text-white">Interview</h3>
+<p class="text-sm text-white/70">1 Application</p>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Application Card -->
+<div class="group cursor-grab rounded-xl border border-white/10 bg-white/[0.05] p-4 transition-all hover:border-purple-400 hover:shadow-[0_0_15px_5px_rgba(192,132,252,0.3)] active:cursor-grabbing">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-10 bg-white/5" data-alt="University Logo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD1ZXSPZpbxZVdrjdPgH7ozRy6h0iieC2fxrQynfbTTB-vMjyzmVc9pe_Zq13L9NmvfgCgiBIIyd8-LgFD26Aj9A83MdoBFPN0x4BDX4LGW6deP4jGKg9BIp2MHu0_Tsey4PTM_OVXH2_UShuPdBeYnFQuN_2L0Usc556F-pkKPrnUmHCINqDVHQujopNLepQB81Lnb0YEgyGbyB3vfsxYGkBZIVDGRpebZdsC0EVHfoIM8REwTfd9Um-OA7mc7zxlxV66Usm8LsyPV");'></div>
+<div>
+<p class="font-bold text-white">NID Ahmedabad</p>
+<p class="text-sm text-white/70">Product Design</p>
+</div>
+</div>
+<span class="text-xs font-medium text-white/50">ID: 5589</span>
+</div>
+<div class="mt-4 flex items-end justify-between">
+<div class="text-sm">
+<p class="text-white/70">Interview Date</p>
+<p class="font-medium text-white">Jan 22, 2025</p>
+</div>
+<div class="rounded-full bg-purple-500/20 px-3 py-1 text-xs font-medium text-purple-400">Scheduled</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Stage: Decision -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.05] p-4 shadow-lg">
+<div class="flex size-10 items-center justify-center rounded-lg bg-green-500/20 text-green-400">
+<span class="material-symbols-outlined">verified</span>
+</div>
+<div>
+<h3 class="text-lg font-bold text-white">Decision</h3>
+<p class="text-sm text-white/70">0 Applications</p>
+</div>
+</div>
+<div class="flex h-40 items-center justify-center rounded-xl border-2 border-dashed border-white/10 text-white/50">
+<p>Drag cards here</p>
+</div>
+</div>
+<!-- Stage: Withdrawn / Rejected -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.05] p-4 shadow-lg">
+<div class="flex size-10 items-center justify-center rounded-lg bg-accent-red/20 text-accent-red">
+<span class="material-symbols-outlined">cancel</span>
+</div>
+<div>
+<h3 class="text-lg font-bold text-white">Withdrawn / Rejected</h3>
+<p class="text-sm text-white/70">1 Application</p>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Application Card -->
+<div class="group cursor-grab rounded-xl border border-white/10 bg-white/[0.05] p-4 transition-all hover:border-accent-red hover:shadow-glow-red active:cursor-grabbing opacity-70">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-10 bg-white/5" data-alt="University Logo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA5mXa2P0XW9YYvIA78Wo_PXK6R7zKOfwHOC4Xp9w9B0pYdPouJ3gVTGUP_uktDXZpdAnS3D6YVJRb7eX7QBlj2mMeN3Ee4uk7_naZEHPeytHnJcnsgtOmS9EBcSUeN2Z1i8svYrp4xyxpeOwT9FJ_zmXYOsikNIoHN0bng1VYNtSiwAVLNcTVHsUa1YuU3c0jtZaL5GcPxM7zJQ1iVcZAlA9hcsCxDNmlgL_fzlXkgnkc4nAAJsY4aTFP3mP8K5o5Nv5tOMMCNqbA3");'></div>
+<div>
+<p class="font-bold text-white">VIT Vellore</p>
+<p class="text-sm text-white/70">Information Technology</p>
+</div>
+</div>
+<span class="text-xs font-medium text-white/50">ID: 4122</span>
+</div>
+<div class="mt-4 flex items-end justify-between">
+<div class="text-sm">
+<p class="text-white/70">Status</p>
+<p class="font-medium text-white">Withdrawn by user</p>
+</div>
+<div class="rounded-full bg-accent-red/20 px-3 py-1 text-xs font-medium text-accent-red">Withdrawn</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

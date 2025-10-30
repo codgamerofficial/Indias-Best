@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Confirmation Modal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#f2b90d",
+              "background-light": "#f8f8f5",
+              "background-dark": "#121212",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-display">
+<div class="relative flex h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-hidden items-center justify-center p-4">
+<!-- Background content (blurred) -->
+<div class="absolute inset-0 bg-cover bg-center bg-[url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')]" data-alt="University campus background"></div>
+<div class="absolute inset-0 bg-black/50 backdrop-blur-md"></div>
+<!-- Modal Container -->
+<div class="relative w-full max-w-md transform transition-all duration-300 ease-out perspective-1000">
+<div class="relative flex flex-col items-center gap-4 rounded-xl border border-white/10 bg-gradient-to-br from-[#1c1c1c] to-[#121212] p-8 shadow-2xl shadow-black/50" style="transform-style: preserve-3d; transform: rotateY(-5deg) rotateX(5deg);">
+<!-- Icon -->
+<div class="flex h-16 w-16 items-center justify-center rounded-full border border-red-500/30 bg-red-500/10 text-red-500 shadow-[0_0_20px_rgba(255,65,54,0.3)]">
+<span class="material-symbols-outlined text-4xl">
+                        warning
+                    </span>
+</div>
+<!-- HeadlineText -->
+<h1 class="text-white tracking-tight text-[28px] font-bold leading-tight text-center">Are You Absolutely Sure?</h1>
+<!-- BodyText -->
+<p class="text-gray-400 text-base font-normal leading-relaxed text-center max-w-sm">
+                    This action cannot be undone. All of your saved college lists, comparison history, and personalized recommendations will be permanently deleted from your account.
+                </p>
+<!-- ButtonGroup -->
+<div class="flex w-full flex-col items-stretch gap-3 pt-4">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-[#FF4136] text-white text-base font-bold leading-normal tracking-[0.015em] transition-transform duration-200 ease-out hover:scale-[1.03] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-background-dark">
+<span class="truncate">Confirm Clear</span>
+</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-white/5 text-gray-300 text-base font-bold leading-normal tracking-[0.015em] transition-all duration-200 ease-out hover:bg-white/10 hover:text-white active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background-dark">
+<span class="truncate">Cancel</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</body></html>

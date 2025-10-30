@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>India's Best - Blog Post</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#f9d006",
+              "background-light": "#f8f8f5",
+              "background-dark": "#121212",
+              "accent-red": "#BF3131",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#EAEAEA]">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- TopNavBar Component -->
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-white/10 bg-background-dark/80 px-4 py-3 backdrop-blur-sm sm:px-10 md:px-20 lg:px-40">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">India's Best</h2>
+</div>
+<div class="hidden flex-1 justify-end gap-8 md:flex">
+<div class="flex items-center gap-9">
+<a class="text-white/80 hover:text-primary text-sm font-medium leading-normal transition-colors" href="#">Home</a>
+<a class="text-primary text-sm font-bold leading-normal" href="#">Colleges</a>
+<a class="text-white/80 hover:text-primary text-sm font-medium leading-normal transition-colors" href="#">Articles</a>
+</div>
+<div class="flex gap-2">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] transition-transform hover:scale-105">
+<span class="truncate">Sign Up</span>
+</button>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-white/10 text-white hover:bg-white/20 text-sm font-bold leading-normal tracking-[0.015em] transition-colors">
+<span class="truncate">Log In</span>
+</button>
+</div>
+</div>
+<div class="md:hidden">
+<button class="text-white p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="flex flex-1 justify-center py-5 sm:py-10">
+<div class="layout-content-container flex w-full max-w-4xl flex-col px-4">
+<!-- Article Header -->
+<div class="mb-8">
+<!-- HeadlineText Component -->
+<h1 class="text-white tracking-tight text-4xl sm:text-5xl font-bold leading-tight text-left pb-4 pt-6">Top 10 Engineering Colleges for AI in 2024</h1>
+<div class="flex flex-wrap items-center justify-between gap-4 border-y border-white/10 py-4">
+<!-- ListItem Component (Author Byline) -->
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12" data-alt="Profile picture of Dr. Ananya Sharma" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBMGC2IqauWE3s01_4jJQ1kebPia1yir0UEmVe6DiRg_-MVkzFX1tWv4Ctat2ugpw_w7mrGwX4_NoWSmbUf3Ddct2LaAqW18CWxP7r26wfB_urElCC0pt2FOh1irALskFaPw5Jpn_R5GXmPFOH0x8oLJ6H0OxDTgDCLWFc4AhTDQBUYLBnSFOIeMWGiE5PpBpANuOy1gkbpsWNW3LXGi42Jg1fqHbh4uGYZRpoOjcbtg5X5VSRfqFOPc3JlVcYCNbx4_5_utn0Qqcoq");'></div>
+<div>
+<p class="text-white text-base font-bold leading-normal">Dr. Ananya Sharma</p>
+<p class="text-white/60 text-sm font-normal leading-normal">Oct 26, 2024 · 8 min read</p>
+</div>
+</div>
+<!-- ReactionBar Component (Social Share) -->
+<div class="flex flex-wrap gap-2">
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg bg-white/10 text-white/70 transition-all hover:scale-110 hover:bg-primary hover:text-background-dark">
+<span class="material-symbols-outlined text-xl">share</span>
+</button>
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg bg-white/10 text-white/70 transition-all hover:scale-110 hover:bg-primary hover:text-background-dark">
+<span class="material-symbols-outlined text-xl">bookmark_add</span>
+</button>
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg bg-white/10 text-white/70 transition-all hover:scale-110 hover:bg-accent-red hover:text-white">
+<span class="material-symbols-outlined text-xl">favorite_border</span>
+</button>
+</div>
+</div>
+</div>
+<!-- HeaderImage Component -->
+<div class="mb-8 @container">
+<div class="w-full bg-center bg-no-repeat bg-cover flex flex-col justify-end overflow-hidden rounded-lg min-h-80 md:min-h-[400px]" data-alt="Futuristic image of a university campus with glowing data streams" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCGXg8cwd6oFOB598tENxQN1MFm6V53dsj28N-kOvWpXUf_mikyl496SMKwC6fRjqCqG2boxZrBbE3aHB40-SWgY08Yg61cHFsRjjP2fMFjp4vgrD3Cij32LYaUmJ_rIyQ0-QXnopPIvzZyi4Sgt0YJH_Enqut4Acl0ycuikbmZmJPws0FvZYOGBhCRX_bQCNx_73IwKJhgQIqnUp89M138Mot5xJV0is7Hc-9vQG21DktHZaStG2ECXDgjjGzIaixWH86aPBAP8xuC");'></div>
+</div>
+<!-- Article Body -->
+<article class="prose prose-invert prose-lg max-w-none text-white/90 prose-headings:text-white prose-a:text-primary prose-strong:text-white/90">
+<p>The rise of Artificial Intelligence has transformed industries and, consequently, the educational landscape. Aspiring engineers now seek institutions that not only provide a strong foundation in computer science but also offer specialized curricula, cutting-edge research opportunities, and deep industry connections in the AI domain. In 2024, the competition is fierce, but a few institutions have clearly distinguished themselves as leaders. Here, we break down the top 10 engineering colleges for AI in India, evaluating them on faculty expertise, research output, infrastructure, and graduate outcomes.</p>
+<h2>1. Indian Institute of Technology, Bombay (IITB)</h2>
+<p>Consistently ranked as the top engineering college in India, IIT Bombay's Computer Science and Engineering department is a powerhouse of AI research. With dedicated labs for machine learning, natural language processing, and computer vision, students get hands-on experience with real-world problems. The institute’s strong ties with global tech giants ensure that students are at the forefront of AI innovation.</p>
+<figure>
+<img alt="Campus of IIT Bombay" class="rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQncjFk0WL4_NqCSzS47SiW-P0BqsEUQHLgZ--prJA1Ig7Kr2tAP8B90v0jeoDS6uaNZPzALlTtCZya3fcHB8sS_pA0sKWBDxOLUBylKrNAc4FI_g527xxRcD-sqBVNBzekkZ2XVsDJhFqbeTDEEhaGfTFfCfEEbG1Lsf2-Y9ZFxxrQqmxP2zVK1SeuDWxyI5Au62SHhNK2y_o4HJJn7qFJhAwY4IlOtGVi5A8JCBUB_5wCZKliwVMLim80P0qi_GvMi1mhtNO2nr-"/>
+<figcaption class="text-center text-sm text-white/60">The iconic main building of IIT Bombay.</figcaption>
+</figure>
+<h2>2. Indian Institute of Science, Bangalore (IISc)</h2>
+<p>While primarily a research institute, IISc's M.Tech in AI program is one of the most coveted in the country. The curriculum is rigorous, research-intensive, and taught by some of the most respected academics in the field. IISc’s interdisciplinary approach allows students to apply AI in diverse areas, from robotics to computational biology.</p>
+<blockquote>
+<p>"The future is being written in code, and AI is the language. Choosing the right institution is the first step towards becoming fluent."</p>
+</blockquote>
+<h2>3. International Institute of Information Technology, Hyderabad (IIIT-H)</h2>
+<p>IIIT Hyderabad has carved a niche for itself with its strong focus on research and a culture that fosters innovation. The Kohli Center on Intelligent Systems (KCIS) at IIIT-H is a hub for AI research, attracting top talent from across the globe. Their undergraduate program in Computer Science with a specialization in AI is particularly noteworthy for its depth and practical orientation.</p>
+<a class="no-underline" href="#">
+<div class="my-6 flex flex-col sm:flex-row items-center gap-6 rounded-lg border border-white/10 bg-white/5 p-6 transition-colors hover:bg-white/10">
+<div class="flex-shrink-0">
+<span class="material-symbols-outlined text-5xl text-primary">school</span>
+</div>
+<div>
+<h3 class="mt-0 text-xl font-bold text-primary">Explore these colleges on India's Best</h3>
+<p class="mt-2 text-white/80">Get detailed information, compare rankings, and find admission guidance for the top AI colleges in the country.</p>
+</div>
+</div>
+</a>
+<p>The list continues with other esteemed institutions, each with its unique strengths in the field of Artificial Intelligence. As the technology evolves, so will the educational programs. It is crucial for students to look beyond rankings and consider factors like faculty research interests, lab facilities, and the overall innovation ecosystem of the college.</p>
+</article>
+<hr class="my-12 border-white/10"/>
+<!-- Comments Section -->
+<section class="rounded-xl border border-white/10 bg-white/5 p-6 sm:p-8" style="box-shadow: inset 0 1px 2px rgba(255,255,255,0.05);">
+<h2 class="text-2xl font-bold text-white mb-6">Comments (3)</h2>
+<!-- Comment Form -->
+<div class="flex items-start gap-4 mb-8">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-10 w-10 flex-shrink-0" data-alt="Current user's profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAhvA4P64jHhKkkFolSqbFv09kwC7UeI85QDBasfXER-lFnKRJRD0lJIED6kJgn8xoP9krFjviWQvWfk93ichr_vJr28I8FMQBH9VKUAmXqymKXrkwzfRx8Kp3KXU1jL2OfG9ywb8VwfQZwV0JplUy09-loJH87QRBGQ6QvXmQibalpwJooo-KjN3St2RBiVSMJtn71644sNYIZrhzr_vPzR4NQMPkS3JIaJ9pBYpNgcfjeHB2s3QLRabCr8d_NWZhGVni_u5Hpm5nE");'></div>
+<div class="w-full">
+<textarea class="w-full rounded-lg border-2 border-white/20 bg-background-dark p-3 text-white/90 focus:border-primary focus:ring-primary transition-colors" placeholder="Add a comment..." rows="3"></textarea>
+<div class="flex justify-end mt-2">
+<button class="flex min-w-[100px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] transition-transform hover:scale-105">
+<span class="truncate">Post Comment</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Comment List -->
+<div class="space-y-6">
+<!-- Comment Item -->
+<div class="flex items-start gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-10 w-10 flex-shrink-0" data-alt="Profile picture of Rohan Verma" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCqUEqYfEbqMdlaz2CSvt1aZ_OH5F5A98ZoxqQVYpn-_SpMiUgBHGPjeDZoKau-CHiHXC3ZI9x-zT7IsiAvzv5r3dskXzds4zNTWkJuEWV4_LfL2pvIqiFqkvYoeLrQ9rymY3dcwIwoH5_HLhXB3UHMppzfLOl4B0mZCtRl41OrN-KCgMLHBQGyOOvVepmtEyQ1M6oLogSKH735kMRvNwGNnuhdFjfGFqmSAzOW1xiO9ag3Nyz8XhuNyhuLka3A9icq9LALlOBY1kSn");'></div>
+<div>
+<div class="flex items-center gap-2 mb-1">
+<p class="font-bold text-white">Rohan Verma</p>
+<p class="text-xs text-white/50">2 days ago</p>
+</div>
+<p class="text-white/80">Great article! I'm an alumnus of IIIT-H, and the focus on research there is truly transformative. The Kohli Center is world-class.</p>
+</div>
+</div>
+<!-- Comment Item with Reply -->
+<div class="flex items-start gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-10 w-10 flex-shrink-0" data-alt="Profile picture of Priya Singh" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBNXq1jJxfDKupw7Zt4DJ2zJxByy0Pz_zIfaxXL2Qf1mObI8tyMW9rIt1K9Y9kKFm1TaOHZmZNI7KFmS3q0jpkvjlYKlZmv2zw298fSu1B7NzdMAaQ-fy5tvEGrd7hue9_p1CL2KawVa7D2Td2C938GiLDEyTfnSQVRVNK75RENZmo2VCRtbCdfA0ba7hg5OazNOTxbJl9RwNjtvujcEu8WVKnWR7jwMA_UY9aq6hA9pwdymxWIW8MtfHgjfSh3_0SzlPy3-4U5Evgm");'></div>
+<div>
+<div class="flex items-center gap-2 mb-1">
+<p class="font-bold text-white">Priya Singh</p>
+<p class="text-xs text-white/50">1 day ago</p>
+</div>
+<p class="text-white/80">Thanks for this list. Could you do a follow-up on colleges that offer good internships in AI? That would be super helpful.</p>
+<div class="mt-4 flex items-start gap-4 pl-6 border-l-2 border-white/10">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-8 w-8 flex-shrink-0" data-alt="Profile picture of Dr. Ananya Sharma" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDYdYHGB6ycl93oW9S1v6nvgfy-xUvTtw8x6QoBJVjaBtuQCWX8jEShSB1CBLQkrBQSZYycEbHv5_HLBGJ4-1YWz690eV8Bmp2syoetidn_SElLfhef8WrnMmXNhnoYOI8FNtnKfEO0rHk2mH48PEmvwHqcKoSXynX1uPa2WvqdygDkZGcN_XwXUlj-3t6o373x-8Qv2ss9WG-7wlEuyM9cUUP2625dkL9tcEH_JWxush6Cw1vcCibd_I2q2hiThy5ENYV84ZJRnylA");'></div>
+<div>
+<div class="flex items-center gap-2 mb-1">
+<p class="font-bold text-white">Dr. Ananya Sharma <span class="text-xs font-medium text-primary bg-primary/20 px-2 py-0.5 rounded-full">Author</span></p>
+<p class="text-xs text-white/50">1 day ago</p>
+</div>
+<p class="text-white/80">That's an excellent suggestion, Priya! We'll definitely consider it for a future article. Stay tuned!</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<hr class="my-12 border-white/10"/>
+<!-- Related Articles Section -->
+<section>
+<h2 class="text-3xl font-bold text-white mb-8 text-center">Related Articles</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Related Article Card -->
+<div class="group flex flex-col overflow-hidden rounded-lg border border-white/10 bg-white/5 transition-all hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/10">
+<div class="h-48 w-full bg-cover bg-center" data-alt="Abstract neural network graphic" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDLaRuNPZpEO9m8ygwsTBsg9T2YbL_WPDA63i5bpkiMIPhL53nqcOC-JeJQSs52QPtjmiEm5wxAgNgYAungpNiOVT7-jYwT0i2AbHUfCNHku-R6DKhSXjQtw_u4bIP89ZpR8Q7UF_SoMWK9kyhdozaqjU2ccp1u8T86VtcmByiNAhNnPgIm_Wo1G_Rv__ZSEIbxVrUrkMV6fBQ5Ca5nD4wxPBIuXB7_mLXio6lDwLNrSJHqDELrt8mslJaDir8V8Qqb5E39cqb4e309")'></div>
+<div class="flex flex-1 flex-col p-4">
+<h3 class="flex-1 font-bold text-white/90 group-hover:text-primary transition-colors">The Future of AI: Beyond Machine Learning</h3>
+<p class="text-sm text-white/60 mt-2">Nov 05, 2024 · 6 min read</p>
+</div>
+</div>
+<!-- Related Article Card -->
+<div class="group flex flex-col overflow-hidden rounded-lg border border-white/10 bg-white/5 transition-all hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/10">
+<div class="h-48 w-full bg-cover bg-center" data-alt="Students working in a modern computer lab" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCzgxGWQwOAKo3fvWVS61nzkxKQB-siCbS3k5VbZ9TbmSTY0x-9NS0SY6XvA0dpaA8b2_LVYGfWJ9oeCTsmPDkVLBO9W49Ksgn874RyXh5QlXc54kz6wIVXhVpewSys1XnvsP4rqvw0E7wFPBumAB3j0dcqYdoZ4ImP0Hhewwzsed-USpp9NlHXe3CoM10IGBHkR3dSG3AzSL7VdDerEv2DIfx99k-K7XU88V9DXJ9EWTK_sa8kz_Xd6pW2_vaVhBdURC1UkkyZNnth")'></div>
+<div class="flex flex-1 flex-col p-4">
+<h3 class="flex-1 font-bold text-white/90 group-hover:text-primary transition-colors">How to Prepare for Engineering Entrance Exams</h3>
+<p class="text-sm text-white/60 mt-2">Oct 15, 2024 · 10 min read</p>
+</div>
+</div>
+<!-- Related Article Card -->
+<div class="group flex flex-col overflow-hidden rounded-lg border border-white/10 bg-white/5 transition-all hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/10">
+<div class="h-48 w-full bg-cover bg-center" data-alt="Close-up of a robotic arm" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDglNhuIpqA0DVCrHTTcCUUUM-TWci4TTkDq584uFZPE1DntrDcJbyV01ateooq_KBwipLEDz7L7Ig63xCYciTRU6esr7A8nVRXV-Vud3Ar-7typl0CfRStuWbInIPIsQ57wszCSVbSkf5cEmMMvfvnX8UJej__5fxD4YnM0ga-lNJTRAzcKUNS-7tjfYQLn02e_bZx70NXoOLdw2und8fj9LGqaz9oIia6gp2ADW6EzSoYZZcjqz4wZ2iKH9IirQy4eZ962wH0zlJS")'></div>
+<div class="flex flex-1 flex-col p-4">
+<h3 class="flex-1 font-bold text-white/90 group-hover:text-primary transition-colors">Beyond CSE: Exploring Mechatronics in India</h3>
+<p class="text-sm text-white/60 mt-2">Sep 28, 2024 · 7 min read</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+</div>
+</body></html>

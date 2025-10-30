@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>India's Best - College Search Results</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#f2b90d",
+              "background-light": "#f8f8f5",
+              "background-dark": "#121212",
+              "card-dark": "#1E1E1E",
+              "accent-red": "#B22222",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#EAEAEA]">
+<div class="relative flex h-auto min-h-screen w-full flex-col">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-white/10 bg-background-dark/80 px-4 py-3 backdrop-blur-md md:px-8 lg:px-16">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-white">
+<div class="size-6 text-primary">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill-rule="evenodd"></path></svg>
+</div>
+<h2 class="text-white text-xl font-bold leading-tight tracking-[-0.015em]">India's Best</h2>
+</div>
+<div class="hidden items-center gap-9 lg:flex">
+<a class="text-white/80 text-sm font-medium leading-normal transition-colors hover:text-white" href="#">Home</a>
+<a class="text-white/80 text-sm font-medium leading-normal transition-colors hover:text-white" href="#">Compare</a>
+</div>
+</div>
+<div class="flex flex-1 justify-end gap-4">
+<div class="hidden max-w-sm flex-1 md:block">
+<label class="flex flex-col h-10 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-[#bab29c] flex border-none bg-card-dark items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined text-lg">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg text-white/90 focus:outline-0 focus:ring-1 focus:ring-primary border-none bg-card-dark focus:border-none h-full placeholder:text-white/40 px-4 pl-2 text-base font-normal leading-normal" placeholder="Search for colleges, courses..." value=""/>
+</div>
+</label>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] transition-transform hover:scale-105">
+<span class="truncate">Login</span>
+</button>
+</div>
+</header>
+<main class="flex flex-1 flex-col @container">
+<div class="flex flex-1 flex-col @[1024px]:flex-row">
+<!-- Filter Sidebar -->
+<aside class="w-full @[1024px]:w-80 @[1280px]:w-96 p-4 @[1024px]:p-6 @[1024px]:sticky @[1024px]:top-16 @[1024px]:h-[calc(100vh-4rem)] @[1024px]:overflow-y-auto border-b @[1024px]:border-r @[1024px]:border-b-0 border-white/10">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-2xl font-bold">Refine Your Search</h3>
+<button class="flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors">
+<span class="material-symbols-outlined text-xl">restart_alt</span>
+                            Reset
+                        </button>
+</div>
+<div class="space-y-6">
+<!-- State Filter -->
+<div>
+<label class="block text-sm font-medium text-white/80 mb-2" for="state">State</label>
+<select class="w-full rounded-lg border-none bg-card-dark p-3 text-white focus:ring-1 focus:ring-primary" id="state">
+<option>Maharashtra</option>
+<option>Delhi</option>
+<option>Karnataka</option>
+<option>Tamil Nadu</option>
+</select>
+</div>
+<!-- City Filter -->
+<div>
+<label class="block text-sm font-medium text-white/80 mb-2" for="city">City</label>
+<select class="w-full rounded-lg border-none bg-card-dark p-3 text-white focus:ring-1 focus:ring-primary" id="city">
+<option>Mumbai</option>
+<option>New Delhi</option>
+<option>Bengaluru</option>
+<option>Vellore</option>
+</select>
+</div>
+<!-- Course Type -->
+<div>
+<h4 class="text-sm font-medium text-white/80 mb-2">Course Type</h4>
+<div class="space-y-2">
+<label class="flex items-center gap-3"><input checked="" class="form-checkbox rounded bg-card-dark text-primary focus:ring-primary" type="checkbox"/><span>B.Tech</span></label>
+<label class="flex items-center gap-3"><input class="form-checkbox rounded bg-card-dark text-primary focus:ring-primary" type="checkbox"/><span>MBA</span></label>
+<label class="flex items-center gap-3"><input class="form-checkbox rounded bg-card-dark text-primary focus:ring-primary" type="checkbox"/><span>B.Sc</span></label>
+</div>
+</div>
+<!-- College Type -->
+<div>
+<h4 class="text-sm font-medium text-white/80 mb-2">College Type</h4>
+<div class="space-y-2">
+<label class="flex items-center gap-3"><input checked="" class="form-radio bg-card-dark text-primary focus:ring-primary" name="college-type" type="radio"/><span>All</span></label>
+<label class="flex items-center gap-3"><input class="form-radio bg-card-dark text-primary focus:ring-primary" name="college-type" type="radio"/><span>Government</span></label>
+<label class="flex items-center gap-3"><input class="form-radio bg-card-dark text-primary focus:ring-primary" name="college-type" type="radio"/><span>Private</span></label>
+</div>
+</div>
+<!-- NIRF Ranking Slider -->
+<div>
+<label class="block text-sm font-medium text-white/80 mb-2" for="ranking-range">NIRF Ranking</label>
+<input class="w-full h-2 bg-card-dark rounded-lg appearance-none cursor-pointer accent-primary" id="ranking-range" max="100" min="1" type="range" value="50"/>
+<div class="flex justify-between text-xs text-white/60 mt-1"><span>1</span><span>100+</span></div>
+</div>
+<button class="w-full flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-4 bg-primary text-background-dark text-base font-bold leading-normal tracking-[0.015em] transition-transform hover:scale-105">
+<span class="truncate">Apply Filters</span>
+</button>
+</div>
+</aside>
+<!-- Results Display Area -->
+<div class="flex-1 p-4 md:p-6">
+<!-- PageHeading and Sorting -->
+<div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+<p class="text-white text-3xl md:text-4xl font-black leading-tight tracking-[-0.033em] min-w-72">Showing 25 of 150 Colleges</p>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-card-dark pl-4 pr-3 transition-colors hover:bg-white/10">
+<p class="text-white text-sm font-medium leading-normal">Sort by: Ranking</p>
+<span class="material-symbols-outlined text-white text-xl">arrow_drop_down</span>
+</button>
+</div>
+<!-- ImageGrid -->
+<div class="grid grid-cols-1 gap-6 @[768px]:grid-cols-2">
+<div class="flex flex-col gap-3 rounded-xl bg-card-dark p-4 border border-white/10 transition-all duration-300 hover:border-primary/80 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-1" style="perspective: 1000px; transform-style: preserve-3d;">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="Campus of Indian Institute of Technology, Bombay" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCz6CLSqsUUsmUelJJn0sPdtERZNPaLPY5PKQaZFIxw4CF_ClPgcmijxs8FpKR93JpotcC048hlhHT-4KrA8xWV_wpphzr5NZpqDFSc-ISF72d6AmbuE64Xsi17qBzAtP1XHnuqEOX4onPYP9XO9N1egbSgj1D9uxLlifCwEgZ4aTRcOAD97gt0GD4de7c1xQKFGcN4fgER-8LabwJnZAQJJnPoBMmcOs3SHIFIXPABkZTpK6pFP_u-fqAP7_NNLB1iSboYflTduwvN");'></div>
+<div class="flex-1">
+<p class="text-white text-lg font-medium leading-normal">Indian Institute of Technology, Bombay</p>
+<p class="text-white/60 text-sm font-normal leading-normal">Mumbai, Maharashtra</p>
+<p class="text-primary text-sm font-semibold leading-normal mt-1">#1 in Engineering</p>
+<p class="text-white/70 text-xs font-normal leading-normal mt-2">Courses: Computer Science, Mechanical...</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-3 border-t border-white/10">
+<span class="px-2 py-1 text-xs rounded bg-accent-red/20 text-accent-red">Public/Government</span>
+<div class="flex gap-2">
+<button class="text-white/70 hover:text-primary transition-colors"><span class="material-symbols-outlined">add_circle</span></button>
+<button class="text-white/70 hover:text-primary transition-colors"><span class="material-symbols-outlined">open_in_new</span></button>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-3 rounded-xl bg-card-dark p-4 border border-white/10 transition-all duration-300 hover:border-primary/80 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-1" style="perspective: 1000px; transform-style: preserve-3d;">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="Architectural detail of Indian Institute of Technology, Delhi" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAgK7gYtOSGsu2WjkLKH8f2lUIjvR08DJem3KQiLSeXKdols2B5uJrm13ZJsFe2w4Tcq_dKP4Zrgk6tDj9__TAUPNzxL3BSNkpjDV3ADGC7J9k7GxzFk19VM2zsWM2Om0o2utM7yyDrFUoIRbIaLCOQztxmT1NzrjjIssVHl87wnwjlWnkj-rs7XMtiuO2LM63r7RGW5GzW2_Gl4PKN7MoDRG_qmHP_iv8qhVzyvvl2EfzeX2WYBaQkK41YjT_0oQcLceHO86aCR15Z");'></div>
+<div class="flex-1">
+<p class="text-white text-lg font-medium leading-normal">Indian Institute of Technology, Delhi</p>
+<p class="text-white/60 text-sm font-normal leading-normal">New Delhi, Delhi</p>
+<p class="text-primary text-sm font-semibold leading-normal mt-1">#2 in Engineering</p>
+<p class="text-white/70 text-xs font-normal leading-normal mt-2">Courses: Electrical, Chemical...</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-3 border-t border-white/10">
+<span class="px-2 py-1 text-xs rounded bg-accent-red/20 text-accent-red">Public/Government</span>
+<div class="flex gap-2">
+<button class="text-white/70 hover:text-primary transition-colors"><span class="material-symbols-outlined">add_circle</span></button>
+<button class="text-white/70 hover:text-primary transition-colors"><span class="material-symbols-outlined">open_in_new</span></button>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-3 rounded-xl bg-card-dark p-4 border border-white/10 transition-all duration-300 hover:border-primary/80 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-1" style="perspective: 1000px; transform-style: preserve-3d;">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="Vellore Institute of Technology campus building" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBStK6vKh70eNYEs8zvWe_EZpmB8TXOJguClaKxEnbicwH0gUDIDsTUv66a_vCfQeBv9CIlgShJfTq2I3dEXvkGpyr6zcqNUfIMEANZ0gxuon0uWWtzppARNBPX9ILClcKSi-fqSwMJLw_NZvDyz8At4lQi9fX8PUkcuCDHlmOZbewkrHaItLvNOpSvrymrJzaifAiZN6iYeoLWJEnaBrC6g3euhzB-cEm3TzzWbWiTm4GghmJwk3GMrDrVDWF1Wx2anpxbsStnFkPL");'></div>
+<div class="flex-1">
+<p class="text-white text-lg font-medium leading-normal">Vellore Institute of Technology</p>
+<p class="text-white/60 text-sm font-normal leading-normal">Vellore, Tamil Nadu</p>
+<p class="text-primary text-sm font-semibold leading-normal mt-1">#1 in Private Engineering</p>
+<p class="text-white/70 text-xs font-normal leading-normal mt-2">Courses: Information Technology...</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-3 border-t border-white/10">
+<span class="px-2 py-1 text-xs rounded bg-primary/20 text-primary">Private</span>
+<div class="flex gap-2">
+<button class="text-white/70 hover:text-primary transition-colors"><span class="material-symbols-outlined">add_circle</span></button>
+<button class="text-white/70 hover:text-primary transition-colors"><span class="material-symbols-outlined">open_in_new</span></button>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-3 rounded-xl bg-card-dark p-4 border border-white/10 transition-all duration-300 hover:border-primary/80 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-1" style="perspective: 1000px; transform-style: preserve-3d;">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="Jadavpur University building with greenery" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA18Vva5bqj-ZY6DmYApvVZc3auqH4lGQjmDMtGUA1ikKc3-bvPP3eMPV_ssKe2IkNsJF9k9kgZ7BcOeCv68536w1FYJAAHRBEkZwuyam3W7HAK4O44W5xhZL_sjtScgic1WmkD2dkr39z-tHqun336fsIqxGVCy3OuiOtAVGQZFXfRBV2iZseNy6GyqJ_pX1VZAKv-dxgUjD5Q1WWbBrSife5SdRqcfWTHeTsWVFkT0QFCX1FZIyTyKL4JAgd7GxjLMp3q1Wdim9IL");'></div>
+<div class="flex-1">
+<p class="text-white text-lg font-medium leading-normal">Jadavpur University</p>
+<p class="text-white/60 text-sm font-normal leading-normal">Kolkata, West Bengal</p>
+<p class="text-primary text-sm font-semibold leading-normal mt-1">#4 in University</p>
+<p class="text-white/70 text-xs font-normal leading-normal mt-2">Courses: Arts, Science, Engineering...</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-3 border-t border-white/10">
+<span class="px-2 py-1 text-xs rounded bg-accent-red/20 text-accent-red">Public/Government</span>
+<div class="flex gap-2">
+<button class="text-white/70 hover:text-primary transition-colors"><span class="material-symbols-outlined">add_circle</span></button>
+<button class="text-white/70 hover:text-primary transition-colors"><span class="material-symbols-outlined">open_in_new</span></button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="flex items-center justify-center p-4 mt-8">
+<a class="flex size-10 items-center justify-center rounded-full hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-white text-lg">chevron_left</span>
+</a>
+<a class="text-sm font-bold leading-normal tracking-[0.015em] flex size-10 items-center justify-center text-background-dark rounded-full bg-primary" href="#">1</a>
+<a class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-white rounded-full hover:bg-white/10 transition-colors" href="#">2</a>
+<a class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-white rounded-full hover:bg-white/10 transition-colors" href="#">3</a>
+<span class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-white/50 rounded-full">...</span>
+<a class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-white rounded-full hover:bg-white/10 transition-colors" href="#">10</a>
+<a class="flex size-10 items-center justify-center rounded-full hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-white text-lg">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

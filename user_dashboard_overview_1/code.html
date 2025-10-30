@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>User Dashboard - India's Best</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#f2b90d",
+            "background-light": "#f8f8f5",
+            "background-dark": "#221e10",
+          },
+          fontFamily: {
+            "display": ["Space Grotesk", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .widget-card {
+      background-color: rgba(34, 30, 16, 0.7);border: 1px solid rgba(84, 78, 59, 0.5);backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      transition: all 0.3s ease;
+      transform-style: preserve-3d;
+      will-change: transform, box-shadow;
+    }
+    .widget-card:hover {
+      transform: translateY(-4px) translateZ(10px);
+      box-shadow: 0 0 20px rgba(242, 185, 13, 0.2), 0 0 30px rgba(242, 185, 13, 0.1);
+      border-color: rgba(242, 185, 13, 0.5);
+    }
+    .grid-container {
+        display: grid;
+        gap: 2rem;grid-template-columns: 1fr;
+    }
+    @media (min-width: 1024px) {.grid-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    @media (min-width: 1280px) {.grid-container {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+  </style>
+</head>
+<body class="font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden" style="background-image: radial-gradient(circle at top left, rgba(242, 185, 13, 0.1), transparent 30%), radial-gradient(circle at bottom right, rgba(242, 185, 13, 0.05), transparent 40%);">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col w-full max-w-7xl flex-1">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#544e3b] px-6 py-4">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-white text-xl font-bold leading-tight tracking-[-0.015em]">India's Best</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-center gap-8">
+<div class="flex items-center gap-9">
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Dashboard</a>
+<a class="text-white/70 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Colleges</a>
+<a class="text-white/70 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Compare</a>
+<a class="text-white/70 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">News</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden sm:flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity">
+<span class="truncate">My Profile</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/50" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBEEnXmPbaQyRdRNbmkoo5QmDPD6BCdvkK28nPpKlXgcNB4mO9QTS5_cFw7Jh6oJ5WF41aUuqPhtXt1nlDEgYd-6Qc8Fw8oCCKamzgOtiWPhmU9GEB5TInhHZ5eNF2-iz7va0WmdF9OdCYmZfmoVqGff5IQQqBbvJxb8eUuMAgSnKVpOZMoX-oO36wWIITNceA5UvOoiwwMYYggwOhQ_82d2oj8iftc9TxHiefZhr_zwRl7JPC4-JQSXQGANZeoexbubayoaSqFDuW4");'></div>
+</div>
+</header>
+<main class="flex-1 mt-10">
+<div class="flex flex-wrap justify-between items-start gap-4 p-4">
+<div class="flex flex-col gap-3">
+<p class="text-white text-4xl font-black leading-tight tracking-[-0.033em]">Welcome back, Alex!</p>
+<p class="text-[#bab29c] text-base font-normal leading-normal">Here's a summary of your journey so far.</p>
+</div>
+<button class="group flex items-center justify-center gap-2 cursor-pointer rounded-lg h-10 px-4 border border-primary/50 text-primary text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/10 transition-all hover:shadow-[0_0_15px_rgba(242,185,13,0.3)]">
+<span class="material-symbols-outlined text-base">widgets</span>
+<span class="truncate">Customize Dashboard</span>
+</button>
+</div>
+<div class="grid-container p-4 mt-6">
+<div class="widget-card rounded-xl p-6 flex flex-col gap-6 lg:row-span-2">
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em]">Application Tracker</h2>
+<div class="flex flex-wrap gap-4">
+<div class="flex min-w-[120px] flex-1 flex-col gap-2 rounded-lg p-4 bg-black/20 border border-[#544e3b]/50">
+<p class="text-white/80 text-sm font-medium leading-normal">Draft</p>
+<p class="text-primary tracking-light text-3xl font-bold leading-tight">2</p>
+</div>
+<div class="flex min-w-[120px] flex-1 flex-col gap-2 rounded-lg p-4 bg-black/20 border border-[#544e3b]/50">
+<p class="text-white/80 text-sm font-medium leading-normal">Submitted</p>
+<p class="text-primary tracking-light text-3xl font-bold leading-tight">5</p>
+</div>
+<div class="flex min-w-[120px] flex-1 flex-col gap-2 rounded-lg p-4 bg-black/20 border border-[#544e3b]/50">
+<p class="text-white/80 text-sm font-medium leading-normal">Accepted</p>
+<p class="text-primary tracking-light text-3xl font-bold leading-tight">1</p>
+</div>
+<div class="flex min-w-[120px] flex-1 flex-col gap-2 rounded-lg p-4 bg-black/20 border border-[#544e3b]/50">
+<p class="text-white/80 text-sm font-medium leading-normal">Rejected</p>
+<p class="text-red-500 tracking-light text-3xl font-bold leading-tight">0</p>
+</div>
+</div>
+<div class="flex justify-start mt-auto">
+<button class="group flex items-center gap-2 cursor-pointer rounded-lg h-10 px-4 bg-primary/20 text-primary text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/30 transition-colors">
+<span class="truncate">Manage Applications</span>
+<span class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="widget-card rounded-xl p-6 flex flex-col gap-6 lg:row-span-3">
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em]">Your Wishlist</h2>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-4 p-4 rounded-lg bg-black/20 border border-[#544e3b]/50">
+<img class="size-10 object-contain bg-white p-1 rounded-md" data-alt="IIT Delhi logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5ZwT58bo4AfXAWWDbgrzVO6WJmBFvrQwj-LCJbxwEuHkOOwWhXWKSJ-NFZGl3_BvYDG6oWO9vrtiXOa_lEVbjtRTvl1IrYcZbMLuxrB46gCeRIT7pRdTzEFu87Y-G4_TiiJr3PjCFOOD66NUrj83-UksjekbWJtkAJf3ed-VKAqf8vOH3q_ugpwPEJGO2W824k5jlMHKiFfxn-VB1GQxFCLm9eQRDfH0sieodXYvlVjr1kdtEqBSSPKgTi16Z8D0uR0hFaBt_jsuW"/>
+<div>
+<p class="font-bold text-white">IIT Delhi</p>
+<p class="text-sm text-white/60">New Delhi, Delhi</p>
+</div>
+</div>
+<div class="flex items-center gap-4 p-4 rounded-lg bg-black/20 border border-[#544e3b]/50">
+<img class="size-10 object-contain bg-white p-1 rounded-md" data-alt="IIT Bombay logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC60zD7Lz7w1ASd-Cw2YNaL9v91CvJfx6Cqce1tHPXToLlSIwqtijTe_ielZDcF5VpLWp_-e6FJQBcueQG7Q9pYH5baopDqAvPoOjsDjvGwds6NyBTxkAoVY9XVAfewYRWLvC3kafpKPhL8GYbYqNZKAE5JEfQNwxpb2UHHZYmotV3mALXByEzeFP2sCLpPh277xSH6JeEPYNi5daNa4HD8ZK7IgnDZtbmi3PPH1pPgRZh-7hyNh4wqYt9ZPJs5KWdOLeiXFhQ6Sg4y"/>
+<div>
+<p class="font-bold text-white">IIT Bombay</p>
+<p class="text-sm text-white/60">Mumbai, Maharashtra</p>
+</div>
+</div>
+<div class="flex items-center gap-4 p-4 rounded-lg bg-black/20 border border-[#544e3b]/50">
+<img class="size-10 object-contain bg-white p-1 rounded-md" data-alt="IISc Bangalore logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYpA6MKF1Mq-0QoWE3D_6V_Oxgim31dIIWuLpHOjAfM8QzJJknrVdykzMupWrZcyvXgfF_fwjkzJzghEct28vzlH0ULmE-S8MTSyJHdQlZE139Sw_RTXI791kQaE6ZF0HBFps405OFFrevW_S66ls6ojmT7OC83DuJjAbUzcX7aonb8QUFIP0gazCw_MLLwzOJh-mItwSoPV8I6XzR48iksWtCVemY5wd4ROJD7MgDdGetFyILJvRYByr8Pqw6MUksrggCju7SXcHu"/>
+<div>
+<p class="font-bold text-white">IISc Bangalore</p>
+<p class="text-sm text-white/60">Bengaluru, Karnataka</p>
+</div>
+</div>
+</div>
+<div class="flex justify-start mt-auto">
+<button class="group flex items-center gap-2 cursor-pointer rounded-lg h-10 px-4 bg-primary/20 text-primary text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/30 transition-colors">
+<span class="truncate">View All Saved Colleges</span>
+<span class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="widget-card rounded-xl p-6 flex flex-col gap-6 xl:col-span-1 lg:col-span-2">
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em]">Your To-Do List</h2>
+<ul class="space-y-4">
+<li class="flex items-start gap-4 group">
+<div class="flex-shrink-0 mt-1 size-8 rounded-full bg-primary/10 text-primary flex items-center justify-center"><span class="material-symbols-outlined text-base">checklist</span></div>
+<div>
+<p class="text-white">Complete profile for <span class="font-bold">95%</span> match recommendations</p>
+<p class="text-xs text-white/50">Due: Tomorrow</p>
+</div>
+</li>
+<li class="flex items-start gap-4 group">
+<div class="flex-shrink-0 mt-1 size-8 rounded-full bg-primary/10 text-primary flex items-center justify-center"><span class="material-symbols-outlined text-base">school</span></div>
+<div>
+<p class="text-white">Submit application for <a class="font-bold hover:underline" href="#">VIT Vellore</a></p>
+<p class="text-xs text-white/50">Due: 25 July 2024</p>
+</div>
+</li>
+<li class="flex items-start gap-4 group">
+<div class="flex-shrink-0 mt-1 size-8 rounded-full bg-primary/10 text-primary flex items-center justify-center"><span class="material-symbols-outlined text-base">article</span></div>
+<div>
+<p class="text-white">Read news article: "Top 10 Emerging CS Fields"</p>
+<p class="text-xs text-white/50">Saved 2 days ago</p>
+</div>
+</li>
+</ul>
+<div class="flex justify-start mt-auto">
+<button class="group flex items-center gap-2 cursor-pointer rounded-lg h-10 px-4 bg-primary/20 text-primary text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/30 transition-colors">
+<span class="truncate">View Full To-Do List</span>
+<span class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="widget-card rounded-xl p-6 flex flex-col gap-6 lg:col-span-2 xl:col-span-3">
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em]">Colleges Recommended For You</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="flex flex-col gap-3 p-4 rounded-lg bg-black/20 border border-[#544e3b]/50 transition-all hover:border-primary/50 hover:-translate-y-1">
+<div class="bg-center bg-no-repeat aspect-video bg-cover rounded-md" data-alt="BITS Pilani campus" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD-j1ifYSYCS16jLx8l8WqPTQ8ioj9WHPOpdkl2oFbdJb9nd8zlQMieCshwzVFq3w-PAI9zEQUX0t1BOIHm7oh644pZ2ouuccCR5dMfy7GB-bDyl1EjmRors1iRuoMv69eL1AoXyppl5IvwXki71tAL1mY-bfd9iP2RGG_T1Pyk_RcMgLw5P0BFiqIFRZklwekvWgVcll9eKxv55L-xssu16iUkdDO578kwvxMYL0m2T5hPnfeyQ5_aYm5Eu4Zg3-dGBgnHJUY3MU-j");'></div>
+<p class="font-bold text-white">BITS Pilani</p>
+<div class="text-sm text-white/60 flex items-center gap-1.5"><span class="material-symbols-outlined text-sm">location_on</span>Pilani, Rajasthan</div>
+<div class="mt-1 py-1 px-2.5 bg-red-500/20 text-red-400 rounded-full text-xs font-bold self-start">95% Match</div>
+</div>
+<div class="flex flex-col gap-3 p-4 rounded-lg bg-black/20 border border-[#544e3b]/50 transition-all hover:border-primary/50 hover:-translate-y-1">
+<div class="bg-center bg-no-repeat aspect-video bg-cover rounded-md" data-alt="IIT Madras campus" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCRKU1K0SGvXignC6iv7M4Oz3xkUrT2BP647Hexl-V5Qp-QiCx-XMY_9rMyqatugIMX4rNoZrafz_z0wMhyQX5UzaFpWOQeEh92ei1xjwBSGBEfSYwvaxOO3r2NrY9VcUbm_0XT8hltoOIa-KkBdKkke_fP1El9wH6xkI2h8whKSzKT5NCwqklM1PG0YYzcTpj76AUE2A1FmFeqyo4oYDcgjjjo1rJozRZ88soBK-pT_gqazba3LtTyP7_m10knaO1SYNFG5a6glYvP");'></div>
+<p class="font-bold text-white">IIT Madras</p>
+<div class="text-sm text-white/60 flex items-center gap-1.5"><span class="material-symbols-outlined text-sm">location_on</span>Chennai, Tamil Nadu</div>
+<div class="mt-1 py-1 px-2.5 bg-red-500/20 text-red-400 rounded-full text-xs font-bold self-start">92% Match</div>
+</div>
+<div class="flex flex-col gap-3 p-4 rounded-lg bg-black/20 border border-[#544e3b]/50 transition-all hover:border-primary/50 hover:-translate-y-1">
+<div class="bg-center bg-no-repeat aspect-video bg-cover rounded-md" data-alt="VIT Vellore campus" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBdms9jNM8yuuufD7alz3rOU9n5E7l5XXrB8WqVdD3p0-QR42tzvsPW44RIF0D7VCvHSfphOznxUwSqv31XIxw-bcw5uSItuAAMw7Mfv7ajqONHeJ4_TbOH8kM7SEpVXOg8rPVVmhqDEbBPVRHcZLt1T0ARTwelfcN3XaozKdIEoRLfMYvBOD1ZFAyDULZoWAAJA-4Dexg3YEu64GE-fc49TmioRC6qgwHkI3VIE_NNgOu3h6kypf2Ivr7zCg1QvvTISO9F5ffbWs5W");'></div>
+<p class="font-bold text-white">VIT Vellore</p>
+<div class="text-sm text-white/60 flex items-center gap-1.5"><span class="material-symbols-outlined text-sm">location_on</span>Vellore, Tamil Nadu</div>
+<div class="mt-1 py-1 px-2.5 bg-red-500/20 text-red-400 rounded-full text-xs font-bold self-start">88% Match</div>
+</div>
+<div class="flex flex-col gap-3 p-4 rounded-lg bg-black/20 border border-[#544e3b]/50 transition-all hover:border-primary/50 hover:-translate-y-1">
+<div class="bg-center bg-no-repeat aspect-video bg-cover rounded-md" data-alt="St. Stephen's College" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCoUkuRX3xuQ8Z_2B7ElReenmfSKmqUM2hdE7FjZnrJDVxDpo2YezE5iq14D0OKe-RZCCtpPQlacIiR_W8UqsthcYHVabVAzGDIIf6Lr05fB3TcvzOWa588udqYuOdm4yNzHZ7ti4R1ex-rD1gkK4w25LcCxnCqBnfbRwjeVsfNxrDg-xW9nOVzuRQKBEawpd8w_96IXCtSQus6LSv9WhK_yU5Ydff-PMEOurUzGO-B0Vo79vPM_hp9Xxuqdxb7Z2ATN6cAOAr5YyZZ");'></div>
+<p class="font-bold text-white">St. Stephen's College</p>
+<div class="text-sm text-white/60 flex items-center gap-1.5"><span class="material-symbols-outlined text-sm">location_on</span>New Delhi, Delhi</div>
+<div class="mt-1 py-1 px-2.5 bg-red-500/20 text-red-400 rounded-full text-xs font-bold self-start">85% Match</div>
+</div>
+</div>
+<div class="flex justify-start mt-auto">
+<button class="group flex items-center gap-2 cursor-pointer rounded-lg h-10 px-4 bg-primary/20 text-primary text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/30 transition-colors">
+<span class="truncate">See All Recommendations</span>
+<span class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

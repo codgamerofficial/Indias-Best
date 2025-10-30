@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My College Wishlist - India's Best</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f9d006",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#1A1A1D",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .card-3d {
+            transform-style: preserve-3d;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        .card-3d:hover {
+            transform: perspective(1000px) rotateY(var(--rotate-y, 0)) rotateX(var(--rotate-x, 0)) translateZ(20px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(249, 208, 6, 0.3);
+        }
+        .card-glow {
+            transition: opacity 0.4s ease;
+        }
+        .group:hover .card-glow {
+            opacity: 1;
+        }
+        .action-button-group {
+            transform: translateY(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .group:hover .action-button-group {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white">
+<div class="relative flex min-h-screen w-full flex-col">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-white/10 px-4 sm:px-10 lg:px-20 py-3 backdrop-blur-md bg-background-dark/80">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6 text-primary">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill-rule="evenodd"></path></svg>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">India's Best</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end items-center gap-8">
+<div class="flex items-center gap-9">
+<a class="text-white/80 hover:text-white transition-colors text-sm font-medium leading-normal" href="#">Home</a>
+<a class="text-white text-sm font-bold leading-normal relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:h-[2px] after:w-full after:bg-primary" href="#">Dashboard</a>
+<a class="text-white/80 hover:text-white transition-colors text-sm font-medium leading-normal" href="#">Colleges</a>
+<a class="text-white/80 hover:text-white transition-colors text-sm font-medium leading-normal" href="#">Courses</a>
+</div>
+<div class="flex gap-2 items-center">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] hover:bg-yellow-400 transition-colors">
+<span class="truncate">Log In</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-white/20" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDZQCxZsMuvYzrnTX2HW5vR1oJH91EMugTG9eajr-_RpxMs7P8rmBo3lFJy0HDQ4VWL-BMlQckjOsTiymUUWkPa6LPhTDTP1OlIRupx3t0cywM8wUGaMDaCCkenQI3zxudXBMH-HMyYjxtVIsvBrP36V4uSUEwucgzxHVvguGYsTGsV6WTLE8LVG55BXrLRPSF944ny5ifixw7KX--dgP8YTZrLuTv8Qm0NZeVQXVw-vuYS73CJN2FVBPma_D6xHv4g5F_h7Pk1G-SS");'></div>
+</div>
+</div>
+<button class="md:hidden text-white">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="flex h-full grow flex-col">
+<div class="px-4 sm:px-10 lg:px-20 py-8">
+<div class="mx-auto flex max-w-7xl flex-col gap-6">
+<!-- Breadcrumbs -->
+<div class="flex flex-wrap gap-2">
+<a class="text-white/60 hover:text-white transition-colors text-base font-medium leading-normal" href="#">Home</a>
+<span class="text-white/60 text-base font-medium leading-normal">/</span>
+<a class="text-white/60 hover:text-white transition-colors text-base font-medium leading-normal" href="#">Dashboard</a>
+<span class="text-white/60 text-base font-medium leading-normal">/</span>
+<span class="text-white text-base font-medium leading-normal">My Wishlist</span>
+</div>
+<!-- Page Heading -->
+<div class="flex flex-wrap justify-between gap-3">
+<p class="text-white text-4xl sm:text-5xl font-black leading-tight tracking-[-0.033em]">My College Wishlist</p>
+</div>
+<!-- Search Bar & Filters -->
+<div class="flex flex-col md:flex-row gap-4 items-center">
+<div class="flex-grow w-full">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-white/60 flex bg-[#2c2c31] items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border-none bg-[#2c2c31] h-full placeholder:text-white/60 px-4 text-base font-normal leading-normal" placeholder="Search in Wishlist..." value=""/>
+</div>
+</label>
+</div>
+<div class="flex gap-3 overflow-x-auto w-full md:w-auto pb-2">
+<button class="flex h-12 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#2c2c31] px-4 hover:bg-[#3a3a40] transition-colors">
+<p class="text-white text-sm font-medium leading-normal">Sort by: Rank</p>
+<span class="material-symbols-outlined text-white text-xl">arrow_drop_down</span>
+</button>
+<button class="flex h-12 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#2c2c31] px-4 hover:bg-[#3a3a40] transition-colors">
+<p class="text-white text-sm font-medium leading-normal">Filter: Course</p>
+<span class="material-symbols-outlined text-white text-xl">arrow_drop_down</span>
+</button>
+<button class="flex h-12 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#2c2c31] px-4 hover:bg-[#3a3a40] transition-colors">
+<p class="text-white text-sm font-medium leading-normal">Filter: State</p>
+<span class="material-symbols-outlined text-white text-xl">arrow_drop_down</span>
+</button>
+</div>
+</div>
+<!-- Wishlist Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 py-8">
+<!-- College Card 1 -->
+<div class="group relative card-3d rounded-xl bg-[#2c2c31] border border-white/10 overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 card-glow z-0"></div>
+<div class="relative z-10 flex flex-col h-full">
+<div class="bg-center bg-cover aspect-[4/3]" data-alt="Campus of Indian Institute of Technology Bombay" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCNXxZugIlFAMZP4K037q4wJZgh1mT1Q3cjoi9VrDFk2ZSeROF5LRb8-Ji7yCuFCdwVhhVyQ3hoUWMncNn1fGmBJwM8sLHuJLtQb6_KBPSThdvAmygD_JE09fuVrsP1Dj64RVxoZOAA6abl95AqqV98zLZAtNPY3v5FmSIEXUnetjiVqYIpz83geMcaN0cpVIy2hZCL7OBDUMwoVRk8hLsJSTjugy99j9JUf_2bui_YFEzPoUageduN2JLJzj2DswXKFKoeCYGY6CwK');"></div>
+<div class="p-5 flex flex-col flex-grow">
+<span class="text-xs font-bold text-primary tracking-widest uppercase">NIRF Ranking: #3</span>
+<h3 class="text-xl font-bold text-white mt-1">Indian Institute of Technology Bombay</h3>
+<p class="text-sm text-white/70 mt-1 flex-grow">Mumbai, Maharashtra</p>
+</div>
+<div class="absolute inset-0 flex items-center justify-center bg-black/70 p-4 action-button-group gap-2">
+<button class="flex-1 h-10 flex items-center justify-center gap-2 rounded-lg bg-red-600/90 hover:bg-red-600 text-white text-sm font-bold transition-colors"><span class="material-symbols-outlined text-base">delete</span> Remove</button>
+<button class="flex-1 h-10 flex items-center justify-center gap-2 rounded-lg bg-white/10 hover:bg-white/20 text-white text-sm font-bold transition-colors"><span class="material-symbols-outlined text-base">info</span> Details</button>
+</div>
+</div>
+</div>
+<!-- College Card 2 -->
+<div class="group relative card-3d rounded-xl bg-[#2c2c31] border border-white/10 overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 card-glow z-0"></div>
+<div class="relative z-10 flex flex-col h-full">
+<div class="bg-center bg-cover aspect-[4/3]" data-alt="Campus of Indian Institute of Technology Delhi" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDlhZFjdBeMbqWQ73HvbAVJQXhZVVzeQK6z7vQAr2b3Nf3HOpcieej00qL-eGLXFCW9wusGECZN0UlPZrBIQBqYwLLXY556StA_mziKn0o8OnAMZY_dju0W2gAcnvKYumuKK4VozHoRSUQ3CddQIFzk_Jxvdb3xLPuO16-m_ODmg2hvwyTEQLBfBOneRm3_Mekh7FfVvSEljEgixw4ZyEgjbfHmoDjbopGD-XcWhzCKMkw7UreS2Ol-jvFtAZXCveL4fioUL4bR-_N0');"></div>
+<div class="p-5 flex flex-col flex-grow">
+<span class="text-xs font-bold text-primary tracking-widest uppercase">NIRF Ranking: #2</span>
+<h3 class="text-xl font-bold text-white mt-1">Indian Institute of Technology Delhi</h3>
+<p class="text-sm text-white/70 mt-1 flex-grow">New Delhi, Delhi</p>
+</div>
+<div class="absolute inset-0 flex items-center justify-center bg-black/70 p-4 action-button-group gap-2">
+<button class="flex-1 h-10 flex items-center justify-center gap-2 rounded-lg bg-red-600/90 hover:bg-red-600 text-white text-sm font-bold transition-colors"><span class="material-symbols-outlined text-base">delete</span> Remove</button>
+<button class="flex-1 h-10 flex items-center justify-center gap-2 rounded-lg bg-white/10 hover:bg-white/20 text-white text-sm font-bold transition-colors"><span class="material-symbols-outlined text-base">info</span> Details</button>
+</div>
+</div>
+</div>
+<!-- College Card 3 -->
+<div class="group relative card-3d rounded-xl bg-[#2c2c31] border border-white/10 overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 card-glow z-0"></div>
+<div class="relative z-10 flex flex-col h-full">
+<div class="bg-center bg-cover aspect-[4/3]" data-alt="Campus of Vellore Institute of Technology" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDjX8pG-TIg38Zt6DBhy64Zs7muznz_MVBRGYuoIBahhXj24GSs9pZSuBruqljS0r3rq3YOm8QyuhegWD-XlNEXVSZZEx7-n9ZU1ySrgv44hIzWFCCZyPD57jBQLdJ75S4DZcABb3tnxv-EBfWkYB7oW4a8RktxZdaw0HTDcl91pMHq86Wun-KINJRgni6oeJg21CyQDSCHCIW6kCclv-eW_gTFRuT_Sm8M05diEhnncTL69_kGHC5hb1l-RRSphLUrX0GyNJgLR-C8');"></div>
+<div class="p-5 flex flex-col flex-grow">
+<span class="text-xs font-bold text-primary tracking-widest uppercase">NIRF Ranking: #11</span>
+<h3 class="text-xl font-bold text-white mt-1">Vellore Institute of Technology</h3>
+<p class="text-sm text-white/70 mt-1 flex-grow">Vellore, Tamil Nadu</p>
+</div>
+<div class="absolute inset-0 flex items-center justify-center bg-black/70 p-4 action-button-group gap-2">
+<button class="flex-1 h-10 flex items-center justify-center gap-2 rounded-lg bg-red-600/90 hover:bg-red-600 text-white text-sm font-bold transition-colors"><span class="material-symbols-outlined text-base">delete</span> Remove</button>
+<button class="flex-1 h-10 flex items-center justify-center gap-2 rounded-lg bg-white/10 hover:bg-white/20 text-white text-sm font-bold transition-colors"><span class="material-symbols-outlined text-base">info</span> Details</button>
+</div>
+</div>
+</div>
+<!-- College Card 4 -->
+<div class="group relative card-3d rounded-xl bg-[#2c2c31] border border-white/10 overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 card-glow z-0"></div>
+<div class="relative z-10 flex flex-col h-full">
+<div class="bg-center bg-cover aspect-[4/3]" data-alt="Campus of National Institute of Technology Tiruchirappalli" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC3_w6RcgC7UV0opBuESRRkFRAY2XHCfdrBPxZW5_JsSMDaC8ICL98oyOwfpxNq7tC5wkb_zBO9Lnqt7zWcNo_kQD2ewv67avtlx54UdY60MLadBlCqoM5o6d2WfTA3V0LN4ATLrjtV_p26ENqWKW-Pj85J6eVkbpGr45NnIUBXkIfgtU8dU17oXirbmqFU4b3QklV-US0H9PtcBQm5x5D-VsFQ7aja40NeX9Fum-YsEuJLYLeUBkHPfbwMW8OnPjpXzBQc30lw-Onk');"></div>
+<div class="p-5 flex flex-col flex-grow">
+<span class="text-xs font-bold text-primary tracking-widest uppercase">NIRF Ranking: #9</span>
+<h3 class="text-xl font-bold text-white mt-1">National Institute of Technology Tiruchirappalli</h3>
+<p class="text-sm text-white/70 mt-1 flex-grow">Tiruchirappalli, Tamil Nadu</p>
+</div>
+<div class="absolute inset-0 flex items-center justify-center bg-black/70 p-4 action-button-group gap-2">
+<button class="flex-1 h-10 flex items-center justify-center gap-2 rounded-lg bg-red-600/90 hover:bg-red-600 text-white text-sm font-bold transition-colors"><span class="material-symbols-outlined text-base">delete</span> Remove</button>
+<button class="flex-1 h-10 flex items-center justify-center gap-2 rounded-lg bg-white/10 hover:bg-white/20 text-white text-sm font-bold transition-colors"><span class="material-symbols-outlined text-base">info</span> Details</button>
+</div>
+</div>
+</div>
+<!-- Empty State Example -->
+<div class="col-span-1 sm:col-span-2 lg:col-span-3 xl:col-span-4 flex flex-col items-center justify-center text-center p-10 border-2 border-dashed border-white/20 rounded-xl mt-8">
+<span class="material-symbols-outlined text-7xl text-primary mb-4">school</span>
+<h3 class="text-2xl font-bold text-white">Your Wishlist is a Blank Canvas</h3>
+<p class="text-white/70 mt-2 max-w-md">Start exploring and add colleges to your list. They will appear here for you to manage and compare.</p>
+<button class="mt-6 flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-background-dark text-base font-bold leading-normal tracking-[0.015em] hover:bg-yellow-400 transition-colors">
+<span class="truncate">Explore Colleges</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.card-3d');
+            cards.forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const { width, height } = rect;
+                    const rotateY = (x / width - 0.5) * -20;
+                    const rotateX = (y / height - 0.5) * 20;
+                    card.style.setProperty('--rotate-x', `${rotateX}deg`);
+                    card.style.setProperty('--rotate-y', `${rotateY}deg`);
+                });
+                card.addEventListener('mouseleave', () => {
+                    card.style.setProperty('--rotate-x', '0deg');
+                    card.style.setProperty('--rotate-y', '0deg');
+                });
+            });
+        });
+    </script>
+</body></html>

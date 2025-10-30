@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Job Application Form</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+    </style>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#FFD700",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#121212",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#EAEAEA]">
+<div class="relative flex min-h-screen w-full flex-col items-center justify-center p-4 sm:p-6 lg:p-8" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDzHNWp00v8XoFFTB02YaU5o-TFdmdigoPoT1V8G5XtBPSZ5Q0NLrkMkrg2WIGGRG-AWx_XBbSTZJ6OaIE57XIvXS8DHzK9jafg75YXO2d36WRq8nfqRxBmU2AaX9wWyeZuvE6DQ3m5sXhd3N5u6WYmlCy5UzmI6TCyj5zDPuGzV2S4mY4bmKyrHHWTOcHXZyrU6ADH1MVNtsB-eh9Pl8sUdE7YMY4Xd4tNweMWE-EQyxAap8wVQcLp94IGAuxlVLmW-7_jNm7E42d1'); background-size: 5px 5px;">
+<div class="w-full max-w-3xl rounded-xl border border-white/10 bg-[#1E1E1E]/80 p-6 shadow-2xl shadow-primary/10 backdrop-blur-lg sm:p-8 md:p-10" style="box-shadow: 0 0 15px 0px rgba(255, 215, 0, 0.1), 0 0 40px 0px rgba(255, 215, 0, 0.05) inset;">
+<header class="flex items-start justify-between">
+<div>
+<h1 class="text-3xl font-bold text-white">Apply for Senior Product Designer</h1>
+<p class="mt-1 text-sm text-white/60">India's Best - Remote</p>
+</div>
+<button class="text-white/50 transition-colors hover:text-white">
+<span class="material-symbols-outlined text-3xl">close</span>
+</button>
+</header>
+<form class="mt-8 space-y-8">
+<!-- Personal Information Section -->
+<section>
+<h2 class="text-xl font-bold tracking-tight text-primary">1. Personal Information</h2>
+<div class="mt-4 grid grid-cols-1 gap-x-6 gap-y-5 sm:grid-cols-2">
+<label class="flex flex-col">
+<span class="pb-2 font-medium text-white/90">Full Name</span>
+<input class="form-input h-12 w-full rounded-lg border-2 border-white/10 bg-white/5 p-3 text-white placeholder-white/40 transition-shadow focus:border-primary/80 focus:outline-none focus:ring-0 focus:ring-offset-0" placeholder="Enter your full name" type="text" value=""/>
+</label>
+<label class="flex flex-col">
+<span class="pb-2 font-medium text-white/90">Email Address</span>
+<input class="form-input h-12 w-full rounded-lg border-2 border-white/10 bg-white/5 p-3 text-white placeholder-white/40 transition-shadow focus:border-primary/80 focus:outline-none focus:ring-0 focus:ring-offset-0" placeholder="Enter your email" type="email" value=""/>
+</label>
+<label class="flex flex-col">
+<span class="pb-2 font-medium text-white/90">Phone Number</span>
+<input class="form-input h-12 w-full rounded-lg border-2 border-white/10 bg-white/5 p-3 text-white placeholder-white/40 transition-shadow focus:border-primary/80 focus:outline-none focus:ring-0 focus:ring-offset-0" placeholder="Enter your phone number" type="tel" value=""/>
+</label>
+<label class="flex flex-col">
+<span class="pb-2 font-medium text-white/90">Portfolio/LinkedIn (Optional)</span>
+<input class="form-input h-12 w-full rounded-lg border-2 border-white/10 bg-white/5 p-3 text-white placeholder-white/40 transition-shadow focus:border-primary/80 focus:outline-none focus:ring-0 focus:ring-offset-0" placeholder="https://..." type="url" value=""/>
+</label>
+</div>
+</section>
+<!-- Application Documents Section -->
+<section>
+<h2 class="text-xl font-bold tracking-tight text-primary">2. Application Documents</h2>
+<div class="mt-4 grid grid-cols-1 gap-6">
+<div>
+<span class="font-medium text-white/90">Resume/CV</span>
+<div class="mt-2 flex h-40 w-full cursor-pointer flex-col items-center justify-center rounded-lg border-2 border-dashed border-white/20 bg-white/5 transition-colors hover:border-primary/70 hover:bg-primary/10">
+<span class="material-symbols-outlined text-4xl text-white/50">upload_file</span>
+<p class="mt-2 text-sm text-white/70">Drag &amp; Drop your file here</p>
+<p class="text-xs text-white/50">or <span class="font-semibold text-primary">browse files</span></p>
+</div>
+</div>
+<label class="flex flex-col">
+<span class="pb-2 font-medium text-white/90">Cover Letter</span>
+<textarea class="form-textarea w-full rounded-lg border-2 border-white/10 bg-white/5 p-3 text-white placeholder-white/40 transition-shadow focus:border-primary/80 focus:outline-none focus:ring-0 focus:ring-offset-0" placeholder="Tell us why you're a great fit for this role..." rows="5"></textarea>
+</label>
+</div>
+</section>
+<!-- Professional Experience Section -->
+<section>
+<div class="flex items-center justify-between">
+<h2 class="text-xl font-bold tracking-tight text-primary">3. Professional Experience</h2>
+<button class="flex items-center gap-1 rounded-md px-3 py-1 text-sm font-medium text-primary transition-colors hover:bg-primary/20" type="button">
+<span class="material-symbols-outlined text-lg">add</span> Add Another
+                        </button>
+</div>
+<div class="mt-4 space-y-4">
+<div class="rounded-lg border border-white/10 bg-white/5 p-4">
+<div class="grid grid-cols-1 gap-x-6 gap-y-5 sm:grid-cols-2">
+<label class="flex flex-col">
+<span class="pb-2 text-sm font-medium text-white/90">Job Title</span>
+<input class="form-input h-12 w-full rounded-lg border-2 border-white/10 bg-white/5 p-3 text-white placeholder-white/40 transition-shadow focus:border-primary/80 focus:outline-none focus:ring-0 focus:ring-offset-0" placeholder="e.g., UI/UX Designer" type="text"/>
+</label>
+<label class="flex flex-col">
+<span class="pb-2 text-sm font-medium text-white/90">Company</span>
+<input class="form-input h-12 w-full rounded-lg border-2 border-white/10 bg-white/5 p-3 text-white placeholder-white/40 transition-shadow focus:border-primary/80 focus:outline-none focus:ring-0 focus:ring-offset-0" placeholder="e.g., Tech Innovations Inc." type="text"/>
+</label>
+<div class="grid grid-cols-2 gap-4">
+<label class="flex flex-col">
+<span class="pb-2 text-sm font-medium text-white/90">Start Date</span>
+<input class="form-input h-12 w-full rounded-lg border-2 border-white/10 bg-white/5 p-3 text-white placeholder-white/40 transition-shadow focus:border-primary/80 focus:outline-none focus:ring-0 focus:ring-offset-0" type="month"/>
+</label>
+<label class="flex flex-col">
+<span class="pb-2 text-sm font-medium text-white/90">End Date</span>
+<input class="form-input h-12 w-full rounded-lg border-2 border-white/10 bg-white/5 p-3 text-white placeholder-white/40 transition-shadow focus:border-primary/80 focus:outline-none focus:ring-0 focus:ring-offset-0" type="month"/>
+</label>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Submission Section -->
+<section class="flex flex-col items-center pt-4">
+<button class="w-full max-w-xs rounded-lg bg-primary py-3 text-center text-lg font-bold text-background-dark shadow-lg shadow-primary/20 transition-transform duration-150 ease-in-out hover:scale-[1.02] active:scale-[0.98]" type="submit">
+                        Submit Application
+                    </button>
+<!-- Error Message Example -->
+<p class="mt-4 text-sm text-[#D32F2F]">
+<!-- Please fill out all required fields. -->
+</p>
+</section>
+</form>
+</div>
+</div>
+</body></html>

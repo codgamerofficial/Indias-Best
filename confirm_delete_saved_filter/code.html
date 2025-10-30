@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Confirm Deletion Modal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply bg-background-light dark:bg-background-dark font-display text-white;
+            }
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#f9d006",
+              "background-light": "#f8f8f5",
+              "background-dark": "#121212",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background-dark">
+<div %3e%3c="" %3e%3cpath="" 2000="" class="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden p-4" d="M0 .5H31.5V32" fill="none" height="32" http:="" stroke="%23f9d00620" style="background-image: url('data:image/svg+xml,%3csvg xmlns=" svg"="" svg%3e');"="" viewbox="0 0 32 32" width="32" www.w3.org="">
+<!-- Scrim/Overlay -->
+<div class="absolute inset-0 bg-background-dark/80 backdrop-blur-sm"></div>
+<!-- Modal Container -->
+<div class="relative w-full max-w-md rounded-xl border border-yellow-500/30 bg-gray-900/50 p-8 shadow-2xl shadow-yellow-500/10 backdrop-blur-2xl transition-all duration-300 ease-out hover:[transform:perspective(1000px)_rotateX(2deg)_rotateY(-2deg)]" style="transform-style: preserve-3d;">
+<div class="flex flex-col items-center text-center">
+<!-- Iconography -->
+<div class="relative mb-6 flex h-20 w-20 items-center justify-center rounded-full border border-red-500/30 bg-red-900/40" style="transform: translateZ(40px);">
+<div class="absolute inset-0 rounded-full bg-red-500/20 blur-lg"></div>
+<span class="material-symbols-outlined text-5xl text-red-500" style="text-shadow: 0 0 15px rgba(255, 59, 48, 0.7);">
+                    warning
+                </span>
+</div>
+<!-- Headline/Title -->
+<h1 class="text-white tracking-light text-[32px] font-bold leading-tight pb-3 pt-6 font-display" style="transform: translateZ(30px);">Delete This Filter?</h1>
+<!-- Body Text -->
+<p class="text-gray-300 text-base font-normal leading-normal pb-8 pt-1" style="transform: translateZ(20px);">
+              You are about to permanently delete the filter set <span class="font-semibold text-primary/80">'Top Engineering Colleges'</span>. This action cannot be undone.
+            </p>
+<!-- Button Group -->
+<div class="flex w-full flex-col gap-3 items-stretch" style="transform: translateZ(10px);">
+<!-- Primary Action Button ("Delete") -->
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-[#FF3B30] text-white text-base font-bold leading-normal tracking-[0.015em] w-full transition-transform duration-200 hover:scale-[1.03] active:scale-[0.98] relative group">
+<span class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity"></span>
+<span class="truncate">Yes, Delete</span>
+</button>
+<!-- Secondary Action Button ("Cancel") -->
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-yellow-500/10 text-yellow-400 text-base font-bold leading-normal tracking-[0.015em] w-full border border-yellow-500/30 transition-all duration-200 hover:bg-yellow-500/20 hover:border-yellow-500/50 active:scale-[0.98]">
+<span class="truncate">Cancel</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</body></html>

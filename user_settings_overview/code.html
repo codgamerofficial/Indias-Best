@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>India's Best - Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2b90d",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#121212",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            font-size: 24px;
+        }
+
+        .settings-card {
+            transform-style: preserve-3d;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .settings-card:hover {
+            transform: perspective(1000px) rotateY(-5deg) rotateX(5deg) scale(1.03);
+            box-shadow: 0 10px 30px -10px rgba(242, 185, 13, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#EAEAEA]">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- TopNavBar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-white/10 px-4 sm:px-10 lg:px-20 py-4 bg-background-dark/50 backdrop-blur-sm sticky top-0 z-10">
+<div class="flex items-center gap-4 text-white">
+<div class="text-primary">
+<span class="material-symbols-outlined" style="font-size: 28px;">school</span>
+</div>
+<h2 class="text-white text-xl font-bold leading-tight tracking-[-0.015em]">India's Best</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-center gap-9">
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Home</a>
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Colleges</a>
+<a class="text-white/80 hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Dashboard</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 w-10 bg-white/5 hover:bg-white/10 text-white transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCiBn05YgnRB9nJuEvRLUn3vKngV6Y36ndBZn4woBW57V-HUT7NDYijRFBT6UAwsD0lQ_2Ruk628bBImGcGI4dHsYG1CiF1UenvJ54TsvNAXvysmsPbzDTEY4TO26hWCgReE_-9FS_XzZ4DoB5v7gHQ295mxzS2kc3jPWCUi8nFcashrMsxD7XGNjbJ_yDmXCFcFou9XGrWUjeIuWmHnTkxlM6NQzk_lJB1d2J3PNofj7gXf-VHj7hantZfyA91AZkZKEeYGNGNZ_ip");'></div>
+</div>
+</header>
+<main class="px-4 sm:px-10 lg:px-20 flex flex-1 justify-center py-10">
+<div class="layout-content-container flex flex-col w-full max-w-4xl flex-1 gap-8">
+<!-- Breadcrumbs -->
+<div>
+<div class="flex flex-wrap gap-2">
+<a class="text-white/60 hover:text-primary transition-colors text-base font-medium leading-normal" href="#">Home</a>
+<span class="text-white/40 text-base font-medium leading-normal">/</span>
+<span class="text-white text-base font-medium leading-normal">Settings</span>
+</div>
+</div>
+<!-- PageHeading -->
+<div class="flex flex-wrap justify-between items-center gap-4">
+<div class="flex flex-col gap-2">
+<p class="text-white text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em]">Settings</p>
+<p class="text-white/60 text-base font-normal leading-normal">Manage Your Account and Preferences</p>
+</div>
+</div>
+<!-- SearchBar -->
+<div>
+<label class="flex flex-col min-w-40 h-14 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full bg-[#1E1E1E] border border-white/10 focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/50 transition-all">
+<div class="text-white/60 flex items-center justify-center pl-4">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border-none bg-transparent h-full placeholder:text-white/40 px-4 pl-2 text-base font-normal leading-normal" placeholder="Search settings..." value=""/>
+</div>
+</label>
+</div>
+<!-- TextGrid (Settings Cards) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-4">
+<a class="settings-card flex flex-1 gap-4 rounded-xl border border-white/10 bg-[#1E1E1E] p-5 flex-col hover:border-primary/50 transition-colors group" href="#">
+<div class="text-primary">
+<span class="material-symbols-outlined" style="font-size: 28px;">person</span>
+</div>
+<div class="flex flex-col gap-1.5 mt-2">
+<h2 class="text-white text-lg font-bold leading-tight">Profile Settings</h2>
+<p class="text-white/60 text-sm font-normal leading-normal">Manage personal information and profile picture.</p>
+</div>
+<div class="flex-grow"></div>
+<div class="mt-4 text-white/40 group-hover:text-primary transition-transform duration-300 group-hover:translate-x-1">
+<span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</a>
+<a class="settings-card flex flex-1 gap-4 rounded-xl border border-white/10 bg-[#1E1E1E] p-5 flex-col hover:border-primary/50 transition-colors group" href="#">
+<div class="text-primary">
+<span class="material-symbols-outlined" style="font-size: 28px;">shield</span>
+</div>
+<div class="flex flex-col gap-1.5 mt-2">
+<h2 class="text-white text-lg font-bold leading-tight">Security &amp; Privacy</h2>
+<p class="text-white/60 text-sm font-normal leading-normal">Change password and manage data privacy.</p>
+</div>
+<div class="flex-grow"></div>
+<div class="mt-4 text-white/40 group-hover:text-primary transition-transform duration-300 group-hover:translate-x-1">
+<span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</a>
+<a class="settings-card flex flex-1 gap-4 rounded-xl border border-white/10 bg-[#1E1E1E] p-5 flex-col hover:border-primary/50 transition-colors group" href="#">
+<div class="text-primary">
+<span class="material-symbols-outlined" style="font-size: 28px;">notifications</span>
+</div>
+<div class="flex flex-col gap-1.5 mt-2">
+<h2 class="text-white text-lg font-bold leading-tight">Notification Preferences</h2>
+<p class="text-white/60 text-sm font-normal leading-normal">Control email, SMS, and in-app notifications.</p>
+</div>
+<div class="flex-grow"></div>
+<div class="mt-4 text-white/40 group-hover:text-primary transition-transform duration-300 group-hover:translate-x-1">
+<span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</a>
+<a class="settings-card flex flex-1 gap-4 rounded-xl border border-white/10 bg-[#1E1E1E] p-5 flex-col hover:border-primary/50 transition-colors group" href="#">
+<div class="text-primary">
+<span class="material-symbols-outlined" style="font-size: 28px;">bookmark</span>
+</div>
+<div class="flex flex-col gap-1.5 mt-2">
+<h2 class="text-white text-lg font-bold leading-tight">Application &amp; Saved</h2>
+<p class="text-white/60 text-sm font-normal leading-normal">View saved colleges and tracked applications.</p>
+</div>
+<div class="flex-grow"></div>
+<div class="mt-4 text-white/40 group-hover:text-primary transition-transform duration-300 group-hover:translate-x-1">
+<span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</a>
+<a class="settings-card flex flex-1 gap-4 rounded-xl border border-white/10 bg-[#1E1E1E] p-5 flex-col hover:border-primary/50 transition-colors group" href="#">
+<div class="text-primary">
+<span class="material-symbols-outlined" style="font-size: 28px;">tune</span>
+</div>
+<div class="flex flex-col gap-1.5 mt-2">
+<h2 class="text-white text-lg font-bold leading-tight">General Settings</h2>
+<p class="text-white/60 text-sm font-normal leading-normal">Adjust language and site-wide preferences.</p>
+</div>
+<div class="flex-grow"></div>
+<div class="mt-4 text-white/40 group-hover:text-primary transition-transform duration-300 group-hover:translate-x-1">
+<span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</a>
+<a class="settings-card flex flex-1 gap-4 rounded-xl border border-white/10 bg-[#1E1E1E] p-5 flex-col hover:border-primary/50 transition-colors group" href="#">
+<div class="text-primary">
+<span class="material-symbols-outlined" style="font-size: 28px;">help</span>
+</div>
+<div class="flex flex-col gap-1.5 mt-2">
+<h2 class="text-white text-lg font-bold leading-tight">Support &amp; Help</h2>
+<p class="text-white/60 text-sm font-normal leading-normal">Access FAQs and contact our support team.</p>
+</div>
+<div class="flex-grow"></div>
+<div class="mt-4 text-white/40 group-hover:text-primary transition-transform duration-300 group-hover:translate-x-1">
+<span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</a>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-10 border-t border-white/10">
+<div class="max-w-4xl mx-auto px-4 sm:px-10 lg:px-20 py-8 text-center text-white/40">
+<p class="text-sm">© 2024 India's Best. All rights reserved.</p>
+<div class="flex justify-center gap-6 mt-4">
+<a class="text-xs hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="text-xs hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-xs hover:text-primary transition-colors" href="#">Help Center</a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</body></html>

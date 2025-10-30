@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Theme Updated Success</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#f9d006",
+              "background-light": "#f8f8f5",
+              "background-dark": "#231f0f",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0', transform: 'scale(0.95)' },
+                '100%': { opacity: '1', transform: 'scale(1)' },
+              },
+              iconGlow: {
+                '0%, 100%': { transform: 'scale(1)', filter: 'drop-shadow(0 0 8px rgba(249, 208, 6, 0.4))' },
+                '50%': { transform: 'scale(1.05)', filter: 'drop-shadow(0 0 16px rgba(249, 208, 6, 0.6))' },
+              },
+            },
+            animation: {
+              fadeIn: 'fadeIn 0.5s ease-out forwards',
+              iconGlow: 'iconGlow 2s ease-in-out infinite',
+            },
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+</head>
+<body class="font-display">
+<div class="relative flex h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center opacity-30" data-alt="A blurred background image of a university campus to provide context for the college selection website." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAedKMUOp0z_l_1sXQxTbBxy0eYEEmKuG1y3HO2LAMvktNheuW0hoGPsdeJZj0ovtfJT2bhjMwDijp0leN4Y_7uN_a7AcHfiDXTEfSjrVGwBmmu7U83V-AdJCl_byRUne98Js-3W5Uz-gUZshBfHkL4GPMZUayAYT4Y_r3JvaSvIoYeobAw9TPzEMMY3Q0DgSwBtR3gxRMkFkQEqfyOvVdQCndBCIXls08ERmh5F0bz7Rk8y-IPG_o_2zPznIbA5E6G7sORhz60mU5H');"></div>
+<div class="absolute inset-0 bg-background-dark/80"></div>
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 flex flex-1 items-center justify-center py-5">
+<div class="layout-content-container flex flex-col w-full max-w-md flex-1">
+<div class="flex flex-col items-center gap-6 rounded-xl border border-primary/20 bg-black/40 p-8 shadow-2xl shadow-primary/10 backdrop-blur-lg relative overflow-hidden animate-fadeIn">
+<div class="absolute -top-1/2 -left-1/2 w-[200%] h-[200%] bg-[radial-gradient(circle_at_center,_rgba(249,208,6,0.15)_0%,_rgba(249,208,6,0)_50%)] animate-pulse"></div>
+<div class="relative flex h-24 w-24 items-center justify-center rounded-full bg-primary/10" style="transform: perspective(500px) rotateX(20deg) rotateY(-10deg); box-shadow: 0 10px 30px -10px rgba(249, 208, 6, 0.4);">
+<span class="material-symbols-outlined text-6xl text-primary animate-iconGlow" data-icon="check_circle">check_circle</span>
+</div>
+<div class="flex max-w-sm flex-col items-center gap-2 text-center">
+<p class="text-2xl font-bold leading-tight tracking-tight text-white">Theme Updated Successfully!</p>
+<p class="text-base font-normal leading-normal text-white/70">Your new look is now active. Enjoy the fresh interface.</p>
+</div>
+<button class="flex min-w-[84px] w-full max-w-xs cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-4 bg-primary text-background-dark text-base font-bold leading-normal tracking-wide transition-all duration-300 hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/30 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background-dark">
+<span class="truncate">Got It</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

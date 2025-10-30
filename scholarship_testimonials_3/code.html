@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>India's Best - Scholarship Stories</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    "primary": "#f2b90d",
+                    "background-light": "#f8f8f5",
+                    "background-dark": "#181611",
+                },
+                fontFamily: {
+                    "display": ["Space Grotesk", "sans-serif"]
+                },
+                borderRadius: {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+                },
+            },
+        },
+    }
+</script>
+<style>
+    .perspective-container {
+        perspective: 1000px;
+    }
+    .testimonial-card {
+        transform-style: preserve-3d;
+        transition: transform 0.5s;
+    }
+    .perspective-container:hover .testimonial-card {
+        transform: rotateY(10deg) rotateX(5deg) scale(1.02);
+    }
+    .bg-grid {
+        background-image:
+            linear-gradient(to right, #e5393520 1px, transparent 1px),
+            linear-gradient(to bottom, #e5393520 1px, transparent 1px);
+        background-size: 4rem 4rem;
+    }
+</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<div class="absolute inset-0 bg-grid z-0"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-background-dark/80 to-background-dark z-10"></div>
+<div class="layout-container relative z-20 flex h-full grow flex-col">
+<div class="px-4 sm:px-10 md:px-20 lg:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#393528] px-4 sm:px-10 py-3">
+<div class="flex items-center gap-4">
+<div class="size-6 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">India's Best</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end items-center gap-8">
+<div class="flex items-center gap-9">
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Colleges</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Scholarships</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Exams</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">About Us</a>
+</div>
+<div class="flex gap-2">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-[#181611] text-sm font-bold leading-normal tracking-[0.015em] hover:brightness-110 transition-all">
+<span class="truncate">Sign Up</span>
+</button>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#393528] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-[#4d4838] transition-all">
+<span class="truncate">Login</span>
+</button>
+</div>
+</div>
+<button class="md:hidden text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<main class="flex flex-col gap-12 py-16">
+<div class="flex flex-wrap justify-center text-center gap-3 p-4">
+<div class="flex w-full flex-col items-center gap-3">
+<p class="text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em] text-transparent bg-clip-text bg-gradient-to-r from-primary to-[#ff8c42]">From Aspiration to Achievement</p>
+<p class="text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em] text-white">Our Scholarship Stories</p>
+<p class="text-[#bab29c] text-base font-normal leading-normal max-w-lg mt-2">Real stories from students who found scholarships via India's Best, turning their educational dreams into reality.</p>
+</div>
+</div>
+<div class="flex flex-col gap-8">
+<div class="flex flex-wrap items-center justify-center gap-2 px-4">
+<button class="px-4 py-2 text-sm font-medium rounded-full bg-primary text-[#181611] border border-primary transition-all hover:brightness-110">All Stories</button>
+<button class="px-4 py-2 text-sm font-medium rounded-full text-primary border border-primary/50 transition-all hover:bg-primary/10 hover:border-primary">Merit-Based</button>
+<button class="px-4 py-2 text-sm font-medium rounded-full text-primary border border-primary/50 transition-all hover:bg-primary/10 hover:border-primary">Need-Based</button>
+<button class="px-4 py-2 text-sm font-medium rounded-full text-primary border border-primary/50 transition-all hover:bg-primary/10 hover:border-primary">Sports</button>
+<button class="px-4 py-2 text-sm font-medium rounded-full text-primary border border-primary/50 transition-all hover:bg-primary/10 hover:border-primary">Research</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="perspective-container">
+<div class="testimonial-card flex h-full flex-1 flex-col gap-4 rounded-xl min-w-60 bg-[#221e10]/50 border border-[#393528] p-6 backdrop-blur-sm shadow-lg shadow-primary/10">
+<div class="flex items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 bg-center bg-no-repeat aspect-square bg-cover rounded-full flex flex-col border-2 border-primary" data-alt="Photo of Priya S." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBDxyXmkP5EIHYgbkgowLR1MX0_ZG8JzCDAD8zi5gQRPf13E1_3C33FleKJQjxB80Q8zB-dENU2ojRQWjJg8_cjQgZuFmPPTpyNYgebslFooQYwmYM_vnt1pRj6j8KC3J4MfiaYDR5uFWrEopHrYzMfWVmMU_er6YMptMyzrFi1072fW7fdVHM1mk75guJpg3jWbfVxnxc-vHUlMziJTm2z9tFkG-bCSKOOeL4NCucF5iUkxHHbwlxSPEEhKtZKqHbk7MhyDk1w0DsT");'></div>
+<div>
+<p class="text-white text-lg font-bold leading-normal">Priya S.</p>
+<p class="text-[#bab29c] text-sm font-normal leading-normal">IIT Bombay</p>
+</div>
+</div>
+<button class="flex items-center gap-2 rounded-full border border-primary/50 px-3 py-1.5 text-primary transition-all hover:bg-primary/10 hover:border-primary">
+<span class="material-symbols-outlined text-lg">thumb_up</span>
+<span class="text-sm font-medium">128</span>
+</button>
+</div>
+<div>
+<p class="text-primary text-base font-medium leading-normal">Merit-Based Engineering Grant</p>
+<p class="text-[#bab29c] text-sm font-normal leading-normal mt-2">
+                                            "The Merit-Based Engineering Grant I found on India's Best was a game-changer. It covered my tuition and allowed me to focus completely on my studies."
+                                        </p>
+</div>
+</div>
+</div>
+<div class="perspective-container">
+<div class="testimonial-card flex h-full flex-1 flex-col gap-4 rounded-xl min-w-60 bg-[#221e10]/50 border border-[#393528] p-6 backdrop-blur-sm shadow-lg shadow-primary/10">
+<div class="flex items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 bg-center bg-no-repeat aspect-square bg-cover rounded-full flex flex-col border-2 border-primary" data-alt="Photo of Rohan K." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCvF8yJgU-inLQX-jEpNMru9GB8MpurWioRneT05OF-v3TwtM9fgAZ8E2gROYYlfjiYYJEWByaQfYpehk76kmukkxRA8vd9Z6vsoF_yyBrrJhjhl7W8y7IZlsEjwsgKZSABd3-h-W6HQRvh7czdWubORQyvRa3zxEElFoMEGnnJKdNnTDKse4UHicdA8Z6dYxAhkcn2qMrwA-wTH5wbVOxsXyUL6xo4vu0H152FmP_WJ-bEfLAOC_bzcpuV1rIzdTCRrpBmWoc-yfGV");'></div>
+<div>
+<p class="text-white text-lg font-bold leading-normal">Rohan K.</p>
+<p class="text-[#bab29c] text-sm font-normal leading-normal">Delhi University</p>
+</div>
+</div>
+<button class="flex items-center gap-2 rounded-full border border-primary/50 px-3 py-1.5 text-primary transition-all hover:bg-primary/10 hover:border-primary">
+<span class="material-symbols-outlined text-lg">thumb_up</span>
+<span class="text-sm font-medium">94</span>
+</button>
+</div>
+<div>
+<p class="text-primary text-base font-medium leading-normal">National Talent Scholarship</p>
+<p class="text-[#bab29c] text-sm font-normal leading-normal mt-2">
+                                            "Securing the National Talent Scholarship through this platform was surprisingly easy. It has significantly reduced the financial burden on my family."
+                                        </p>
+</div>
+</div>
+</div>
+<div class="perspective-container">
+<div class="testimonial-card flex h-full flex-1 flex-col gap-4 rounded-xl min-w-60 bg-[#221e10]/50 border border-[#393528] p-6 backdrop-blur-sm shadow-lg shadow-primary/10">
+<div class="flex items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 bg-center bg-no-repeat aspect-square bg-cover rounded-full flex flex-col border-2 border-primary" data-alt="Photo of Anjali M." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCVFc_aQ0ukkGQ2-KZwUuYpPw1VDseoCVaN23821dEfrYd7JzScMN14Fg2YppVrtzcDcnSMPCnOJSxn_H6rxGkU7U69CKHrrxzcxiPe0LCk678rt5tmFddIlN7UxElQYu7GiF4HMW037nlZcZe7Q0qpY1exU9Og1yuigFn8ZD8aOqEv-OOoXqrObWPK9aaO6oiB63_mnMHXT28RXRIar2OfBzcLqeBiJplw-9__mQ8PfQ746zrffNj7mzjnUtB4Vr9dwLR5-Y2rOeZl");'></div>
+<div>
+<p class="text-white text-lg font-bold leading-normal">Anjali M.</p>
+<p class="text-[#bab29c] text-sm font-normal leading-normal">NIFT Delhi</p>
+</div>
+</div>
+<button class="flex items-center gap-2 rounded-full border border-primary/50 px-3 py-1.5 text-primary transition-all hover:bg-primary/10 hover:border-primary">
+<span class="material-symbols-outlined text-lg">thumb_up</span>
+<span class="text-sm font-medium">82</span>
+</button>
+</div>
+<div>
+<p class="text-primary text-base font-medium leading-normal">Future Designers Scholarship</p>
+<p class="text-[#bab29c] text-sm font-normal leading-normal mt-2">
+                                            "I received the 'Future Designers' scholarship which was listed here. It's not just financial aid; it's a validation of my passion for design. Thank you!"
+                                        </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex justify-center mt-8">
+<div class="flex flex-col sm:flex-row flex-wrap gap-4 px-4 py-3 max-w-[520px] justify-center w-full">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-[#181611] text-base font-bold leading-normal tracking-[0.015em] grow shadow-lg shadow-primary/20 hover:brightness-110 transition-all">
+<span class="truncate">Explore Scholarships Now</span>
+</button>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-[#393528] text-white text-base font-bold leading-normal tracking-[0.015em] grow hover:bg-[#4d4838] transition-all">
+<span class="truncate">Share Your Success Story</span>
+</button>
+</div>
+</div>
+</main>
+<footer class="flex flex-col gap-6 px-5 py-10 text-center @container border-t border-[#393528]">
+<div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
+<a class="text-[#bab29c] text-base font-normal leading-normal min-w-40 hover:text-primary transition-colors" href="#">About Us</a>
+<a class="text-[#bab29c] text-base font-normal leading-normal min-w-40 hover:text-primary transition-colors" href="#">Contact</a>
+<a class="text-[#bab29c] text-base font-normal leading-normal min-w-40 hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-[#bab29c] text-base font-normal leading-normal min-w-40 hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-wrap justify-center gap-6 text-[#bab29c]">
+<a class="hover:text-primary transition-colors" href="#">
+<svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path></svg>
+</a>
+<a class="hover:text-primary transition-colors" href="#">
+<svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M22.46 6c-.77.35-1.6.58-2.46.67.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.22-1.95-.55v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"></path></svg>
+</a>
+<a class="hover:text-primary transition-colors" href="#">
+<svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.585-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.585-.012-4.85-.07c-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.85s.012-3.584.07-4.85c.149-3.227 1.664-4.771 4.919-4.919C8.415 2.175 8.796 2.163 12 2.163zm0 1.441c-3.173 0-3.502.012-4.728.068-2.738.125-3.967 1.354-4.092 4.092-.056 1.226-.067 1.555-.067 4.728s.011 3.502.067 4.728c.125 2.738 1.354 3.967 4.092 4.092 1.226.056 1.554.067 4.728.067s3.502-.011 4.728-.067c2.738-.125 3.967-1.354 4.092-4.092.056-1.226.067-1.555-.067-4.728s-.011-3.502-.067-4.728c-.125-2.738-1.354-3.967-4.092-4.092C15.502 3.614 15.173 3.604 12 3.604z"></path><path d="M12 7.717c-2.361 0-4.283 1.922-4.283 4.283s1.922 4.283 4.283 4.283 4.283-1.922 4.283-4.283S14.361 7.717 12 7.717zm0 7.126c-1.571 0-2.843-1.272-2.843-2.843s1.272-2.843 2.843-2.843 2.843 1.272 2.843 2.843-1.272 2.843-2.843 2.843z"></path><path d="M16.965 6.577c-.552 0-1 .448-1 1s.448 1 1 1 1-.448 1-1-.448-1-1-1z"></path></svg>
+</a>
+<a class="hover:text-primary transition-colors" href="#">
+<svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path></svg>
+</a>
+</div>
+<p class="text-[#bab29c] text-sm font-normal leading-normal">© 2024 India's Best. All Rights Reserved.</p>
+</footer>
+</div>
+</div>
+</div>
+</div>
+</body></html>

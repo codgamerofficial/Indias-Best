@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Saved Comparisons - India's Best</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2b90d",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#121212",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .perspective-card {
+            transform-style: preserve-3d;
+            transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+            transform: perspective(1000px) rotateY(-2deg) rotateX(4deg);
+            box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.3), 0 0 15px rgba(242, 185, 13, 0.1);
+        }
+
+        .perspective-card:hover {
+            transform: perspective(1200px) rotateY(0deg) rotateX(0deg) translateZ(20px);
+            box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(242, 185, 13, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#EAEAEA]">
+<div class="relative flex min-h-screen w-full flex-col">
+<header class="sticky top-0 z-10 border-b border-white/10 bg-background-dark/80 backdrop-blur-sm">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex h-16 items-center justify-between">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-2xl">school</span>
+<h2 class="text-white text-lg font-bold">India's Best</h2>
+</div>
+<div class="hidden items-center gap-9 md:flex">
+<a class="text-white/80 hover:text-primary text-sm font-medium transition-colors" href="#">Colleges</a>
+<a class="text-white/80 hover:text-primary text-sm font-medium transition-colors" href="#">Scholarships</a>
+<a class="text-white/80 hover:text-primary text-sm font-medium transition-colors" href="#">Exams</a>
+<a class="text-primary text-sm font-bold" href="#">Saved Comparisons</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex h-9 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-4 text-sm font-bold text-background-dark transition-transform duration-200 hover:scale-105">
+<span>Log In</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/50" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCzfknJ9kBJnK1WOOuA8S3Q98SMiN9cz362BJXnA_1cHZG8QCYfqij6_S1bpFlQILPjx3yJD-PXs73i7Mw8y-TYZAZ0L-p1Q9MkLd9pk0hXkC8DFunW_hjciLM9xzAKGKN8U8AG2LCchiV64SUb1goVKUDhDjCDfLd_eee4U-9LXd382CmtO6e0bQUGArAwvk8x38OitED1GANdwQ3gBDfudpx3oZach30R4l-O2XMtljMXtvEkA8js6iZt2vd9I3b-CCEi-s0FHi8_");'></div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<div class="container mx-auto px-4 py-8 sm:px-6 lg:px-8">
+<div class="layout-content-container mx-auto flex max-w-4xl flex-col gap-8">
+<div class="flex flex-col items-center gap-4 text-center">
+<h1 class="text-white text-4xl font-black tracking-tighter sm:text-5xl">My Saved Comparisons</h1>
+<p class="text-[#A0A0A0] max-w-2xl">Manage your saved college and scholarship comparisons. View, rename, or delete them as needed.</p>
+</div>
+<div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+<div class="flex-grow">
+<label class="flex flex-col h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-lg">
+<div class="text-[#A0A0A0] flex items-center justify-center rounded-l-lg border border-r-0 border-white/20 bg-[#1a1a1a] pl-4">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg border border-l-0 border-white/20 bg-[#1a1a1a] text-white placeholder:text-[#A0A0A0] focus:border-primary focus:ring-primary/50" placeholder="Find a saved comparison..."/>
+</div>
+</label>
+</div>
+<button class="flex h-12 min-w-[84px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg bg-primary px-5 text-base font-bold text-background-dark shadow-[0_4px_15px_rgba(242,185,13,0.2)] transition-transform duration-200 hover:scale-105">
+<span class="material-symbols-outlined">add</span>
+<span class="truncate">Create New Comparison</span>
+</button>
+</div>
+<div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+<!-- Card 1 -->
+<div class="group perspective-card rounded-xl bg-gradient-to-br from-white/5 to-transparent p-6 backdrop-blur-sm border border-white/10">
+<div class="flex flex-col gap-4">
+<div class="flex flex-col gap-1">
+<p class="text-base font-bold text-white">Top Engineering Choices</p>
+<p class="text-sm font-normal text-[#A0A0A0]">Saved on: 15/08/2023</p>
+<div class="mt-2 flex flex-wrap gap-2">
+<span class="rounded-full bg-primary/20 px-3 py-1 text-xs text-primary">IIT Bombay</span>
+<span class="rounded-full bg-primary/20 px-3 py-1 text-xs text-primary">IIT Delhi</span>
+</div>
+</div>
+<div class="mt-2 flex items-center justify-between">
+<button class="flex h-9 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg bg-primary/90 px-4 text-sm font-bold text-background-dark transition-all duration-200 hover:bg-primary">
+<span class="material-symbols-outlined text-lg">visibility</span>
+<span class="truncate">View Comparison</span>
+</button>
+<div class="flex items-center gap-1">
+<button class="flex size-9 cursor-pointer items-center justify-center rounded-lg text-[#A0A0A0] transition-colors hover:bg-white/10 hover:text-white">
+<span class="material-symbols-outlined text-xl">edit</span>
+</button>
+<button class="flex size-9 cursor-pointer items-center justify-center rounded-lg text-[#A0A0A0] transition-colors hover:bg-red-500/20 hover:text-red-400">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group perspective-card rounded-xl bg-gradient-to-br from-white/5 to-transparent p-6 backdrop-blur-sm border border-white/10">
+<div class="flex flex-col gap-4">
+<div class="flex flex-col gap-1">
+<p class="text-base font-bold text-white">MBA Prospects</p>
+<p class="text-sm font-normal text-[#A0A0A0]">Saved on: 02/07/2023</p>
+<div class="mt-2 flex flex-wrap gap-2">
+<span class="rounded-full bg-primary/20 px-3 py-1 text-xs text-primary">IIM Ahmedabad</span>
+<span class="rounded-full bg-primary/20 px-3 py-1 text-xs text-primary">IIM Bangalore</span>
+<span class="rounded-full bg-primary/20 px-3 py-1 text-xs text-primary">FMS Delhi</span>
+</div>
+</div>
+<div class="mt-2 flex items-center justify-between">
+<button class="flex h-9 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg bg-primary/90 px-4 text-sm font-bold text-background-dark transition-all duration-200 hover:bg-primary">
+<span class="material-symbols-outlined text-lg">visibility</span>
+<span class="truncate">View Comparison</span>
+</button>
+<div class="flex items-center gap-1">
+<button class="flex size-9 cursor-pointer items-center justify-center rounded-lg text-[#A0A0A0] transition-colors hover:bg-white/10 hover:text-white">
+<span class="material-symbols-outlined text-xl">edit</span>
+</button>
+<button class="flex size-9 cursor-pointer items-center justify-center rounded-lg text-[#A0A0A0] transition-colors hover:bg-red-500/20 hover:text-red-400">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Empty State Card -->
+<div class="md:col-span-2 flex flex-col items-center justify-center gap-4 rounded-xl border border-dashed border-white/20 bg-white/5 p-12 text-center">
+<span class="material-symbols-outlined text-5xl text-[#A0A0A0]">search_off</span>
+<h3 class="text-xl font-bold text-white">No More Comparisons</h3>
+<p class="text-[#A0A0A0]">You've reached the end of your list. Why not create a new one?</p>
+<button class="mt-2 flex h-10 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg bg-primary px-5 text-sm font-bold text-background-dark shadow-[0_4px_15px_rgba(242,185,13,0.2)] transition-transform duration-200 hover:scale-105">
+<span class="material-symbols-outlined">add</span>
+<span class="truncate">Create a New Comparison</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

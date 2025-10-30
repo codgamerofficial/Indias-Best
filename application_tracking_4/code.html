@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>India's Best - Application Tracker</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2b90d",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#121212",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+        }
+        .card-3d {
+            transform-style: preserve-3d;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 0 1px #333;
+        }
+        .card-3d:hover {
+            transform: perspective(1000px) rotateY(5deg) rotateX(5deg) scale3d(1.03, 1.03, 1.03);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 0 2px #f2b90d;
+        }
+        .calendar-day:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 15px rgba(242, 185, 13, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-300 dark:text-gray-300 antialiased">
+<div class="relative flex min-h-screen w-full flex-col">
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-white/10 bg-background-dark/80 px-4 py-3 backdrop-blur-md sm:px-8 md:px-16 lg:px-24">
+<div class="flex items-center gap-4 text-white">
+<div class="text-primary size-7">
+<svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">India's Best</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Dashboard</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">College Search</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Resources</a>
+</div>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-white/5 text-white hover:bg-white/10 gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5 transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAmpHI2fDhSjhInBmHhVNfYYNrE4EtEqmj1aGDVPvXgcVQrWYVs9y6Yq2-QG-HKLU4vQlbkK5fEdCjm3TqP_1GXFdcjK__hGQXvanjrwoSJOuExTykCqzAY4G1qHCfFCt1JMc67fygPUN1OjN-vGCvSiqoTl92F43GwiGZeqct20rO-FAGRut2sPR-IyPQXaYfPFiM9K-nzL1QeT9wYWnxwKJ-8s34SKfoIJaX5EYvXvWA2dnl46WLeCyt4ZpOUDbBPjxIXaUMb6CdN");'></div>
+</div>
+<button class="md:hidden flex items-center justify-center rounded-lg h-10 w-10 bg-white/5 text-white hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<main class="w-full max-w-7xl mx-auto px-4 sm:px-8 py-8 md:py-12">
+<div class="flex flex-wrap justify-between items-center gap-4 mb-8">
+<div class="flex flex-col gap-2">
+<p class="text-white text-4xl font-black leading-tight tracking-[-0.033em]">My Application Tracker</p>
+<p class="text-gray-400 text-base font-normal leading-normal">A centralized view of all your college applications.</p>
+</div>
+<button class="flex items-center justify-center gap-2 rounded-lg bg-primary text-background-dark h-12 px-6 font-bold hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined">add_circle</span>
+                    Add Application
+                </button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-white/10 bg-white/5">
+<p class="text-gray-300 text-base font-medium leading-normal">Total Applications</p>
+<p class="text-white tracking-light text-3xl font-bold leading-tight">8</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-white/10 bg-white/5">
+<p class="text-gray-300 text-base font-medium leading-normal">Accepted</p>
+<p class="text-green-400 tracking-light text-3xl font-bold leading-tight">2</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-white/10 bg-white/5">
+<p class="text-gray-300 text-base font-medium leading-normal">Pending</p>
+<p class="text-primary tracking-light text-3xl font-bold leading-tight">3</p>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-4 mb-8 p-4 rounded-xl border border-white/10 bg-white/5">
+<div class="flex-grow">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-gray-400 flex bg-[#2a2a2a] items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-primary border-none bg-[#2a2a2a] focus:border-none h-full placeholder:text-gray-400 px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Search for a specific application or college..." value=""/>
+</div>
+</label>
+</div>
+<div class="flex items-center justify-between gap-4">
+<div class="hidden sm:flex gap-2 p-1 flex-wrap items-center">
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#2a2a2a] hover:bg-white/20 text-gray-300 px-4 transition-colors">
+<p class="text-sm font-medium leading-normal">Submitted</p>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#2a2a2a] hover:bg-white/20 text-gray-300 px-4 transition-colors">
+<p class="text-sm font-medium leading-normal">Under Review</p>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#2a2a2a] hover:bg-white/20 text-gray-300 px-4 transition-colors">
+<p class="text-sm font-medium leading-normal">Accepted</p>
+</button>
+</div>
+<div class="flex items-center p-1 rounded-lg bg-[#2a2a2a]">
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-md bg-primary text-background-dark px-4 font-bold">
+<span class="material-symbols-outlined">list</span>
+<p class="text-sm font-medium leading-normal">List</p>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-md text-gray-300 hover:bg-white/10 px-4 transition-colors">
+<span class="material-symbols-outlined">calendar_month</span>
+<p class="text-sm font-medium leading-normal">Calendar</p>
+</button>
+</div>
+</div>
+</div>
+<div class="hidden">
+<div class="card-3d p-6 rounded-xl border border-white/10 bg-gradient-to-br from-white/5 to-transparent mb-8">
+<div class="flex flex-col md:flex-row justify-between items-center mb-6 gap-4">
+<h3 class="text-2xl font-bold text-white">July 2024</h3>
+<div class="flex items-center gap-2">
+<button class="card-3d flex items-center justify-center size-10 rounded-lg bg-white/10 hover:bg-white/20 transition-colors"><span class="material-symbols-outlined">chevron_left</span></button>
+<button class="card-3d flex items-center justify-center size-10 rounded-lg bg-white/10 hover:bg-white/20 transition-colors"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+<div class="grid grid-cols-7 gap-2 text-center text-sm font-medium text-gray-400 pb-2 border-b border-white/10">
+<div>Sun</div>
+<div>Mon</div>
+<div>Tue</div>
+<div>Wed</div>
+<div>Thu</div>
+<div>Fri</div>
+<div>Sat</div>
+</div>
+<div class="grid grid-cols-7 gap-1 md:gap-2">
+<div class="aspect-square text-gray-600 p-2 text-left"></div>
+<div class="aspect-square calendar-day rounded-lg p-2 text-left transition-all"><span class="font-bold">1</span></div>
+<div class="aspect-square calendar-day rounded-lg p-2 text-left transition-all"><span class="font-bold">2</span></div>
+<div class="aspect-square calendar-day rounded-lg p-2 text-left transition-all"><span class="font-bold">3</span></div>
+<div class="aspect-square calendar-day rounded-lg p-2 text-left transition-all"><span class="font-bold">4</span></div>
+<div class="aspect-square calendar-day relative rounded-lg p-2 text-left transition-all border border-red-500/50 bg-red-500/10"><span class="font-bold">5</span>
+<div class="absolute bottom-2 left-2 right-2 text-left text-[10px] leading-tight font-semibold bg-red-500/30 text-red-300 p-1 rounded-md overflow-hidden truncate">IISc Bangalore</div>
+</div>
+<div class="aspect-square calendar-day rounded-lg p-2 text-left transition-all"><span class="font-bold">6</span></div>
+<div class="aspect-square calendar-day rounded-lg p-2 text-left transition-all"><span class="font-bold">7</span></div>
+<div class="aspect-square calendar-day rounded-lg p-2 text-left transition-all"><span class="font-bold">8</span></div>
+<div class="aspect-square calendar-day rounded-lg p-2 text-left transition-all"><span class="font-bold">9</span></div>
+<div class="aspect-square calendar-day rounded-lg p-2 text-left transition-all"><span class="font-bold">10</span></div>
+<div class="aspect-square calendar-day rounded-lg p-2 text-left transition-all"><span class="font-bold">11</span></div>
+<div class="aspect-square calendar-day rounded-lg p-2 text-left transition-all"><span class="font-bold">12</span></div>
+<div class="aspect-square calendar-day rounded-lg p-2 text-left transition-all"><span class="font-bold">13</span></div>
+<div class="aspect-square calendar-day rounded-lg p-2 text-left transition-all"><span class="font-bold">14</span></div>
+<div class="aspect-square calendar-day relative rounded-lg p-2 text-left transition-all border border-primary/50 bg-primary/10"><span class="font-bold text-primary">15</span>
+<div class="absolute bottom-2 left-2 right-2 text-left text-[10px] leading-tight font-semibold bg-primary/30 text-primary p-1 rounded-md overflow-hidden truncate">IIT Delhi</div>
+</div>
+<div class="aspect-square calendar-day rounded-lg p-2 text-left transition-all"><span class="font-bold">16</span></div>
+<div class="aspect-square calendar-day rounded-lg p-2 text-left transition-all"><span class="font-bold">17</span></div>
+<div class="aspect-square calendar-day rounded-lg p-2 text-left transition-all"><span class="font-bold">18</span></div>
+<div class="aspect-square calendar-day rounded-lg p-2 text-left transition-all"><span class="font-bold">19</span></div>
+<div class="aspect-square calendar-day rounded-lg p-2 text-left transition-all"><span class="font-bold">20</span></div>
+<div class="aspect-square calendar-day rounded-lg p-2 text-left transition-all"><span class="font-bold">21</span></div>
+<div class="aspect-square calendar-day rounded-lg p-2 text-left transition-all"><span class="font-bold">22</span></div>
+<div class="aspect-square calendar-day rounded-lg p-2 text-left transition-all"><span class="font-bold">23</span></div>
+<div class="aspect-square calendar-day rounded-lg p-2 text-left transition-all"><span class="font-bold">24</span></div>
+<div class="aspect-square calendar-day rounded-lg p-2 text-left transition-all"><span class="font-bold">25</span></div>
+<div class="aspect-square calendar-day rounded-lg p-2 text-left transition-all"><span class="font-bold">26</span></div>
+<div class="aspect-square calendar-day rounded-lg p-2 text-left transition-all"><span class="font-bold">27</span></div>
+<div class="aspect-square calendar-day rounded-lg p-2 text-left transition-all"><span class="font-bold">28</span></div>
+<div class="aspect-square calendar-day rounded-lg p-2 text-left transition-all"><span class="font-bold">29</span></div>
+<div class="aspect-square calendar-day rounded-lg p-2 text-left transition-all"><span class="font-bold">30</span></div>
+<div class="aspect-square calendar-day rounded-lg p-2 text-left transition-all"><span class="font-bold">31</span></div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="card-3d flex flex-col gap-4 rounded-xl border border-white/10 bg-gradient-to-br from-white/5 to-transparent p-6">
+<div class="flex items-start justify-between">
+<div>
+<p class="text-xl font-bold text-white">IIT Bombay</p>
+<p class="text-sm text-gray-400">B.Tech in Computer Science</p>
+</div>
+<div class="flex items-center gap-2 rounded-full bg-green-500/20 px-3 py-1 text-xs font-semibold text-green-400">
+<span class="material-symbols-outlined !text-sm">check_circle</span>
+                            Accepted
+                        </div>
+</div>
+<div class="space-y-2">
+<div class="w-full bg-gray-700/50 rounded-full h-2.5 overflow-hidden">
+<div class="bg-green-500 h-2.5 rounded-full" style="width: 100%"></div>
+</div>
+<p class="text-xs text-gray-400 font-medium">100% Complete - Decision Received</p>
+</div>
+<div class="flex flex-col gap-1">
+<p class="text-sm font-medium text-gray-400">Decision Received</p>
+<p class="text-lg font-bold text-white">10 June 2024</p>
+</div>
+<button class="w-full mt-auto flex items-center justify-center gap-2 rounded-lg bg-primary/20 text-primary h-10 font-bold hover:bg-primary/30 transition-colors">
+                        View Portal
+                        <span class="material-symbols-outlined !text-base">arrow_forward</span>
+</button>
+</div>
+<div class="card-3d flex flex-col gap-4 rounded-xl border border-white/10 bg-gradient-to-br from-white/5 to-transparent p-6">
+<div class="flex items-start justify-between">
+<div>
+<p class="text-xl font-bold text-white">IIT Delhi</p>
+<p class="text-sm text-gray-400">M.Sc in Physics</p>
+</div>
+<div class="flex items-center gap-2 rounded-full bg-primary/20 px-3 py-1 text-xs font-semibold text-primary">
+<span class="material-symbols-outlined !text-sm">hourglass_top</span>
+                            Under Review
+                        </div>
+</div>
+<div class="space-y-2">
+<div class="w-full bg-gray-700/50 rounded-full h-2.5 overflow-hidden">
+<div class="bg-primary h-2.5 rounded-full" style="width: 75%"></div>
+</div>
+<p class="text-xs text-gray-400 font-medium">75% Complete - Interview Scheduled</p>
+</div>
+<div class="flex flex-col gap-1">
+<p class="text-sm font-medium text-gray-400">Decision Expected By</p>
+<p class="text-lg font-bold text-white">15 July 2024</p>
+</div>
+<button class="w-full mt-auto flex items-center justify-center gap-2 rounded-lg bg-primary/20 text-primary h-10 font-bold hover:bg-primary/30 transition-colors">
+                        View Portal
+                        <span class="material-symbols-outlined !text-base">arrow_forward</span>
+</button>
+</div>
+<div class="card-3d flex flex-col gap-4 rounded-xl border border-white/10 bg-gradient-to-br from-white/5 to-transparent p-6">
+<div class="flex items-start justify-between">
+<div>
+<p class="text-xl font-bold text-white">IISc Bangalore</p>
+<p class="text-sm text-gray-400">Ph.D in Life Sciences</p>
+</div>
+<div class="flex items-center gap-2 rounded-full bg-red-500/20 px-3 py-1 text-xs font-semibold text-red-400">
+<span class="material-symbols-outlined !text-sm">cancel</span>
+                            Rejected
+                        </div>
+</div>
+<div class="space-y-2">
+<div class="w-full bg-gray-700/50 rounded-full h-2.5 overflow-hidden">
+<div class="bg-red-500 h-2.5 rounded-full" style="width: 100%"></div>
+</div>
+<p class="text-xs text-gray-400 font-medium">100% Complete - Decision Received</p>
+</div>
+<div class="flex flex-col gap-1">
+<p class="text-sm font-medium text-gray-400">Decision Received</p>
+<p class="text-lg font-bold text-white">05 July 2024</p>
+</div>
+<button class="w-full mt-auto flex items-center justify-center gap-2 rounded-lg bg-primary/20 text-primary h-10 font-bold hover:bg-primary/30 transition-colors">
+                        View Portal
+                        <span class="material-symbols-outlined !text-base">arrow_forward</span>
+</button>
+</div>
+<div class="card-3d flex flex-col gap-4 rounded-xl border border-white/10 bg-gradient-to-br from-white/5 to-transparent p-6">
+<div class="flex items-start justify-between">
+<div>
+<p class="text-xl font-bold text-white">IIT Madras</p>
+<p class="text-sm text-gray-400">B.Tech in Electrical Eng.</p>
+</div>
+<div class="flex items-center gap-2 rounded-full bg-blue-500/20 px-3 py-1 text-xs font-semibold text-blue-400">
+<span class="material-symbols-outlined !text-sm">send</span>
+                            Submitted
+                        </div>
+</div>
+<div class="space-y-2">
+<div class="w-full bg-gray-700/50 rounded-full h-2.5 overflow-hidden">
+<div class="bg-blue-500 h-2.5 rounded-full" style="width: 25%"></div>
+</div>
+<p class="text-xs text-gray-400 font-medium">25% Complete - Documents Submitted</p>
+</div>
+<div class="flex flex-col gap-1">
+<p class="text-sm font-medium text-gray-400">Submitted On</p>
+<p class="text-lg font-bold text-white">20 June 2024</p>
+</div>
+<button class="w-full mt-auto flex items-center justify-center gap-2 rounded-lg bg-primary/20 text-primary h-10 font-bold hover:bg-primary/30 transition-colors">
+                        Upload Documents
+                        <span class="material-symbols-outlined !text-base">upload_file</span>
+</button>
+</div>
+<div class="card-3d flex flex-col gap-4 rounded-xl border border-red-500/50 bg-gradient-to-br from-red-500/10 to-transparent p-6">
+<div class="flex items-start justify-between">
+<div>
+<p class="text-xl font-bold text-white">BITS Pilani</p>
+<p class="text-sm text-gray-400">Integrated M.E. Program</p>
+</div>
+<div class="flex items-center gap-2 rounded-full bg-red-500/20 px-3 py-1 text-xs font-semibold text-red-400">
+<span class="material-symbols-outlined !text-sm">error</span>
+                            Deadline Passed
+                        </div>
+</div>
+<div class="space-y-2">
+<div class="w-full bg-gray-700/50 rounded-full h-2.5 overflow-hidden">
+<div class="bg-red-500 h-2.5 rounded-full" style="width: 10%"></div>
+</div>
+<p class="text-xs text-gray-400 font-medium">10% Complete - Application Incomplete</p>
+</div>
+<div class="flex flex-col gap-1">
+<p class="text-sm font-medium text-gray-400">Deadline Was</p>
+<p class="text-lg font-bold text-red-400">01 July 2024</p>
+</div>
+<button class="w-full mt-auto flex items-center justify-center gap-2 rounded-lg bg-white/10 text-gray-400 h-10 font-bold cursor-not-allowed">
+                        View Portal
+                        <span class="material-symbols-outlined !text-base">lock</span>
+</button>
+</div>
+<div class="col-span-1 md:col-span-2 lg:col-span-3 min-h-[250px] flex flex-col items-center justify-center gap-4 rounded-xl border-2 border-dashed border-white/20 bg-transparent text-center p-6">
+<span class="material-symbols-outlined !text-5xl text-white/30">explore</span>
+<p class="text-xl font-bold text-white">Your application journey starts here.</p>
+<p class="text-gray-400 max-w-sm">Click 'Add Application' to begin tracking your submissions and stay organized.</p>
+</div>
+</div>
+</main>
+</div>
+</body></html>

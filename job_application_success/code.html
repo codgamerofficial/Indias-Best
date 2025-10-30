@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Application Success</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f9d006",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#231f0f",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+</head>
+<body class="font-display">
+<div class="relative flex min-h-screen w-full flex-col bg-background-light dark:bg-[#1A1A2E] group/design-root overflow-hidden items-center justify-center p-4">
+<!-- Background elements for visual effect -->
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDAqb_3t-O8Mwprke6YNLwm-fC2NW9TyKNc35xg9JbqzIW0Vywr82W5YYLGZdKm4ewVC93-Z8IShxjprE4IQBxUQN1DVKHVls7O1HzrxPnjvIGETPa4anRhOWK9H6UWFy5vnlrtzoNkcDezjGYl11Ro4oSdCAFYAYy0hmdqdkKzznK4ae95KVVM_RS9ihH3Rv3xo9CNFMvExjkNGdPBal0aC5fZzQetCjHWoomhXxdpFdSvWtVzdUzEBzq_tF40U4rEeX48OrdkL5K5'); opacity: 0.1;"></div>
+<div class="absolute -top-1/4 left-0 w-1/2 h-1/2 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
+<div class="absolute -bottom-1/4 right-0 w-1/2 h-1/2 bg-[#E94560]/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+<!-- Modal Container -->
+<div class="relative w-full max-w-lg overflow-hidden rounded-xl border border-white/10 bg-black/30 backdrop-blur-xl shadow-2xl shadow-primary/10">
+<button class="absolute top-4 right-4 text-white/50 hover:text-white transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+<div class="p-8 sm:p-12 flex flex-col items-center text-center">
+<!-- Success Icon -->
+<div class="relative mb-6 flex h-24 w-24 items-center justify-center rounded-full bg-primary/10">
+<div class="absolute inset-0 rounded-full bg-primary/20 animate-ping"></div>
+<span class="material-symbols-outlined text-5xl text-primary" style="text-shadow: 0 0 15px var(--tw-shadow-color); --tw-shadow-color: #f9d006;">
+                        task_alt
+                    </span>
+</div>
+<!-- HeadlineText -->
+<h1 class="text-white tracking-light text-3xl sm:text-4xl font-bold leading-tight pb-3">Success! Application Sent.</h1>
+<!-- BodyText -->
+<p class="text-white/80 text-base font-normal leading-normal max-w-sm pb-6">
+                    Your application has been received. Our team will review it and be in touch with the next steps shortly.
+                </p>
+<!-- ButtonGroup -->
+<div class="flex w-full flex-col items-stretch gap-3">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-background-dark text-base font-bold leading-normal tracking-[0.015em] transition-all hover:scale-105 hover:shadow-lg hover:shadow-primary/30 active:scale-95 w-full">
+<span class="truncate">Track Your Application</span>
+</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-white/5 text-white text-base font-bold leading-normal tracking-[0.015em] transition-colors hover:bg-white/10 w-full">
+<span class="truncate">Explore More Careers</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</body></html>

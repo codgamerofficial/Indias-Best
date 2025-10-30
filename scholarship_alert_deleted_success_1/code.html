@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Alert Deleted Confirmation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        @keyframes iconGlow {
+            0%, 100% { filter: drop-shadow(0 0 8px rgba(242, 185, 13, 0.5)); }
+            50% { filter: drop-shadow(0 0 16px rgba(242, 185, 13, 1)); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        .icon-glow-animated {
+            animation: iconGlow 2s ease-in-out infinite;
+        }
+        .glow-border {
+            box-shadow: 0 0 2px rgba(242, 185, 13, 0.8), 0 0 8px rgba(242, 185, 13, 0.5), 0 0 16px rgba(242, 185, 13, 0.3);
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#f2b90d",
+              "background-light": "#f8f8f5",
+              "background-dark": "#1A1A1A",
+              "success-green": "#28a745",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-display">
+<div class="relative flex h-screen w-full flex-col items-center justify-center bg-background-light dark:bg-background-dark p-4 group/design-root" style="background-image: radial-gradient(circle at top right, rgba(242, 185, 13, 0.1), transparent 30%), radial-gradient(circle at bottom left, rgba(255, 65, 54, 0.1), transparent 40%);">
+<div class="layout-container flex h-full grow flex-col items-center justify-center">
+<div class="relative w-full max-w-md transform-gpu rounded-xl border border-primary/20 bg-background-dark/80 p-8 text-center backdrop-blur-lg transition-all duration-300 ease-in-out glow-border animate-fade-in">
+<button class="absolute top-4 right-4 text-white/50 hover:text-white transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+<div class="flex justify-center mb-6">
+<div class="flex h-20 w-20 items-center justify-center rounded-full bg-success-green/20">
+<span class="material-symbols-outlined text-5xl text-success-green icon-glow-animated" style="filter: drop-shadow(0 0 10px #28a745);">check_circle</span>
+</div>
+</div>
+<h1 class="text-white tracking-tight text-[32px] font-bold leading-tight pb-2 font-display">Success!</h1>
+<p class="text-white/80 text-base font-normal leading-normal pb-8 font-display">Scholarship alert deleted successfully!</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="flex min-w-[84px] max-w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 flex-1 bg-primary text-background-dark text-base font-bold leading-normal tracking-[0.015em] font-display hover:opacity-90 transition-opacity">
+<span class="truncate">Return to Alerts</span>
+</button>
+<button class="flex min-w-[84px] max-w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 flex-1 bg-transparent border border-primary/50 text-primary text-base font-bold leading-normal tracking-[0.015em] font-display hover:bg-primary/10 transition-colors">
+<span class="truncate">Create New Alert</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

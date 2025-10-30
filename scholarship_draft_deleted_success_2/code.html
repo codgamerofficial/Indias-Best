@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Success - Draft Deleted</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2b90d",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#1A1A1A",
+                        "accent-red": "#E53935",
+                        "text-light": "#F5F5F5",
+                        "text-dark": "#1A1A1A",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        'primary-glow': '0 0 20px 5px rgba(242, 185, 13, 0.3)',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'scale(0.95)' },
+                            '100%': { opacity: '1', transform: 'scale(1)' },
+                        },
+                        iconGlow: {
+                            '0%, 100%': { boxShadow: '0 0 20px 5px rgba(242, 185, 13, 0.3)' },
+                            '50%': { boxShadow: '0 0 30px 10px rgba(242, 185, 13, 0.5)' },
+                        },
+                        checkGrow: {
+                            '0%': { transform: 'scale(0)' },
+                            '100%': { transform: 'scale(1)' },
+                        }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-out forwards',
+                        'icon-glow': 'iconGlow 2s ease-in-out',
+                        'check-grow': 'checkGrow 0.3s ease-out 0.3s forwards',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+</head>
+<body class="font-display">
+<div class="relative flex h-screen w-full flex-col items-center justify-center bg-background-light dark:bg-background-dark text-text-light group/design-root overflow-hidden p-4">
+<div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
+<div class="absolute -top-1/4 -left-1/4 w-1/2 h-1/2 bg-primary/10 rounded-full blur-3xl animate-[spin_20s_linear_infinite]"></div>
+<div class="absolute -bottom-1/4 -right-1/4 w-1/2 h-1/2 bg-accent-red/10 rounded-full blur-3xl animate-[spin_25s_linear_infinite_reverse]"></div>
+</div>
+<div class="relative z-10 flex w-full max-w-lg flex-col items-center rounded-xl border border-white/10 bg-black/30 p-8 text-center backdrop-blur-lg backdrop-saturate-150 shadow-2xl animate-fade-in opacity-0">
+<button class="absolute top-4 right-4 text-white/50 hover:text-white transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+<div class="mb-6 flex h-24 w-24 items-center justify-center rounded-full bg-primary/20 animate-icon-glow">
+<span class="material-symbols-outlined text-primary text-6xl scale-0 animate-check-grow">
+                    check_circle
+                </span>
+</div>
+<div class="layout-content-container flex flex-col items-center">
+<h1 class="text-white tracking-tight text-[32px] font-bold leading-tight pb-3">Draft Deleted!</h1>
+<p class="text-white/80 text-base font-normal leading-normal max-w-sm pb-8">Your scholarship draft was deleted successfully!</p>
+<div class="flex w-full max-w-xs flex-col items-stretch gap-3">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-background-dark text-base font-bold leading-normal tracking-[0.015em] transition-transform hover:scale-105">
+<span class="truncate">Return to Drafts</span>
+</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-white/10 text-white hover:bg-white/20 text-base font-bold leading-normal tracking-[0.015em] transition-colors">
+<span class="truncate">Start New Application</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Scholarship Application - India's Best</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    "primary": "#f2b90d",
+                    "background-light": "#f8f8f5",
+                    "background-dark": "#121212",
+                },
+                fontFamily: {
+                    "display": ["Space Grotesk", "sans-serif"]
+                },
+                borderRadius: {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+                },
+                keyframes: {
+                    glow: {
+                        '0%, 100%': { opacity: '0.7', boxShadow: '0 0 5px #f2b90d, 0 0 10px #f2b90d' },
+                        '50%': { opacity: '1', boxShadow: '0 0 15px #f2b90d, 0 0 25px #f2b90d' },
+                    },
+                    pulse: {
+                        '0%, 100%': { transform: 'scale(1)', opacity: '1' },
+                        '50%': { transform: 'scale(1.05)', opacity: '0.8' },
+                    }
+                },
+                animation: {
+                    glow: 'glow 2.5s ease-in-out infinite',
+                    pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                }
+            },
+        },
+    }
+    </script>
+<style>
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .form-input {
+        background-color: #2a2a2a;
+        border: 1px solid #444;
+        color: #E0E0E0;
+        transition: all 0.2s ease-in-out;
+        box-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.2);
+    }
+    .form-input:focus {
+        border-color: #f2b90d;
+        box-shadow: 0 0 0 3px rgba(242, 185, 13, 0.3), inset 0 2px 4px 0 rgb(0 0 0 / 0.2);
+        outline: none;
+    }
+    .progress-glow {
+        box-shadow: 0 0 8px 0px rgba(242, 185, 13, 0.6), 0 0 16px 0px rgba(242, 185, 13, 0.4);
+    }
+    .timer-segment {
+        background: linear-gradient(145deg, #1f1f1f, #2a2a2a);
+        box-shadow: inset 0 2px 4px rgba(0,0,0,0.5), 0 2px 3px rgba(0,0,0,0.4);
+    }
+    .timer-value {
+        text-shadow: 0 0 5px rgba(242, 185, 13, 0.5), 0 0 10px rgba(242, 185, 13, 0.3);
+    }
+    .ai-suggestion-underline {
+        text-decoration: underline;
+        text-decoration-style: solid;
+        text-underline-offset: 4px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+    .grammar-error { text-decoration-color: rgba(239, 68, 68, 0.7); }
+    .grammar-error:hover { background-color: rgba(239, 68, 68, 0.1); }
+    .clarity-suggestion { text-decoration-color: rgba(59, 130, 246, 0.7); }
+    .clarity-suggestion:hover { background-color: rgba(59, 130, 246, 0.1); }
+    .conciseness-suggestion { text-decoration-color: rgba(34, 197, 94, 0.7); }
+    .conciseness-suggestion:hover { background-color: rgba(34, 197, 94, 0.1); }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-[#E0E0E0]">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#393528] px-4 sm:px-10 py-3 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">India's Best</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-white/80 hover:text-white transition-colors text-sm font-medium leading-normal" href="#">Colleges</a>
+<a class="text-white/80 hover:text-white transition-colors text-sm font-medium leading-normal" href="#">Scholarships</a>
+<a class="text-white/80 hover:text-white transition-colors text-sm font-medium leading-normal" href="#">Exams</a>
+<a class="text-white/80 hover:text-white transition-colors text-sm font-medium leading-normal" href="#">About Us</a>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCK-d4eeWxgJsdP0ofI97mXoV0_594pVpaUtwVijm4fpQSKmrOTakTe_TE3yMP8wQuKfyWPgMR0DBUwrkYnEyG0UN-7fNvdl-S0CDh3LWQKcjen0L1ao06kTiXSj_TkG_vhewj88kcX7f-pUhdtHvPwH4HBsc_OBhnHV5AnWsHXJDkS4jidHmLr0oIj2N_a7ER4Z_LVCGnx4xZBnm9Urnz3qZFLHe4y4t6x2mtBEtbfbaE4kfiemijWupkXaB5pT1UAULF3SAtlLg8K");'></div>
+</div>
+<button class="md:hidden text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<main class="flex flex-1 justify-center py-10 px-4">
+<div class="layout-content-container flex flex-col w-full max-w-4xl flex-1 gap-8">
+<div class="flex flex-wrap justify-between gap-3 p-4">
+<div class="flex min-w-72 flex-col gap-3">
+<p class="text-white text-4xl font-black leading-tight tracking-[-0.033em]">Scholarship Application</p>
+<p class="text-[#bab29c] text-base font-normal leading-normal">Complete the form below to apply for the Future Leaders Scholarship.</p>
+</div>
+</div>
+<div class="w-full px-4 mb-8">
+<div class="border-2 border-red-500/30 bg-red-900/20 rounded-xl p-4 sm:p-6 text-center shadow-lg shadow-red-900/20">
+<h3 class="text-red-300 text-sm sm:text-base font-bold uppercase tracking-widest mb-3">Application Deadline Approaching</h3>
+<div class="flex items-center justify-center gap-2 sm:gap-4">
+<div class="flex flex-col items-center">
+<div class="timer-segment w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center rounded-lg border border-white/10">
+<span class="timer-value text-primary text-4xl sm:text-5xl font-black">12</span>
+</div>
+<span class="mt-2 text-xs sm:text-sm font-medium text-red-300/80">Days</span>
+</div>
+<div class="text-primary text-4xl font-bold pb-6">:</div>
+<div class="flex flex-col items-center">
+<div class="timer-segment w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center rounded-lg border border-white/10">
+<span class="timer-value text-primary text-4xl sm:text-5xl font-black">08</span>
+</div>
+<span class="mt-2 text-xs sm:text-sm font-medium text-red-300/80">Hours</span>
+</div>
+<div class="text-primary text-4xl font-bold pb-6">:</div>
+<div class="flex flex-col items-center">
+<div class="timer-segment w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center rounded-lg border border-white/10">
+<span class="timer-value text-primary text-4xl sm:text-5xl font-black">45</span>
+</div>
+<span class="mt-2 text-xs sm:text-sm font-medium text-red-300/80">Minutes</span>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full px-4 mb-4">
+<div class="flex flex-col gap-3">
+<div class="flex justify-between text-sm text-[#bab29c]">
+<span>Personal Details</span>
+<span class="font-bold text-white">Step 1 of 5</span>
+</div>
+<div class="w-full bg-[#2a2a2a] rounded-full h-2.5 overflow-hidden border border-[#444] shadow-inner">
+<div class="bg-primary h-full rounded-full progress-glow" style="width: 20%"></div>
+</div>
+<ol class="mt-4 grid grid-cols-5 text-center text-xs font-medium text-[#bab29c]">
+<li class="text-primary font-bold">
+<span class="block">Personal</span>
+</li>
+<li>
+<span class="block">Academic</span>
+</li>
+<li>
+<span class="block">Essay</span>
+</li>
+<li>
+<span class="block">Documents</span>
+</li>
+<li>
+<span class="block">Review</span>
+</li>
+</ol>
+</div>
+</div>
+<div class="flex flex-col gap-10 p-4">
+<section class="flex flex-col gap-6">
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 border-b border-[#393528]">Personal Details</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="text-[#bab29c] text-sm" for="full-name">Full Name</label>
+<input class="form-input w-full rounded-lg px-4 py-3" id="full-name" placeholder="Enter your full name" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-[#bab29c] text-sm" for="dob">Date of Birth</label>
+<input class="form-input w-full rounded-lg px-4 py-3" id="dob" type="date"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="text-[#bab29c] text-sm" for="email">Email Address</label>
+<input class="form-input w-full rounded-lg px-4 py-3" id="email" placeholder="you@example.com" type="email"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-[#bab29c] text-sm" for="phone">Phone Number</label>
+<input class="form-input w-full rounded-lg px-4 py-3" id="phone" placeholder="+91 000-000-0000" type="tel"/>
+<div class="flex items-center gap-2 text-red-500 mt-1">
+<span class="material-symbols-outlined text-base">error</span>
+<p class="text-xs">Invalid phone number format.</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-[#bab29c] text-sm" for="address">Full Address</label>
+<textarea class="form-input w-full rounded-lg px-4 py-3 resize-none" id="address" placeholder="Enter your complete mailing address" rows="3"></textarea>
+</div>
+</section>
+<section class="flex flex-col gap-6">
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 border-b border-[#393528]">Academic &amp; Extracurricular History</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="text-[#bab29c] text-sm">High School / Previous College</label>
+<input class="form-input w-full rounded-lg px-4 py-3" placeholder="e.g., Delhi Public School" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-[#bab29c] text-sm">Overall GPA / Percentage</label>
+<input class="form-input w-full rounded-lg px-4 py-3" placeholder="e.g., 92.5% or 3.8 GPA" type="text"/>
+</div>
+</div>
+</section>
+<section class="flex flex-col gap-6">
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 border-b border-[#393528]">Personal Statement</h2>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center mb-1">
+<label class="text-[#bab29c] text-sm" for="essay">Essay Prompt: Describe a challenge you have overcome and what you learned from it.</label>
+</div>
+<div class="relative group">
+<textarea class="form-input w-full rounded-lg px-4 py-3 resize-y bg-transparent" id="essay" placeholder="Start writing your essay here..." rows="10"></textarea>
+<div class="absolute inset-0 -z-10 px-4 py-3 rounded-lg overflow-hidden pointer-events-none form-input text-transparent leading-[1.625rem] whitespace-pre-wrap">One of the most significant <span class="ai-suggestion-underline grammar-error">chalenges</span> I ever faced was learning to code. The initial journey was <span class="ai-suggestion-underline clarity-suggestion">fraught with difficulties and frustrating moments</span>. However, this experience taught me the value of persistence and the power of breaking down complex problems into smaller, manageable parts. It was an <span class="ai-suggestion-underline conciseness-suggestion">invaluable lesson in resilience</span>.</div>
+</div>
+<div class="mt-2 text-right">
+<span class="text-sm font-medium text-[#bab29c]">Words: <span class="text-white font-bold">39</span> / 500</span>
+</div>
+<div class="mt-4 p-4 border border-primary/20 bg-[#2a2a2a]/50 rounded-lg shadow-lg shadow-primary/10">
+<div class="flex items-center gap-3 mb-3">
+<div class="p-1.5 bg-primary/20 rounded-full animate-pulse">
+<span class="material-symbols-outlined text-primary text-xl">auto_awesome</span>
+</div>
+<h3 class="text-base font-bold text-primary">AI Writing Assistant</h3>
+</div>
+<div class="flex flex-col gap-3 text-sm">
+<div class="flex items-start gap-3 p-3 rounded-md bg-red-900/20 hover:bg-red-900/30 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-red-400 mt-0.5 text-base">spellcheck</span>
+<div>
+<p class="font-semibold text-red-300">Grammar Suggestion</p>
+<p class="text-red-300/80 text-xs">Consider changing "chalenges" to "challenges".</p>
+</div>
+</div>
+<div class="flex items-start gap-3 p-3 rounded-md bg-blue-900/20 hover:bg-blue-900/30 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-blue-400 mt-0.5 text-base">lightbulb</span>
+<div>
+<p class="font-semibold text-blue-300">Clarity Suggestion</p>
+<p class="text-blue-300/80 text-xs">"fraught with difficulties..." could be more impactful. Try: "was challenging and often frustrating."</p>
+</div>
+</div>
+<div class="flex items-start gap-3 p-3 rounded-md bg-green-900/20 hover:bg-green-900/30 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-green-400 mt-0.5 text-base">compress</span>
+<div>
+<p class="font-semibold text-green-300">Conciseness Suggestion</p>
+<p class="text-green-300/80 text-xs">"invaluable lesson in resilience" is good. For more impact, try: "taught me invaluable resilience."</p>
+</div>
+</div>
+<div class="mt-2 p-3 rounded-md bg-primary/10 border border-primary/20">
+<p class="text-primary/90 text-xs font-semibold">Proactive Tip: Try to elaborate on *how* you broke down complex problems. Show, don't just tell!</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="flex flex-col gap-6">
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 border-b border-[#393528]">Supporting Documents</h2>
+<div class="flex flex-col gap-4">
+<p class="text-[#bab29c] text-sm">Upload required documents. Accepted formats: PDF, DOCX, JPG. Max size: 5MB.</p>
+<div class="relative flex flex-col items-center justify-center w-full p-8 border-2 border-dashed border-[#444] rounded-xl bg-[#2a2a2a] hover:border-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-primary text-4xl">cloud_upload</span>
+<p class="mt-2 text-white font-semibold">Drag &amp; drop files here</p>
+<p class="text-xs text-[#bab29c]">or click to browse</p>
+<input class="opacity-0 absolute inset-0 w-full h-full cursor-pointer" type="file"/>
+</div>
+</div>
+</section>
+<div class="flex flex-wrap justify-end items-center gap-4 pt-8 border-t border-[#393528]">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-[#393528] text-white/80 text-sm font-bold leading-normal tracking-[0.015em] hover:bg-[#4a4535] transition-colors">
+<span class="truncate">Save as Draft</span>
+</button>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-[#181611] text-sm font-bold leading-normal tracking-[0.015em] hover:brightness-110 transition-all transform hover:scale-105 shadow-lg shadow-primary/20">
+<span class="truncate">Submit Application</span>
+<span class="material-symbols-outlined ml-2">send</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

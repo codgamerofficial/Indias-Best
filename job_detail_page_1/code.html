@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>India's Best - Senior Product Designer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f9d006",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#121212",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+        .cta-button {
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 0 5px rgba(249, 208, 6, 0), 0 0 10px rgba(249, 208, 6, 0);
+        }
+        .cta-button:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 0 15px rgba(249, 208, 6, 0.7), 0 0 25px rgba(249, 208, 6, 0.5);
+        }
+        .secondary-button {
+            transition: all 0.3s ease-in-out;
+        }
+        .secondary-button:hover {
+            transform: translateY(-2px);
+            background-color: #3a3727;
+        }
+        .card-3d {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transform-style: preserve-3d;
+        }
+        .card-3d:hover {
+            transform: perspective(1000px) rotateY(1deg) rotateX(2deg) scale3d(1.02, 1.02, 1.02);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-[#E0E0E0]">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#3a3727] bg-background-dark/80 px-4 py-3 backdrop-blur-sm sm:px-6 md:px-10 lg:px-20">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">India's Best</h2>
+</div>
+<div class="hidden items-center gap-8 md:flex">
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Colleges</a>
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Courses</a>
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Exams</a>
+<a class="text-primary text-sm font-bold leading-normal" href="#">Careers</a>
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">News</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 text-primary text-sm font-bold leading-normal tracking-[0.015em] transition-colors hover:bg-primary/30 sm:flex">
+<span class="truncate">Sign In</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/50" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAYuYKk2D2LFYK8AX-6s4F7l9fOykInLcUo8ldGxh0yH_E3dGmqsRkvw7IqCzbaJpjnHcUkWlqbmZFjb6wmpfn2naQ-ISLl59Sv8Wp-hiSpFJSXxq5ww-75rcQSeJvfDlnc5UAhzZgiC1j_NFS_cATX4svcvCIxH3UMz5DlBwQh67UrZ9geH05jXESPc5ef-1jO1B2F-ooi3tKaPEyy1wUvczwBDP9YPCI4cF1Dk75r0ZfIrUw1rwgdI4D1zD-96ovzynjqebN2etp4");'></div>
+<button class="md:hidden text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="flex-grow px-4 py-8 sm:px-6 md:px-10 lg:px-20">
+<div class="mx-auto max-w-7xl">
+<!-- Breadcrumbs -->
+<div class="flex flex-wrap gap-2 px-4 pb-6">
+<a class="text-[#bbb69b] hover:text-primary text-sm font-medium leading-normal transition-colors" href="#">Home</a>
+<span class="text-[#bbb69b] text-sm font-medium leading-normal">/</span>
+<a class="text-[#bbb69b] hover:text-primary text-sm font-medium leading-normal transition-colors" href="#">Careers</a>
+<span class="text-[#bbb69b] text-sm font-medium leading-normal">/</span>
+<span class="text-white text-sm font-medium leading-normal">Senior Product Designer</span>
+</div>
+<!-- PageHeading -->
+<div class="flex flex-wrap justify-between gap-3 px-4 pb-8">
+<div class="flex flex-col gap-2">
+<p class="text-white text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em]">Senior Product Designer</p>
+<p class="text-[#bbb69b] text-lg font-normal leading-normal">India's Best - Bangalore, India (Hybrid)</p>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-12 lg:grid-cols-3">
+<!-- Left Column: Main Content -->
+<div class="lg:col-span-2 space-y-12">
+<!-- Job Description -->
+<div class="space-y-4">
+<h3 class="text-2xl font-bold text-white border-b-2 border-primary/30 pb-2">Job Description</h3>
+<p class="text-[#E0E0E0] leading-relaxed">
+                                We are seeking a visionary Senior Product Designer to join our dynamic team. In this role, you will be instrumental in shaping the user experience of our flagship products, from conceptualization to execution. You'll collaborate with cross-functional teams to create intuitive, innovative, and beautiful interfaces that address complex user challenges. If you have a passion for design, a user-centric mindset, and a desire to make a significant impact, we want to hear from you.
+                            </p>
+</div>
+<!-- Responsibilities -->
+<div class="space-y-4">
+<h3 class="text-2xl font-bold text-white border-b-2 border-primary/30 pb-2">Responsibilities</h3>
+<ul class="space-y-3 list-disc list-inside text-[#E0E0E0]">
+<li>Lead design projects across the entire product lifecycle, setting the vision for the user experience.</li>
+<li>Collaborate with product managers, engineers, and researchers to define and solve user problems.</li>
+<li>Create wireframes, prototypes, and high-fidelity mockups to communicate design ideas.</li>
+<li>Conduct user research and usability testing to validate design decisions.</li>
+<li>Mentor junior designers and contribute to our design system and processes.</li>
+<li>Advocate for user-centered design principles and best practices throughout the organization.</li>
+</ul>
+</div>
+<!-- Qualifications -->
+<div class="space-y-4">
+<h3 class="text-2xl font-bold text-white border-b-2 border-primary/30 pb-2">Qualifications &amp; Skills</h3>
+<ul class="space-y-3 list-disc list-inside text-[#E0E0E0]">
+<li>5+ years of experience in product design, with a strong portfolio showcasing your work.</li>
+<li>Proficiency in design tools such as Figma, Sketch, and Adobe Creative Suite.</li>
+<li>Experience with user research methodologies and data-driven design.</li>
+<li>Excellent communication, presentation, and interpersonal skills.</li>
+<li>A deep understanding of mobile-first and responsive design principles.</li>
+<li>Ability to think at a high level about product strategy and vision.</li>
+</ul>
+</div>
+<!-- Benefits -->
+<div class="space-y-4">
+<h3 class="text-2xl font-bold text-white border-b-2 border-primary/30 pb-2">Benefits</h3>
+<div class="grid grid-cols-2 gap-x-6 gap-y-4 text-[#E0E0E0]">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">health_and_safety</span>
+<span>Comprehensive Health Insurance</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">workspaces</span>
+<span>Flexible Work Hours &amp; Hybrid Model</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">school</span>
+<span>Professional Development Budget</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">savings</span>
+<span>Competitive Salary &amp; Stock Options</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">groups</span>
+<span>Collaborative &amp; Inclusive Culture</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">cake</span>
+<span>Generous Paid Time Off</span>
+</div>
+</div>
+</div>
+<!-- About the Team -->
+<div class="space-y-4">
+<h3 class="text-2xl font-bold text-white border-b-2 border-primary/30 pb-2">About the Team</h3>
+<p class="text-[#E0E0E0] leading-relaxed">
+                                The Product Design team at India's Best is a group of passionate creatives and problem-solvers dedicated to revolutionizing the educational technology landscape. We thrive on collaboration, curiosity, and a shared commitment to excellence. We believe in empowering our users with tools that are not only functional but also delightful to use. Join us and be part of a team that's shaping the future of learning in India.
+                            </p>
+</div>
+</div>
+<!-- Right Column: Actions and Summary -->
+<div class="lg:col-span-1">
+<div class="sticky top-28 space-y-6">
+<!-- Action Buttons -->
+<div class="flex w-full flex-col items-stretch gap-3">
+<button class="cta-button flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-[#121212] text-base font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Apply Now</span>
+</button>
+<button class="secondary-button flex min-w-[84px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-12 px-5 border border-[#3a3727] bg-[#27251b] text-white text-base font-bold leading-normal tracking-[0.015em] hover:border-primary/50">
+<span class="material-symbols-outlined text-lg">bookmark</span>
+<span class="truncate">Save for Later</span>
+</button>
+<button class="group flex min-w-[84px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-12 px-5 bg-transparent text-white/70 text-base font-bold leading-normal tracking-[0.015em] transition-colors hover:text-white hover:bg-white/10">
+<span class="material-symbols-outlined text-lg text-red-500/80 group-hover:text-red-500">share</span>
+<span class="truncate">Share</span>
+</button>
+</div>
+<!-- Job Summary Card -->
+<div class="p-4">
+<div class="card-3d flex flex-col items-stretch justify-start rounded-xl border border-primary/20 bg-[#27251b] p-6 shadow-lg shadow-black/30">
+<p class="mb-4 text-lg font-bold leading-tight tracking-[-0.015em] text-white">Job Summary</p>
+<div class="space-y-4 text-sm text-[#bbb69b]">
+<div class="flex justify-between">
+<span class="font-medium">Job Type:</span>
+<span class="font-bold text-white">Full-time</span>
+</div>
+<div class="flex justify-between">
+<span class="font-medium">Experience:</span>
+<span class="font-bold text-white">5+ Years</span>
+</div>
+<div class="flex justify-between">
+<span class="font-medium">Salary:</span>
+<span class="font-bold text-white">Competitive</span>
+</div>
+<div class="flex justify-between">
+<span class="font-medium">Posted Date:</span>
+<span class="font-bold text-white">June 10, 2024</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Related Jobs Section -->
+<div class="mt-20 border-t border-white/10 pt-12">
+<h3 class="text-2xl font-bold text-white mb-6">Related Jobs</h3>
+<div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+<!-- Related Job Card 1 -->
+<div class="card-3d rounded-lg border border-white/10 bg-[#27251b] p-6 transition-colors hover:border-primary/50">
+<h4 class="font-bold text-white">UX Researcher</h4>
+<p class="text-sm text-[#bbb69b] mb-3">Pune, India</p>
+<p class="text-sm text-[#E0E0E0] line-clamp-2">Join our research team to uncover user insights and drive product strategy...</p>
+<a class="text-primary mt-4 inline-block font-semibold text-sm hover:underline" href="#">View Job →</a>
+</div>
+<!-- Related Job Card 2 -->
+<div class="card-3d rounded-lg border border-white/10 bg-[#27251b] p-6 transition-colors hover:border-primary/50">
+<h4 class="font-bold text-white">Lead UI/UX Designer</h4>
+<p class="text-sm text-[#bbb69b] mb-3">Remote</p>
+<p class="text-sm text-[#E0E0E0] line-clamp-2">Lead a talented team of designers and shape the future of our user interface...</p>
+<a class="text-primary mt-4 inline-block font-semibold text-sm hover:underline" href="#">View Job →</a>
+</div>
+<!-- Related Job Card 3 -->
+<div class="card-3d rounded-lg border border-white/10 bg-[#27251b] p-6 transition-colors hover:border-primary/50">
+<h4 class="font-bold text-white">Product Manager - Design Systems</h4>
+<p class="text-sm text-[#bbb69b] mb-3">Bangalore, India</p>
+<p class="text-sm text-[#E0E0E0] line-clamp-2">Own the roadmap and strategy for our cross-platform design system...</p>
+<a class="text-primary mt-4 inline-block font-semibold text-sm hover:underline" href="#">View Job →</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="mt-16 border-t border-solid border-t-[#3a3727] bg-[#1a1a1a]">
+<div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="col-span-2 md:col-span-1">
+<div class="flex items-center gap-3">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path></svg>
+</div>
+<h2 class="text-white text-lg font-bold">India's Best</h2>
+</div>
+<div>
+<h3 class="font-bold text-white tracking-wider">Explore</h3>
+<ul class="mt-4 space-y-2">
+<li><a class="text-sm text-[#bbb69b] hover:text-primary" href="#">Colleges</a></li>
+<li><a class="text-sm text-[#bbb69b] hover:text-primary" href="#">Courses</a></li>
+<li><a class="text-sm text-[#bbb69b] hover:text-primary" href="#">Exams</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-bold text-white tracking-wider">Company</h3>
+<ul class="mt-4 space-y-2">
+<li><a class="text-sm text-[#bbb69b] hover:text-primary" href="#">About Us</a></li>
+<li><a class="text-sm text-[#bbb69b] hover:text-primary" href="#">Careers</a></li>
+<li><a class="text-sm text-[#bbb69b] hover:text-primary" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-bold text-white tracking-wider">Legal</h3>
+<ul class="mt-4 space-y-2">
+<li><a class="text-sm text-[#bbb69b] hover:text-primary" href="#">Privacy Policy</a></li>
+<li><a class="text-sm text-[#bbb69b] hover:text-primary" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-12 border-t border-solid border-t-[#3a3727] pt-8 text-center text-sm text-[#bbb69b]">
+<p>© 2024 India's Best. All rights reserved.</p>
+</div>
+</div>
+</div></footer>
+</div>
+</body></html>

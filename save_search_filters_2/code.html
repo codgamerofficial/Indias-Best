@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Save Search - India's Best</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#f9d006",
+            "background-light": "#f8f8f5",
+            "background-dark": "#121212",
+          },
+          fontFamily: {
+            "display": ["Space Grotesk", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          boxShadow: {
+            'inner-deep': 'inset 0 4px 8px 0 rgb(0 0 0 / 0.35)',
+            'glow-primary': '0 0 15px 2px rgba(249, 208, 6, 0.4)',
+            'glow-red': '0 0 15px 2px rgba(255, 65, 54, 0.4)',
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24
+    }
+    .custom-group:focus-within label, .custom-group input:not(:placeholder-shown) + label {
+      transform: translateY(-1.7rem) scale(0.85);
+      color: #f9d006;
+    }
+  </style>
+</head>
+<body class="font-display">
+<div class="relative flex min-h-screen w-full flex-col items-center justify-center bg-background-light dark:bg-background-dark p-4 group/design-root" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCX09QH_1IRZN92zpEaaXZswonaFNvTeX0ITjcZM2WJvM3lPMIUaFxiwweh90smqhaESnzMECWQNT3zvULHxU2S-ZRcS7xiqOq7PoAMOv31vsMLHLdLFqyoeytSQaiUK0F4anMU3UpLDU5ieCQEAjIRcpdcMgm26HaU-SsCsjjduSJxS0cotKTQ4hTFb7_ZgBfZJnwIROIq0ddBBipV3sCihrz-Z8Lz6Y2_XIdF-u0eqzdQjZTVZswoqGmrWBX4eRDTiOCr6XmK3sVr');">
+<div class="relative w-full max-w-lg overflow-hidden rounded-xl border border-white/10 bg-black/30 backdrop-blur-xl shadow-2xl shadow-primary/10">
+<div class="absolute inset-0 rounded-xl border border-primary/20 opacity-50 blur-lg"></div>
+<button class="absolute top-4 right-4 z-10 text-gray-500 hover:text-red-500 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-background-dark rounded-full">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+<div class="relative flex flex-col p-8 md:p-12 gap-8">
+<h1 class="text-white tracking-tight text-3xl md:text-4xl font-bold leading-tight text-center">Save This Search</h1>
+<p class="text-gray-300 text-base font-normal leading-normal text-center">Give your filter set a name to save it for later.</p>
+<div class="relative flex w-full flex-col gap-2 custom-group">
+<input class="form-input peer w-full resize-none overflow-hidden rounded-md text-white placeholder-transparent focus:outline-none focus:ring-0 border-b-2 border-white/20 bg-transparent h-12 pt-4 px-1 text-base font-normal leading-normal transition-all duration-300 focus:border-primary" id="filter-set-name" placeholder="Filter Set Name" type="text"/>
+<label class="absolute left-1 top-3 text-gray-400 text-base font-medium leading-normal transition-all duration-300 pointer-events-none" for="filter-set-name">Filter Set Name</label>
+</div>
+<div class="flex gap-2.5 flex-wrap justify-center">
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-1.5 rounded-full border border-white/10 bg-white/5 px-3 backdrop-blur-sm group hover:border-primary/50 hover:bg-primary/10 transition-all duration-300 cursor-pointer">
+<p class="text-gray-200 text-sm font-medium leading-normal">State: Maharashtra</p>
+<span class="material-symbols-outlined text-gray-500 text-base group-hover:text-red-400 transition-colors duration-300">cancel</span>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-1.5 rounded-full border border-white/10 bg-white/5 px-3 backdrop-blur-sm group hover:border-primary/50 hover:bg-primary/10 transition-all duration-300 cursor-pointer">
+<p class="text-gray-200 text-sm font-medium leading-normal">City: Pune</p>
+<span class="material-symbols-outlined text-gray-500 text-base group-hover:text-red-400 transition-colors duration-300">cancel</span>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-1.5 rounded-full border border-white/10 bg-white/5 px-3 backdrop-blur-sm group hover:border-primary/50 hover:bg-primary/10 transition-all duration-300 cursor-pointer">
+<p class="text-gray-200 text-sm font-medium leading-normal">Degree: MBA</p>
+<span class="material-symbols-outlined text-gray-500 text-base group-hover:text-red-400 transition-colors duration-300">cancel</span>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-1.5 rounded-full border border-white/10 bg-white/5 px-3 backdrop-blur-sm group hover:border-primary/50 hover:bg-primary/10 transition-all duration-300 cursor-pointer">
+<p class="text-gray-200 text-sm font-medium leading-normal">Fees: &lt; ₹10 Lakhs</p>
+<span class="material-symbols-outlined text-gray-500 text-base group-hover:text-red-400 transition-colors duration-300">cancel</span>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-1.5 rounded-full border border-white/10 bg-white/5 px-3 backdrop-blur-sm group hover:border-primary/50 hover:bg-primary/10 transition-all duration-300 cursor-pointer">
+<p class="text-gray-200 text-sm font-medium leading-normal">Specialization: Finance</p>
+<span class="material-symbols-outlined text-gray-500 text-base group-hover:text-red-400 transition-colors duration-300">cancel</span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-4 pt-4">
+<button class="relative w-full sm:w-auto flex-grow items-center justify-center rounded-lg bg-primary px-8 py-3 text-base font-bold text-black shadow-lg shadow-primary/20 transition-all duration-300 hover:bg-yellow-400 hover:shadow-glow-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background-dark transform hover:-translate-y-0.5 active:translate-y-0">
+<span class="absolute -inset-0.5 rounded-lg bg-primary opacity-0 blur-md transition-opacity duration-300 group-hover:opacity-75"></span>
+<span class="relative">Save Filter</span>
+</button>
+<button class="relative w-full sm:w-auto items-center justify-center rounded-lg border border-red-500/50 bg-transparent px-8 py-3 text-base font-medium text-red-400 transition-all duration-300 hover:bg-red-500/10 hover:text-red-300 hover:shadow-glow-red focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-background-dark">
+<span class="absolute -inset-0.5 rounded-lg bg-red-500 opacity-0 blur-md transition-opacity duration-300 group-hover:opacity-75"></span>
+<span class="relative">Cancel</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Set Up Two-Factor Authentication - Recovery Codes</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2b90d",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#1A1A2E",
+                        "card-dark": "#222238",
+                        "card-light": "#FFFFFF",
+                        "text-light": "#1f2937",
+                        "text-dark": "#e5e7eb",
+                        "text-muted-light": "#6b7280",
+                        "text-muted-dark": "#9ca3af",
+                        "danger": "#D9534F"
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="relative flex min-h-screen w-full flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-white/10 px-4 sm:px-10 lg:px-20 py-3">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">India's Best</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Colleges</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Exams</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Reviews</a>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Log In</span>
+</button>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-white/10 text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-white/20 transition-colors">
+<span class="truncate">Sign Up</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 ml-4 border-2 border-white/20" data-alt="User avatar image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB3xwb8FtvkC97wPqBAzy5nlYMgBLeBOUBdexadJSHRzUS_Q2l7z_wPHU3mZZeDFcG14PBKEKKXggBFMN6Pl-822ExpgP9JrTb6Cif67kfWRiNZUuhl8UPktT1E2QwthWZitVyg5MrkWvnJMsXCgvS75xJuL8Piq0Y5AGxyIyXVmCD3_RP5l9tnInw2tmU_dKMH5FkjQwr-zM1_sqO0fIijkZNWqNXIOccNckxt_534iHAgxYYdWi3OGo7e9MuOjzGQxkuqx7GWrAF9");'></div>
+</div>
+</div>
+<button class="md:hidden text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<main class="flex flex-1 items-center justify-center py-10 px-4">
+<div class="w-full max-w-2xl">
+<div class="flex flex-col gap-6">
+<div class="text-center">
+<p class="text-white text-4xl font-black leading-tight tracking-[-0.033em]">Two-Factor Authentication Enabled</p>
+</div>
+<div class="flex gap-3 justify-center flex-wrap">
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white/10 pl-4 pr-4">
+<p class="text-white/70 text-sm font-medium leading-normal flex items-center gap-1"><span class="material-symbols-outlined text-base">check_circle</span>Scan Code</p>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white/10 pl-4 pr-4">
+<p class="text-white/70 text-sm font-medium leading-normal flex items-center gap-1"><span class="material-symbols-outlined text-base">check_circle</span>Verify</p>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary pl-4 pr-4">
+<p class="text-background-dark text-sm font-bold leading-normal">3. Recovery Codes</p>
+</div>
+</div>
+<div class="p-4">
+<div class="flex flex-col items-start justify-start rounded-xl bg-card-light dark:bg-card-dark shadow-2xl shadow-black/30 p-6 md:p-8 gap-6">
+<div class="flex flex-col items-center text-center w-full gap-2">
+<div class="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined" style="font-size: 40px;">lock_person</span>
+</div>
+<p class="text-text-light dark:text-white text-2xl font-bold leading-tight tracking-[-0.015em]">Save Your Recovery Codes</p>
+<p class="text-text-muted-light dark:text-text-muted-dark text-base font-normal leading-normal max-w-lg">
+                                    Store these codes in a safe place. If you lose access to your authenticator app, you can use one of these codes to log in to your account. Each code can only be used once.
+                                </p>
+</div>
+<div class="w-full grid grid-cols-2 sm:grid-cols-3 gap-3">
+<div class="flex items-center justify-center p-3 rounded-lg bg-background-light dark:bg-black/20">
+<p class="text-text-light dark:text-text-dark text-base font-mono tracking-wider">a1b2-c3d4-e5f6</p>
+</div>
+<div class="flex items-center justify-center p-3 rounded-lg bg-background-light dark:bg-black/20">
+<p class="text-text-light dark:text-text-dark text-base font-mono tracking-wider">g7h8-i9j0-k1l2</p>
+</div>
+<div class="flex items-center justify-center p-3 rounded-lg bg-background-light dark:bg-black/20">
+<p class="text-text-light dark:text-text-dark text-base font-mono tracking-wider">m3n4-o5p6-q7r8</p>
+</div>
+<div class="flex items-center justify-center p-3 rounded-lg bg-background-light dark:bg-black/20">
+<p class="text-text-light dark:text-text-dark text-base font-mono tracking-wider">s9t0-u1v2-w3x4</p>
+</div>
+<div class="flex items-center justify-center p-3 rounded-lg bg-background-light dark:bg-black/20">
+<p class="text-text-light dark:text-text-dark text-base font-mono tracking-wider">y5z6-a7b8-c9d0</p>
+</div>
+<div class="flex items-center justify-center p-3 rounded-lg bg-background-light dark:bg-black/20">
+<p class="text-text-light dark:text-text-dark text-base font-mono tracking-wider">e1f2-g3h4-i5j6</p>
+</div>
+<div class="flex items-center justify-center p-3 rounded-lg bg-background-light dark:bg-black/20">
+<p class="text-text-light dark:text-text-dark text-base font-mono tracking-wider">k7l8-m9n0-o1p2</p>
+</div>
+<div class="flex items-center justify-center p-3 rounded-lg bg-background-light dark:bg-black/20">
+<p class="text-text-light dark:text-text-dark text-base font-mono tracking-wider">q3r4-s5t6-u7v8</p>
+</div>
+<div class="flex items-center justify-center p-3 rounded-lg bg-background-light dark:bg-black/20">
+<p class="text-text-light dark:text-text-dark text-base font-mono tracking-wider">w9x0-y1z2-a3b4</p>
+</div>
+</div>
+<div class="w-full flex flex-col sm:flex-row gap-3">
+<button class="flex-1 flex items-center gap-2 min-w-[84px] cursor-pointer justify-center rounded-lg h-10 px-4 bg-white/10 hover:bg-white/20 text-white text-sm font-medium leading-normal transition-colors">
+<span class="material-symbols-outlined text-base">download</span>
+<span class="truncate">Download</span>
+</button>
+<button class="flex-1 flex items-center gap-2 min-w-[84px] cursor-pointer justify-center rounded-lg h-10 px-4 bg-white/10 hover:bg-white/20 text-white text-sm font-medium leading-normal transition-colors">
+<span class="material-symbols-outlined text-base">print</span>
+<span class="truncate">Print</span>
+</button>
+<button class="flex-1 flex items-center gap-2 min-w-[84px] cursor-pointer justify-center rounded-lg h-10 px-4 bg-white/10 hover:bg-white/20 text-white text-sm font-medium leading-normal transition-colors">
+<span class="material-symbols-outlined text-base">content_copy</span>
+<span class="truncate">Copy Codes</span>
+</button>
+</div>
+<div class="w-full border-t border-white/10 my-2"></div>
+<div class="w-full flex flex-col items-center gap-4 text-center">
+<p class="text-text-light dark:text-white text-lg font-bold">Need a fresh set of codes?</p>
+<p class="text-text-muted-light dark:text-text-muted-dark text-sm max-w-md">Regenerating will invalidate your old codes. Make sure to save the new set immediately.</p>
+<button class="flex items-center justify-center gap-2 rounded-lg h-10 px-5 text-sm font-medium leading-normal transition-colors bg-danger/10 text-danger hover:bg-danger/20">
+<span class="material-symbols-outlined text-base">autorenew</span>
+<span class="truncate">Regenerate Codes</span>
+</button>
+</div>
+</div>
+</div>
+<div class="px-4 text-center">
+<label class="flex items-center justify-center gap-2 cursor-pointer">
+<input class="w-4 h-4 rounded text-primary bg-card-dark border-white/20 focus:ring-primary focus:ring-offset-background-dark" type="checkbox"/>
+<span class="text-text-muted-light dark:text-text-muted-dark text-base font-normal leading-normal">
+                            I have saved my recovery codes
+                        </span>
+</label>
+</div>
+<div class="flex justify-center gap-4 p-4">
+<button class="flex min-w-[120px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-background-dark text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-transform hover:scale-105 disabled:bg-primary/50 disabled:cursor-not-allowed disabled:scale-100" disabled="">
+<span class="truncate">Finish Setup</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

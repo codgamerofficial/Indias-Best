@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Regenerate Recovery Codes Confirmation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .distressed-bg {
+            background-image:
+                linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)),
+                url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2b90d",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#221e10",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="antialiased">
+<div class="relative flex h-screen w-full flex-col bg-background-light dark:bg-[#121212] font-display group/design-root overflow-hidden">
+<!-- Blurred Background Content -->
+<div class="absolute inset-0 z-0 h-full w-full bg-cover bg-center blur-sm scale-105" data-alt="Abstract gradient background" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB_p3r2YmwbAJQG2MjEXwYBfNxyhUKSPGGE8VSnKN-7-ZD2z_U5U4urOXRPfZz4CDnBAv_z73BOO84I-jH-bJJfdHHUYHd4Jqw6zIuhLM2VwoezCOiDWEdVRP5wU-uOhwiYZnWwxKeWks0QM-9Ka-l_OQARk4sWMlXu1HaGk1GectkaF4lSz0fbRtS19bFVpkI7CiFrf6LiBEi_-AapjA21y2_d_gZ0m8ish7pleSrhHpojJZ_GF4irC0aFBwkR0U1bHR64DkA-TUz_');"></div>
+<!-- Modal Overlay -->
+<div class="absolute inset-0 z-10 flex h-full w-full items-center justify-center bg-black/60 backdrop-blur-md p-4">
+<!-- Modal Container -->
+<div class="relative w-full max-w-md transform-gpu rounded-xl border border-white/10 bg-black/40 p-1 backdrop-blur-xl shadow-2xl shadow-primary/10 transition-all duration-300 [transform:perspective(800px)_rotateY(-1deg)] group-hover/design-root:[transform:perspective(800px)_rotateY(1deg)]">
+<div class="relative flex flex-col items-center rounded-lg bg-[#121212] px-6 py-8 sm:px-8 sm:py-10">
+<!-- Close Icon -->
+<button class="absolute top-4 right-4 text-white/50 transition-colors hover:text-white">
+<span class="material-symbols-outlined text-2xl">close</span>
+</button>
+<!-- Icon -->
+<div class="mb-5 flex h-20 w-20 items-center justify-center rounded-full border border-red-500/20 bg-red-500/10 shadow-[0_0_20px_rgba(220,53,69,0.3)]">
+<span class="material-symbols-outlined text-4xl text-red-500 animate-pulse">shield_lock</span>
+</div>
+<!-- Headline Text -->
+<h1 class="text-white font-display tracking-tight text-2xl sm:text-3xl font-bold text-center">Regenerate Recovery Codes?</h1>
+<!-- Body Text -->
+<p class="text-white/70 font-display text-base font-normal leading-relaxed text-center mt-3 mb-8">
+                        Proceeding will invalidate all previously saved recovery codes. Please ensure you are ready to save the new set of codes immediately.
+                    </p>
+<!-- Button Group -->
+<div class="flex w-full flex-col items-stretch gap-3">
+<button class="distressed-bg flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-[#121212] text-base font-bold leading-normal tracking-[0.015em] transition-all duration-200 hover:brightness-110 active:scale-[0.98] active:brightness-95">
+<span class="truncate">Yes, Regenerate</span>
+</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-white/5 text-white/80 text-base font-bold leading-normal tracking-[0.015em] transition-all duration-200 hover:bg-white/10 active:bg-white/[0.08]">
+<span class="truncate">Cancel</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

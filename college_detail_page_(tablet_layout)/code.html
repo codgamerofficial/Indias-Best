@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>St. Xavier's College - India's Best</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#f2b90d",
+            "background-light": "#f8f8f5",
+            "background-dark": "#221e10",
+          },
+          fontFamily: {
+            "display": ["Space Grotesk", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      background-color: #121212;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+
+    .icon-filled {
+      font-variation-settings: 'FILL' 1;
+    }
+  </style>
+</head>
+<body class="font-display bg-[#121212] text-gray-200">
+<div class="relative flex h-auto min-h-screen w-full flex-col">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-white/10 px-4 sm:px-6 lg:px-8 py-3 sticky top-0 bg-[#121212]/80 backdrop-blur-sm z-50">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-2xl"> school </span>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">India's Best</h2>
+</div>
+<div class="hidden md:flex flex-col items-center">
+<p class="text-white text-lg font-black leading-tight tracking-[-0.033em]">St. Xavier's College</p>
+<p class="text-gray-400 text-xs font-normal leading-normal">Mumbai, Maharashtra</p>
+</div>
+<div class="flex flex-1 justify-end gap-4">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 w-10 bg-white/10 text-[#FF0055] hover:bg-white/20 transition-colors">
+<span class="material-symbols-outlined icon-filled"> favorite </span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBxIvUon_2nDqr8L9HWiOui2W5BbIFZJnKswZ-pZce6nl77SeflnRO25_TnvA8qRJFLRublKXU81-CaD4rrgOJh5A0hdpSZO70WF-V70cow2GjUg27rbW_46ynhwsKs5ftih8O3AOQFZ-PXFJu-bPPegBffsqanQAHQxK_1EyEs2VD_9-8vPUZvUs1r9vqVu3elj_JjZsAyaf787O3E70i9RNoEGt5mOwzwzxz96i8ThR_ujyg-8bWKU88VXukCY5qq15ej3Yly-ewo");'></div>
+</div>
+</header>
+<div class="flex flex-1 flex-col lg:flex-row">
+<!-- SideNavBar - visible on large screens -->
+<aside class="hidden lg:flex w-64 flex-col justify-between p-4 border-r border-white/10">
+<div class="flex flex-col gap-4">
+<div class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/20 text-primary" href="#">
+<span class="material-symbols-outlined"> dashboard </span>
+<p class="text-sm font-bold leading-normal">Overview</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-white"> menu_book </span>
+<p class="text-white text-sm font-medium leading-normal">Programs</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-white"> description </span>
+<p class="text-white text-sm font-medium leading-normal">Admissions</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-white"> grade </span>
+<p class="text-white text-sm font-medium leading-normal">Reviews</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-white"> photo_camera </span>
+<p class="text-white text-sm font-medium leading-normal">Life @ Campus</p>
+</a>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<button class="w-full flex items-center justify-center gap-2 rounded-lg bg-primary py-2.5 text-center text-sm font-bold text-black hover:bg-yellow-400 transition-colors">
+              Apply Now
+            </button>
+<button class="w-full flex items-center justify-center gap-2 rounded-lg bg-white/10 py-2.5 text-center text-sm font-medium text-white hover:bg-white/20 transition-colors">
+              Visit Website
+            </button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 p-4 sm:p-6 lg:p-8">
+<div class="flex flex-col gap-8">
+<!-- Page Heading - visible on smaller screens -->
+<div class="flex flex-wrap justify-between gap-3 lg:hidden">
+<div class="flex min-w-72 flex-col gap-1">
+<p class="text-white text-4xl font-black leading-tight tracking-[-0.033em]">St. Xavier's College</p>
+<p class="text-gray-400 text-base font-normal leading-normal">Mumbai, Maharashtra | Affiliated with University of Mumbai</p>
+</div>
+</div>
+<!-- Tabs - visible on smaller screens -->
+<div class="lg:hidden">
+<div class="flex border-b border-white/20 gap-4 overflow-x-auto">
+<a class="flex flex-col shrink-0 items-center justify-center border-b-[3px] border-primary text-primary pb-3 pt-2 px-2" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Overview</p>
+</a>
+<a class="flex flex-col shrink-0 items-center justify-center border-b-[3px] border-transparent text-gray-400 pb-3 pt-2 px-2" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Programs</p>
+</a>
+<a class="flex flex-col shrink-0 items-center justify-center border-b-[3px] border-transparent text-gray-400 pb-3 pt-2 px-2" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Admissions</p>
+</a>
+<a class="flex flex-col shrink-0 items-center justify-center border-b-[3px] border-transparent text-gray-400 pb-3 pt-2 px-2" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Reviews</p>
+</a>
+<a class="flex flex-col shrink-0 items-center justify-center border-b-[3px] border-transparent text-gray-400 pb-3 pt-2 px-2" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Life @ Campus</p>
+</a>
+</div>
+</div>
+<!-- 3D Viewer/Media Player -->
+<div class="relative flex items-center justify-center bg-black/50 bg-cover bg-center aspect-video rounded-xl overflow-hidden" data-alt="3D model of St. Xavier's College campus" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAZ1oK526E9NKAAE2THQYxLbDmV3nMo65P3RLk8H67V6YCS9seLZFVGhW2Ez-P4dqeoFiayTzLE5BBTdhPpB-qptf0w5NW63WOzUJbuU2pOuRy85Wv8ZZoTbjjfO7pSwza8LpBapHmiVxp3O9sEGbdZsJbGXJh0GkQEajQtATSnRdwSHu-4yPyzp_psR3nVDegLZsgPpxO037ujN4YmNuOyXMLEsc8hCTvv-AP0FoQAe1RrpNRBW6okPjkX4BrcooZYICZgu2A03_P5");'>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<button class="relative z-10 flex shrink-0 items-center justify-center rounded-full size-16 bg-black/40 text-white backdrop-blur-sm hover:bg-black/60 transition-colors">
+<span class="material-symbols-outlined text-4xl"> view_in_ar </span>
+</button>
+<div class="absolute bottom-4 right-4 flex gap-2 z-10">
+<button class="flex items-center justify-center rounded-full size-8 bg-black/40 text-white backdrop-blur-sm"><span class="material-symbols-outlined text-lg">zoom_in</span></button>
+<button class="flex items-center justify-center rounded-full size-8 bg-black/40 text-white backdrop-blur-sm"><span class="material-symbols-outlined text-lg">zoom_out</span></button>
+<button class="flex items-center justify-center rounded-full size-8 bg-black/40 text-white backdrop-blur-sm"><span class="material-symbols-outlined text-lg">360</span></button>
+</div>
+<div class="absolute inset-x-4 bottom-4 z-0">
+<div class="flex h-4 items-center justify-center">
+<div class="h-1 flex-1 rounded-full bg-white/80" style="flex-grow: 1;"></div>
+<div class="relative">
+<div class="absolute -left-2 -top-2 size-4 rounded-full bg-white"></div>
+</div>
+<div class="h-1 flex-1 rounded-full bg-white opacity-40" style="flex-grow: 2;"></div>
+</div>
+</div>
+</div>
+<!-- Content Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Key Stats Card -->
+<div class="bg-white/5 p-5 rounded-xl border border-white/10 flex flex-col gap-4">
+<h3 class="text-lg font-bold text-white">Key Stats</h3>
+<div class="grid grid-cols-2 gap-4 text-sm">
+<div>
+<p class="text-gray-400">Established</p>
+<p class="text-white font-medium text-lg">1869</p>
+</div>
+<div>
+<p class="text-gray-400">NIRF Ranking</p>
+<p class="text-white font-medium text-lg">#5</p>
+</div>
+<div>
+<p class="text-gray-400">Student Count</p>
+<p class="text-white font-medium text-lg">3,000+</p>
+</div>
+<div>
+<p class="text-gray-400">Campus Size</p>
+<p class="text-white font-medium text-lg">2.94 acres</p>
+</div>
+</div>
+</div>
+<!-- Reviews Card -->
+<div class="bg-white/5 p-5 rounded-xl border border-white/10 flex flex-col gap-3">
+<div class="flex justify-between items-center">
+<h3 class="text-lg font-bold text-white">Student Reviews</h3>
+<a class="text-primary text-sm font-medium hover:underline" href="#">See All</a>
+</div>
+<div class="flex items-center gap-2">
+<p class="text-3xl font-bold text-primary">4.7</p>
+<div class="flex flex-col">
+<div class="flex text-primary">
+<span class="material-symbols-outlined icon-filled text-lg">star</span>
+<span class="material-symbols-outlined icon-filled text-lg">star</span>
+<span class="material-symbols-outlined icon-filled text-lg">star</span>
+<span class="material-symbols-outlined icon-filled text-lg">star</span>
+<span class="material-symbols-outlined icon-filled text-lg">star_half</span>
+</div>
+<p class="text-xs text-gray-400">Based on 250 reviews</p>
+</div>
+</div>
+<p class="text-sm text-gray-300 italic">"An amazing institution with a rich history and fantastic faculty. The campus life is vibrant."</p>
+</div>
+<!-- CTA Card -->
+<div class="bg-white/5 p-5 rounded-xl border border-white/10 flex flex-col gap-3 justify-center">
+<h3 class="text-lg font-bold text-white">Ready to Apply?</h3>
+<p class="text-sm text-gray-400">Admissions for the 2024 batch are now open. Don't miss your chance.</p>
+<button class="w-full mt-2 flex items-center justify-center gap-2 rounded-lg bg-[#FF0055] py-2.5 text-center text-sm font-bold text-white hover:bg-red-500 transition-colors">
+                  Request Info
+                </button>
+</div>
+</div>
+<!-- Image Gallery -->
+<div>
+<h3 class="text-2xl font-bold text-white mb-4">Life @ Campus</h3>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="aspect-square bg-cover bg-center rounded-lg" data-alt="Students studying in the library" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCWvazC16fJCBclu-RzDIZSyuBgWrAGVVwi4LdoRv3AHocd_ZTLGKAY-KLlvXGr4dHMFrSkOoPWWHeoj4Ce_RL1HgFgzR2UrDHja0Y9gdP3SRys4GuC_1Xg_qGXJEIa6YqzpKi4G5TaY0JrFDXTOZY6FYuAAq7KqdaZ1pwxeVUdGxyD-sNN9HgA7t0BUAVA2BapxpIwrY_4HpXalZVD2yEbszdQqy3TTqab7XlPXV1XBmBlnMQIFwmMNyzydaNbhz4NIuOWVcn4fqf9")'></div>
+<div class="aspect-square bg-cover bg-center rounded-lg" data-alt="A college sports team celebrating" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAMMbJoNDUESnW2Vc8NrD45hUvLhdx0Zo3a3Xiz2cgDU33Rr3RCgkLOrdLurM2p4goRwXIHkpUJel6fMvFKAAIE7Rj21nslv4E9cNsajwRFhvEgZFnVPVKj35wYdPXahyIhAs_ovQBQdp79WwjPnK_h4a-2dJdBO2UO0xyHNjUnqw1KCM9m9qv4MfxVzfOlpIQYttaOvBTwM-kjhUtFGNUBcDGhA3rOoDgCs44g6XSq5Y6xXgyItrLeiUO-QQDbhlDs8KgqhTbZ1YA1")'></div>
+<div class="aspect-square bg-cover bg-center rounded-lg" data-alt="A cultural event happening on campus" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD4lws0sBa9n5bKeeLlV8mDW3moGHZSeZkjXjhg4UUkFdx4i8MwzARA0OqtRMFDfWCHDEhWe9wFhpixBeCvjBLwxqIOieeHCpPolG7XGMKGN4kSlUYxqiuWFWAS9aMFMGZu8UKOSk7ZhTINP5g4saGbZl4wGhUB_5TcAUSo-xfhRVSQ3BPIbjWi5xTFogQofIG_5eAgl4_cUBcmxrTq7TqhRRifpHhkPbyVGvWOJq-4PvZtRp6KgbUlp80oRNXVa4FsfD3dzl61cVwx")'></div>
+<div class="aspect-square bg-cover bg-center rounded-lg" data-alt="The modern architecture of a new college building" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDSkaZOZzUsLyNo-WShH5WWINOD745EK63EOuhXNBRDYFjRGWcKfL234SRkARJ7C_xbLaZb_0aMtgM9F39LinCGW5QuED5UFdZ8mGFb8YsNTTV0tz0Ae5_FOLot9mH5Oen-fNlmnttTu1Ys3eFEdKJOJaNCLswFN3UWDw3OQAfFVSJM3Jn3qb2YU-Uly7Iamw3Z6Qbmn4hZFRCi1-7b5hNWbNJYBRHqscCJuFFiekasl2b9T8QmB03AjRLaJLHSjjvUZpSX3DHs0Uj0")'></div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</div>
+</body></html>
