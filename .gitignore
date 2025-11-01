@@ -9,3 +9,5 @@ yarn-debug.log*
 yarn-error.log*
 .DS_Store
 *.log
+# Snyk Security Extension - AI Rules (auto-generated)
+.github\instructions\snyk_rules.instructions.md

@@ -81,6 +81,8 @@ export default function SettingsPage() {
                       checked={settings.notifications.email}
                       onChange={(e) => handleNotificationChange('email', e.target.checked)}
                       className="sr-only peer"
+                      aria-label="Enable email notifications"
+                      title="Enable email notifications"
                     />
                     <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary-dark/20 dark:peer-focus:ring-primary-dark/20 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary-dark"></div>
                   </label>
@@ -97,6 +99,8 @@ export default function SettingsPage() {
                       checked={settings.notifications.applicationUpdates}
                       onChange={(e) => handleNotificationChange('applicationUpdates', e.target.checked)}
                       className="sr-only peer"
+                      aria-label="Enable application updates notifications"
+                      title="Enable application updates notifications"
                     />
                     <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary-dark/20 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary-dark"></div>
                   </label>
@@ -113,6 +117,8 @@ export default function SettingsPage() {
                       checked={settings.notifications.scholarshipAlerts}
                       onChange={(e) => handleNotificationChange('scholarshipAlerts', e.target.checked)}
                       className="sr-only peer"
+                      aria-label="Enable scholarship alerts"
+                      title="Enable scholarship alerts"
                     />
                     <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary-dark/20 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary-dark"></div>
                   </label>
@@ -152,6 +158,8 @@ export default function SettingsPage() {
                       checked={settings.privacy.showEmail}
                       onChange={(e) => handlePrivacyChange('showEmail', e.target.checked)}
                       className="sr-only peer"
+                      aria-label="Show email address to others"
+                      title="Show email address to others"
                     />
                     <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary-dark/20 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary-dark"></div>
                   </label>
@@ -168,6 +176,8 @@ export default function SettingsPage() {
                       checked={settings.privacy.dataSharing}
                       onChange={(e) => handlePrivacyChange('dataSharing', e.target.checked)}
                       className="sr-only peer"
+                      aria-label="Allow anonymous data sharing"
+                      title="Allow anonymous data sharing"
                     />
                     <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary-dark/20 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary-dark"></div>
                   </label>
